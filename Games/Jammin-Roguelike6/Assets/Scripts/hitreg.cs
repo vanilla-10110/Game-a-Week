@@ -18,7 +18,7 @@ public class hitreg : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("macdonals"); 
-        if (collision.collider.tag == "sword") Debug.Log("we went crazy");
+        
+        if (collision.collider.tag == "weapon") Debug.Log("Hit!");
     }
 }

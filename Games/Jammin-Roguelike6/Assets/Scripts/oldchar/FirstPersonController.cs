@@ -93,7 +93,8 @@ namespace StarterAssets
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
-		}
+            _mainCamera.GetComponent<Camera>().fieldOfView = 100f;
+        }
 
 		private void Start()
 		{
@@ -151,102 +152,94 @@ namespace StarterAssets
 			}
 		}
 
-		private void Move()
-		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+        private void Move()
+        {
+            // set target speed based on move speed, sprint speed and if sprint is pressed
+            float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
-			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
+            // a reference to the players current horizontal velocity
+            float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 
-			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+            // If there is no input, gradually decrease the speed to 0
+            if (_input.move == Vector2.zero)
+            {
+                targetSpeed = 0.0f;
+                _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed, Time.deltaTime * SpeedChangeRate);
+            }
+            else
+            {
+                // If there is input, gradually increase the speed from its current value to the target speed
+                _speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * _input.move.magnitude, Time.deltaTime * SpeedChangeRate);
+            }
 
-			// a reference to the players current horizontal velocity
-			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
+            // normalise input direction
+            Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
 
-			float speedOffset = 0.1f;
-			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
+            // if there is a move input rotate player when the player is moving
+            if (_input.move != Vector2.zero)
+            {
+                // move
+                inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+            }
 
-			// accelerate or decelerate to target speed
-			if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
-			{
-				// creates curved result rather than a linear one giving a more organic speed change
-				// note T in Lerp is clamped, so we don't need to clamp our speed
-				_speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+            // move the player
+            _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+        }
 
-				// round speed to 3 decimal places
-				_speed = Mathf.Round(_speed * 1000f) / 1000f;
-			}
-			else
-			{
-				_speed = targetSpeed;
-			}
 
-			// normalise input direction
-			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+        private void JumpAndGravity()
+        {
+            if (Grounded)
+            {
+                // reset the fall timeout timer
+                _fallTimeoutDelta = FallTimeout;
 
-			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-			// if there is a move input rotate player when the player is moving
-			if (_input.move != Vector2.zero)
-			{
-				// move
-				inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
-			}
+                // stop our velocity dropping infinitely when grounded
+                if (_verticalVelocity < 0.0f)
+                {
+                    _verticalVelocity = -2f;
+                }
 
-			// move the player
-			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
-		}
+                // Jump
+                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+                {
+                    // the square root of H * -2 * G = how much velocity needed to reach desired height
+                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
-		private void JumpAndGravity()
-		{
-			if (Grounded)
-			{
-				// reset the fall timeout timer
-				_fallTimeoutDelta = FallTimeout;
+                    // Apply the character's horizontal movement velocity to the character's vertical movement
+                    _controller.Move(_controller.velocity * Time.deltaTime);
+                }
 
-				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
-				{
-					_verticalVelocity = -2f;
-				}
+                // jump timeout
+                if (_jumpTimeoutDelta >= 0.0f)
+                {
+                    _jumpTimeoutDelta -= Time.deltaTime;
+                }
+            }
+            else
+            {
+                // reset the jump timeout timer
+                _jumpTimeoutDelta = JumpTimeout;
 
-				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
-				{
-					// the square root of H * -2 * G = how much velocity needed to reach desired height
-					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-				}
+                // fall timeout
+                if (_fallTimeoutDelta >= 0.0f)
+                {
+                    _fallTimeoutDelta -= Time.deltaTime;
+                }
 
-				// jump timeout
-				if (_jumpTimeoutDelta >= 0.0f)
-				{
-					_jumpTimeoutDelta -= Time.deltaTime;
-				}
-			}
-			else
-			{
-				// reset the jump timeout timer
-				_jumpTimeoutDelta = JumpTimeout;
+                // if we are not grounded, do not jump
+                _input.jump = false;
+            }
 
-				// fall timeout
-				if (_fallTimeoutDelta >= 0.0f)
-				{
-					_fallTimeoutDelta -= Time.deltaTime;
-				}
+            // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
+            if (_verticalVelocity < _terminalVelocity)
+            {
+                _verticalVelocity += Gravity * Time.deltaTime;
+            }
+        }
 
-				// if we are not grounded, do not jump
-				_input.jump = false;
-			}
 
-			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-			if (_verticalVelocity < _terminalVelocity)
-			{
-				_verticalVelocity += Gravity * Time.deltaTime;
-			}
-		}
-
-		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+        private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
 		{
 			if (lfAngle < -360f) lfAngle += 360f;
 			if (lfAngle > 360f) lfAngle -= 360f;
