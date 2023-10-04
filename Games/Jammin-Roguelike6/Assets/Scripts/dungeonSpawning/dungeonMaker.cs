@@ -25,7 +25,7 @@ public class dungeonMaker : MonoBehaviour
             for (int j = 0; j < columns; j++)
             {
                 
-                rooms[i, j] = GameObject.Find();
+               // rooms[i, j] = GameObject.Find(); <---------- WHAT THE FUCK IS THIS REUBEN! no more pushing errors.
             }
         }
 
