@@ -1,0 +1,32 @@
+# Blender 3.6.4 MTL File: 'Donut & Tea.blend'
+# www.blender.org
+
+newmtl Donut
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Users/Fredi/Downloads/uploads_files_3242027_Donut+&+Tea/Textures/Donut_Texture.png
+
+newmtl Icing
+Ns 330.625000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.271455 0.757851
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Sprinkles
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.719806 0.800000 0.360646
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
