@@ -285,13 +285,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee396ce7de342a489cded29f83c596a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dungeonWidth: 100
-  dungeonLength: 100
+  dungeonWidth: 200
+  dungeonLength: 200
   roomWidthMin: 25
   roomLengthMin: 25
+  maxIterations: 50
   corridorWidth: 5
-  maxIterations: 1
-  material: {fileID: 2100000, guid: c632e0941e0e20745a3c9727a500a3de, type: 2}
+  material: {fileID: 2100000, guid: 5a6757c9dae13644cb8f57221435fc9f, type: 2}
+  roomBottomCornerModifier: 0.3
+  roomTopCornerMidifier: 1
+  roomOffset: 2
+  wallVertical: {fileID: 3350455406155625111, guid: da351c6862687c24db81b32cdd0f5d7c,
+    type: 3}
+  wallHorizontal: {fileID: 6198911493924147121, guid: 704b1be0367fadf4db0f278d5893ada5,
+    type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

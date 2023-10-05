@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-
-
-
 public class Line
 {
     Orientation orientation;
