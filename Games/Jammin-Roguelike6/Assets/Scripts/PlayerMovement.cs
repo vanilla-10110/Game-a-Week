@@ -13,7 +13,10 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCooldown;
     public float airMultiplier;
 
-    bool readyToJump;
+
+    public Animator cameraAnimator;
+    
+    bool readyToJump = true;
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;
@@ -54,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         {
             readyToJump = false;
             Jump();
-
+            Debug.Log("yessir??");
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
@@ -62,8 +65,17 @@ public class PlayerMovement : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        
-        if(isGrounded) rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+
+        if (horizontalInput != 0 || verticalInput != 0)
+        {
+            cameraAnimator.SetTrigger("run");
+        }
+        else
+        {
+            cameraAnimator.SetTrigger("idle");
+        }
+
+        if (isGrounded) rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
 
         else if (!isGrounded) rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
@@ -81,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);

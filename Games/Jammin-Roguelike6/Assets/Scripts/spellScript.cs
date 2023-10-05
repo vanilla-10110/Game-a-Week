@@ -5,22 +5,21 @@ using UnityEngine;
 
 public class spellScript : MonoBehaviour
 {
-
+    [Header("Objects")]
     public Transform spellSpawnPoint;
-    public GameObject[] spells;
-    public ParticleSystem castSmoke;
     public Transform smokeSpawn;
+    public ParticleSystem castSmoke;
+    public GameObject[] spells;
 
+    [Header("Values")]
     int spellIndex = 0;
-
-    public float spellVelocity;
+    public float spellVelocity = 10f;
     public void ShootSpell()
     {
         GameObject spawnedSpell = Instantiate(spells[spellIndex]);
         spawnedSpell.transform.position = spellSpawnPoint.position;
         spawnedSpell.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellVelocity;
         Destroy(spawnedSpell, 5);
-        
         castSmoke.Play();
     }
 }

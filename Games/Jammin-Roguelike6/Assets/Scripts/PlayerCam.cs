@@ -12,7 +12,7 @@ public class PlayerCam : MonoBehaviour
     float xRotation;
     float yRotation;
 
-    public float cameraFOV = 90f;
+    public float cameraFOV = 80f;
     
     void Start()
     {
