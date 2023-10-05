@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - sword
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -13,13 +14,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - spell
   - 
   - Character
   - Ground
   - Pushable
-  - 
-  - 
+  - Player
+  - Weapon
   - 
   - 
   - 
