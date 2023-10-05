@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1791297224
 Transform:
   m_ObjectHideFlags: 0
@@ -171,16 +171,14 @@ MonoBehaviour:
   dungeonLength: 200
   roomWidthMin: 25
   roomLengthMin: 25
-  maxIterations: 50
+  maxIterations: 1
   corridorWidth: 5
   material: {fileID: 2100000, guid: 5a6757c9dae13644cb8f57221435fc9f, type: 2}
   roomBottomCornerModifier: 0.3
   roomTopCornerMidifier: 1
   roomOffset: 2
-  wallVertical: {fileID: 3350455406155625111, guid: da351c6862687c24db81b32cdd0f5d7c,
-    type: 3}
-  wallHorizontal: {fileID: 6198911493924147121, guid: 704b1be0367fadf4db0f278d5893ada5,
-    type: 3}
+  wallVertical: {fileID: 3350455406155625111, guid: da351c6862687c24db81b32cdd0f5d7c, type: 3}
+  wallHorizontal: {fileID: 6198911493924147121, guid: 704b1be0367fadf4db0f278d5893ada5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

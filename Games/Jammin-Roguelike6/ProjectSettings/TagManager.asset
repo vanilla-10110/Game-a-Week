@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CinemachineTarget
-  - sword
-  - FxTemporaire
+  - Floor
+  - Wall
+  - OuterCorner
+  - Room
   layers:
   - Default
   - TransparentFX
@@ -14,13 +15,13 @@ TagManager:
   - 
   - Water
   - UI
-  - spell
   - 
-  - Character
-  - Ground
-  - Pushable
-  - Player
-  - Weapon
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
