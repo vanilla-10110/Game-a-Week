@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{3dfe3184-3be5-4386-8df6-ca1575730f5d}">
+		<property name="assetPath">
+			<value>FB_IMPACT_4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.0649166666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0ea6db39-10d9-46be-b01c-92aec614a6ba}</destination>
+		</relationship>
+	</object>
+</objects>
