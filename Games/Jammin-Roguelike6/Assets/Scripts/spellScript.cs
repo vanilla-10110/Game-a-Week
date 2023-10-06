@@ -11,6 +11,8 @@ public class spellScript : MonoBehaviour
     public ParticleSystem castSmoke;
     public GameObject[] spells;
 
+    public FireballScript fireballScript;
+
     [Header("Values")]
     int spellIndex = 0;
     public float spellVelocity = 10f;
@@ -22,4 +24,5 @@ public class spellScript : MonoBehaviour
         Destroy(spawnedSpell, 5);
         castSmoke.Play();
     }
+
 }

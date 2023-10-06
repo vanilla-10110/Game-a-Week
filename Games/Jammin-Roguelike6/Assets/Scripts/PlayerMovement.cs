@@ -36,16 +36,24 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
-    
+
+    public Camera mainCamera;
+
+    [SerializeField] LayerMask layerMask;
+
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        
 
     }
     private void FixedUpdate()
     {
+        
         MovePlayer();
+        
     }
 
     private void MyInput()
@@ -112,5 +120,16 @@ public class PlayerMovement : MonoBehaviour
         SpeedControl();
         if (isGrounded) rb.drag = groundDrag;
         else rb.drag = 0;
+
+
+        // Create a ray from the main camera
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+
+        // Perform a raycast against all objects within layer 8 (which is the layer for "Everything")
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity, 8))
+        {
+            Debug.Log("wow");
+        }
     }
 }

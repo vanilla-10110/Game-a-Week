@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fireballScript : MonoBehaviour
+public class FireballScript : MonoBehaviour
 {
     public ParticleSystem explosion;
 
@@ -18,10 +18,8 @@ public class fireballScript : MonoBehaviour
     {
         
     }
-
-    private void OnCollisionEnter(Collision collision)
+    public void Detonate()
     {
-        
         Instantiate(explosion, transform.position, transform.rotation);
         Transform fire = transform.Find("fireSFX");
         //fire.GetComponent<ParticleSystem>().Pause();
@@ -30,6 +28,11 @@ public class fireballScript : MonoBehaviour
         emission.enabled = false;
         fire.parent = null;
         Destroy(gameObject);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        Detonate();
 
     }
 }
