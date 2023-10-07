@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="SandboxScene" id="{c2cac01d-0803-46cc-b7d5-8ab6f4261274}">
+		<property name="name">
+			<value>test scene</value>
+		</property>
+		<relationship name="folder">
+			<destination>{e919ccad-cd8c-4322-b9a9-08d581fb4424}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{ab84f6f3-8d71-47d1-aa7b-c6e0e57a99bd}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{38a3fb25-1393-4ac8-b4a2-2e344dfb9462}</destination>
+		</relationship>
+		<relationship name="sandboxParameters">
+			<destination>{df96d042-1d97-4f3b-8373-a9139557ce5d}</destination>
+			<destination>{9773a0f7-0f4a-4ff0-9f98-f44a7b2da31b}</destination>
+		</relationship>
+	</object>
+	<object class="MarkerTrack" id="{ab84f6f3-8d71-47d1-aa7b-c6e0e57a99bd}" />
+	<object class="Timeline" id="{38a3fb25-1393-4ac8-b4a2-2e344dfb9462}" />
+	<object class="SandboxParameter" id="{df96d042-1d97-4f3b-8373-a9139557ce5d}">
+		<property name="parameterValue">
+			<value>0</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{1238daa6-092d-421d-a50d-34a17f0bc682}</destination>
+		</relationship>
+	</object>
+	<object class="SandboxParameter" id="{9773a0f7-0f4a-4ff0-9f98-f44a7b2da31b}">
+		<property name="parameterValue">
+			<value>29</value>
+		</property>
+		<relationship name="parameter">
+			<destination>{c09b8f92-f787-4b30-a07d-b52e063d9a3f}</destination>
+		</relationship>
+	</object>
+</objects>
