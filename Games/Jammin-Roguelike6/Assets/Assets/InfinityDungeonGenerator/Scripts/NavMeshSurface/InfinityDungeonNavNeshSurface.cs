@@ -222,7 +222,7 @@ public class InfinityDungeonNavMeshSurface : MonoBehaviour
 						new Vector3(0 + (j * sizeOfInt) + groundTransforamX, transformY,
 							groundTransforamZ + (i * sizeOfInt)),
 						Quaternion.Euler(0, 0, 0));
-					toClean.GetComponent<NavMeshSurface>().BuildNavMesh();
+					//toClean.GetComponent<NavMeshSurface>().BuildNavMesh();
 					//					surfaces.SetValue(toClean,surfacesCounter);
 					//					surfaces[surfacesCounter].BuildNavMesh();
 					//					surfacesCounter += 1;
@@ -916,7 +916,7 @@ public class InfinityDungeonNavMeshSurface : MonoBehaviour
 						new Vector3(-sizeOfFloat - (m * sizeOfFloat) + groundTransforamX, transformY,
 							(dootPlaceJ * sizeOfFloat) + groundTransforamZ),
 						Quaternion.Euler(0, 0, 0));
-					tunelToClean3.GetComponent<NavMeshSurface>().BuildNavMesh();
+					//tunelToClean3.GetComponent<NavMeshSurface>().BuildNavMesh();
 					tunrelsToClean.Add(new Tunnel(generatedDungeonNumber, tunelToClean3));
 
 				}
@@ -975,7 +975,7 @@ public class InfinityDungeonNavMeshSurface : MonoBehaviour
 						new Vector3(doorPlaceI * sizeOfInt + groundTransforamX, transformY,
 							-sizeOfFloat - (n * sizeOfInt) + groundTransforamZ),
 						Quaternion.Euler(0, 0, 0));
-					tunelToClean3.GetComponent<NavMeshSurface>().BuildNavMesh();
+					//tunelToClean3.GetComponent<NavMeshSurface>().BuildNavMesh();
 					tunrelsToClean.Add(new Tunnel(generatedDungeonNumber, tunelToClean3));
 
 				}
@@ -1094,7 +1094,7 @@ public class InfinityDungeonNavMeshSurface : MonoBehaviour
 						new Vector3(doorPlaceI * sizeOfInt + groundTransforamX, transformY,
 							(roomSizeI * sizeOfFloat) + (n * sizeOfInt) + groundTransforamZ),
 						Quaternion.Euler(0, 0, 0));
-					tunelToClean3.GetComponent<NavMeshSurface>().BuildNavMesh();
+					//tunelToClean3.GetComponent<NavMeshSurface>().BuildNavMesh();
 					tunrelsToClean.Add(new Tunnel(generatedDungeonNumber, tunelToClean3));
 
 				}

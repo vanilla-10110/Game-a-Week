@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
+
 
 public class InfinityDungeon : MonoBehaviour
 {
-	public GameObject[] walls;
+	public NavMeshSurface surface;
+
+    public GameObject[] walls;
 
 	//Ground
 	public GameObject[] ground;
@@ -102,6 +107,10 @@ public class InfinityDungeon : MonoBehaviour
 
 				GenInfinityDungeon(groundTransX, groundTransZ, false, entranceDoorPlaceI, entranceDoorPlaceJ,
 					entranceDoorPlace, pastRoomSizeI, pastRoomSizeJ);
+				//maybe here////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 				for (int j = 0; j < tunrelsToClean.Count; j++)
 				{
 					if (tunrelsToClean[j].tunnelCounter.Equals(generatedDungeonNumber - 2))
@@ -1114,6 +1123,11 @@ public class InfinityDungeon : MonoBehaviour
 		{
 			player.transform.position = new Vector3(playerSpawnPosX, playerSpawnPosY, playerSpawnPosZ);
 		}
+
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		//update navmesh
+		surface.BuildNavMesh();
+
 	}
 
 

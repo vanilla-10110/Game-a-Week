@@ -1042,43 +1042,52 @@ public class DungeonGenerator : MonoBehaviour {
 						}
 					}
 
-	//environmentToWalls
-//					if(SetRangeChance(furnitureRange)){
-//						if(j==0&&i!=entranceDoorPlaceJ&&i%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(-1.9f+(j*sizeOfInt)+groundTransforamX,1.7f,groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(j==0&&i!=entranceDoorPlaceJ){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(-1.4f+(j*sizeOfInt)+groundTransforamX,transformY,groundTransforamZ+(i*sizeOfInt)) , Quaternion.Euler(0,90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(j==roomSizeJ-1&&i!=dootPlaceJ&&i%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(1.9f+(j*sizeOfInt)+groundTransforamX,1.7f,groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,-90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(j==roomSizeJ-1&&i!=dootPlaceJ){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(1.4f+(j*sizeOfFloat)+groundTransforamX,transformY,groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==0&&j!=entranceDoorPlaceI&&j%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,1.7f,-1.9f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,0, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==0&&j!=entranceDoorPlaceI){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,transformY,-1.4f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,180, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==roomSizeI-1&&j!=doorPlaceI&&j%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,1.7f,1.9f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,180, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==roomSizeI-1&&j!=doorPlaceI){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,transformY,1.4f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,180, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//					}
-					//Columns
-					if(SetRangeChance(columnRange)&&columns.Length>0){
+				//environmentToWalls
+				if (SetRangeChance(furnitureRange))
+				{
+					if (j == 0 && i != entranceDoorPlaceJ && i % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(-1.9f + (j * sizeOfInt) + groundTransforamX, 1.7f, groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (j == 0 && i != entranceDoorPlaceJ)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(-1.4f + (j * sizeOfInt) + groundTransforamX, transformY, groundTransforamZ + (i * sizeOfInt)), Quaternion.Euler(0, 90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (j == roomSizeJ - 1 && i != dootPlaceJ && i % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(1.9f + (j * sizeOfInt) + groundTransforamX, 1.7f, groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, -90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (j == roomSizeJ - 1 && i != dootPlaceJ)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(1.4f + (j * sizeOfFloat) + groundTransforamX, transformY, groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == 0 && j != entranceDoorPlaceI && j % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, 1.7f, -1.9f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 0, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == 0 && j != entranceDoorPlaceI)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, transformY, -1.4f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 180, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == roomSizeI - 1 && j != doorPlaceI && j % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, 1.7f, 1.9f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 180, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == roomSizeI - 1 && j != doorPlaceI)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, transformY, 1.4f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 180, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+				}
+				//Columns
+				if (SetRangeChance(columnRange)&&columns.Length>0){
 						if(j==0&&i!=entranceDoorPlaceJ){
 							GameObject toClean2 = Instantiate(columns[Random.Range(0,columns.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,transformY,-1.9f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,90, 0));
 							objectsToCleanDungeon.Add(toClean2);
@@ -1909,43 +1918,52 @@ public class DungeonGenerator : MonoBehaviour {
 						}
 					}
 
-	//environmentToWalls
-//					if(SetRangeChance(furnitureRange)){
-//						if(j==0&&i!=entranceDoorPlaceJ&&i%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(-1.9f+(j*sizeOfInt)+groundTransforamX,1.7f,groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(j==0&&i!=entranceDoorPlaceJ){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(-1.4f+(j*sizeOfInt)+groundTransforamX,transformY,groundTransforamZ+(i*sizeOfInt)) , Quaternion.Euler(0,90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(j==roomSizeJ-1&&i!=dootPlaceJ&&i%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(1.9f+(j*sizeOfInt)+groundTransforamX,1.7f,groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,-90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(j==roomSizeJ-1&&i!=dootPlaceJ){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(1.4f+(j*sizeOfFloat)+groundTransforamX,transformY,groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,90, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==0&&j!=entranceDoorPlaceI&&j%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,1.7f,-1.9f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,0, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==0&&j!=entranceDoorPlaceI){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,transformY,-1.4f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,180, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==roomSizeI-1&&j!=doorPlaceI&&j%3==0){
-//							GameObject toClean2 = Instantiate(lamps[Random.Range(0,lamps.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,1.7f,1.9f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,180, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//						else if(i==roomSizeI-1&&j!=doorPlaceI){
-//							GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0,environmentToWall.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,transformY,1.4f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,180, 0));
-//							environmentToClean.Add(new Tunnel(generatedDungeonNumber,toClean2));
-//						}
-//					}
-					//Columns
-					if(SetRangeChance(columnRange)&&columns.Length>0){
+				//environmentToWalls
+				if (SetRangeChance(furnitureRange))
+				{
+					if (j == 0 && i != entranceDoorPlaceJ && i % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(-1.9f + (j * sizeOfInt) + groundTransforamX, 1.7f, groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (j == 0 && i != entranceDoorPlaceJ)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(-1.4f + (j * sizeOfInt) + groundTransforamX, transformY, groundTransforamZ + (i * sizeOfInt)), Quaternion.Euler(0, 90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (j == roomSizeJ - 1 && i != dootPlaceJ && i % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(1.9f + (j * sizeOfInt) + groundTransforamX, 1.7f, groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, -90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (j == roomSizeJ - 1 && i != dootPlaceJ)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(1.4f + (j * sizeOfFloat) + groundTransforamX, transformY, groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 90, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == 0 && j != entranceDoorPlaceI && j % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, 1.7f, -1.9f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 0, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == 0 && j != entranceDoorPlaceI)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, transformY, -1.4f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 180, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == roomSizeI - 1 && j != doorPlaceI && j % 3 == 0)
+					{
+						GameObject toClean2 = Instantiate(lamps[Random.Range(0, lamps.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, 1.7f, 1.9f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 180, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+					else if (i == roomSizeI - 1 && j != doorPlaceI)
+					{
+						GameObject toClean2 = Instantiate(environmentToWall[Random.Range(0, environmentToWall.Length)], new Vector3(-2f + (j * sizeOfFloat) + groundTransforamX, transformY, 1.4f + groundTransforamZ + (i * sizeOfFloat)), Quaternion.Euler(0, 180, 0));
+						environmentToClean.Add(new Tunnel(generatedDungeonNumber, toClean2));
+					}
+				}
+				//Columns
+				if (SetRangeChance(columnRange)&&columns.Length>0){
 						if(j==0&&i!=entranceDoorPlaceJ){
 							GameObject toClean2 = Instantiate(columns[Random.Range(0,columns.Length)],new Vector3(-2f+(j*sizeOfFloat)+groundTransforamX,transformY,-1.9f+groundTransforamZ+(i*sizeOfFloat)) , Quaternion.Euler(0,90, 0));
 							objectsToCleanDungeon.Add(toClean2);
