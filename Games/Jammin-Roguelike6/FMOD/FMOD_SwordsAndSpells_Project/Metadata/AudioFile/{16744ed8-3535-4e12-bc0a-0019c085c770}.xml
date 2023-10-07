@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{16744ed8-3535-4e12-bc0a-0019c085c770}">
+		<property name="assetPath">
+			<value>FOLYFeet_footstep-concrete-land-07_Gamemaster_ProSoundCollectionv1.3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.50624999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0ea6db39-10d9-46be-b01c-92aec614a6ba}</destination>
+		</relationship>
+	</object>
+</objects>

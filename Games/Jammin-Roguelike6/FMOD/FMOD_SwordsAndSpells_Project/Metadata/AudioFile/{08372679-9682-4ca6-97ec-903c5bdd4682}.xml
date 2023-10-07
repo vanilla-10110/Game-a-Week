@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{08372679-9682-4ca6-97ec-903c5bdd4682}">
+		<property name="assetPath">
+			<value>Human, Heartbeat, Clicky, 65 BPM SND13581.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.6837291666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0ea6db39-10d9-46be-b01c-92aec614a6ba}</destination>
+		</relationship>
+	</object>
+</objects>

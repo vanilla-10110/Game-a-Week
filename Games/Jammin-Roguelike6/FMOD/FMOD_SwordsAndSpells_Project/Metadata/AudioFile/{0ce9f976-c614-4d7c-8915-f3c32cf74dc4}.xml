@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{0ce9f976-c614-4d7c-8915-f3c32cf74dc4}">
+		<property name="assetPath">
+			<value>Lego Yoda Death - Sound Effect (HD).wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.8413750000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0ea6db39-10d9-46be-b01c-92aec614a6ba}</destination>
+		</relationship>
+	</object>
+</objects>

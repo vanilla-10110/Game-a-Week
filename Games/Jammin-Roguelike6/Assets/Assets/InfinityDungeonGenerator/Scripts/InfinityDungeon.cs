@@ -1,9 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class InfinityDungeon : MonoBehaviour
 {
+	public NavMeshSurface surface;
+
+
 	public GameObject[] walls;
 
 	//Ground
@@ -1114,6 +1119,9 @@ public class InfinityDungeon : MonoBehaviour
 		{
 			player.transform.position = new Vector3(playerSpawnPosX, playerSpawnPosY, playerSpawnPosZ);
 		}
+		surface.RemoveData();
+        surface.BuildNavMesh();
+
 	}
 
 
