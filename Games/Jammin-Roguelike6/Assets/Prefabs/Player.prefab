@@ -337,6 +337,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   orientation: {fileID: 4218003186269626608}
+  mainCamera: {fileID: 8701422048823381343}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1998351834856268428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1321,6 +1325,7 @@ MonoBehaviour:
   castSmoke: {fileID: 5264829493865538455}
   spells:
   - {fileID: 5313012063720905964, guid: c85718604b73ae24e9d146f35b67e3c0, type: 3}
+  fireballScript: {fileID: 0}
   spellVelocity: 10
 --- !u!1001 &5462926625454888709
 PrefabInstance:
