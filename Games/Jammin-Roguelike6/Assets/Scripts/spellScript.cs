@@ -11,7 +11,7 @@ public class spellScript : MonoBehaviour
     public ParticleSystem castSmoke;
     public GameObject[] spells;
 
-    public FireballScript fireballScript;
+    
 
     [Header("Values")]
     int spellIndex = 0;
@@ -22,7 +22,9 @@ public class spellScript : MonoBehaviour
         spawnedSpell.transform.position = spellSpawnPoint.position;
         spawnedSpell.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellVelocity;
         Destroy(spawnedSpell, 5);
+        ParticleSystem castSmoked = Instantiate(castSmoke, smokeSpawn.transform);
         castSmoke.Play();
+        Destroy(castSmoked);
     }
 
 }

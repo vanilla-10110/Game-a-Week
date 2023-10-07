@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
+//using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
+
+
 public class PlayerInteract : MonoBehaviour
 {
     public Camera _mainCamera;
@@ -11,9 +14,11 @@ public class PlayerInteract : MonoBehaviour
     public TextMeshProUGUI e; 
 
     public LayerMask layerMask;
+
+    public InputAction interact;
     void Start()
     {
-        
+        //_interact = GetComponent<InputAction>();
     }
 
     
@@ -28,8 +33,15 @@ public class PlayerInteract : MonoBehaviour
         {
             if (hitInfo.collider.GetComponent<Interactable>() != null) { 
             
-                Debug.Log(hitInfo.collider.GetComponent<Interactable>().promptMessage);
+                Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
+                //Debug.Log(interactable.promptMessage);
                 e.gameObject.SetActive(true);
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    interactable.BaseInteract();
+                }
+
+                
             }
         } else e.gameObject.SetActive(false);
 
