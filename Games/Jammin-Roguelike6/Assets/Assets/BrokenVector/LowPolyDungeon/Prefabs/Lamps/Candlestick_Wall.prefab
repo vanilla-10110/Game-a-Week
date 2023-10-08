@@ -83,7 +83,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 65399
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 4725356937743547162}
   - component: {fileID: 4725356937744546266}
   - component: {fileID: 4725356937742542617}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Candlestick_Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

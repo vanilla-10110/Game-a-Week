@@ -65,7 +65,6 @@ public class PlayerMovement : MonoBehaviour
         {
             readyToJump = false;
             Jump();
-            Debug.Log("yessir??");
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
