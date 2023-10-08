@@ -49,20 +49,6 @@ public class Card : Interactable
     int enemyUpgrade1;
     int enemyUpgrade2;
 
-
-    //public Dictionary<string, float> upgradeStat = new Dictionary<string, float>()
-    //{
-    //    {"moveSpeed", 2f},
-    //    {"attackSpeed", 0.3f},
-    //    {"attackDamage", 15f},
-    //    {"criticalStrikeChance", 0f},
-    //    {"fireDOT", 5f},
-    //    {"shockDOT", 5f},
-    //    {"acidDOT", 5f},
-    //    {"voidDOT", 5f}
-    //};
-
-
     private void Awake()
     {
         player = GameObject.Find("/Player/Platyer");
@@ -101,11 +87,11 @@ public class Card : Interactable
     }
 
 
-    //This alongside the raycast stuff could be used for rerolls of the stats
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.T)) SetCardStatsAndText()
-    //}
+    
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T)) SetCardStatsAndText();
+    }
 
     void ChangeStats()
     {

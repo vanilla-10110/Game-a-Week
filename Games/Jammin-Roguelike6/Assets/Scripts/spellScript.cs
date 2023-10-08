@@ -10,6 +10,7 @@ public class spellScript : MonoBehaviour
     public Transform smokeSpawn;
     public ParticleSystem castSmoke;
     public GameObject[] spells;
+    public GameObject player;
 
     
 
@@ -18,9 +19,11 @@ public class spellScript : MonoBehaviour
     public float spellVelocity = 10f;
     public void ShootSpell()
     {
+        player = GameObject.Find("Platyer");
         GameObject spawnedSpell = Instantiate(spells[spellIndex]);
         spawnedSpell.transform.position = spellSpawnPoint.position;
-        spawnedSpell.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellVelocity;
+        //                                                                                          (              physics.realistic            )
+        spawnedSpell.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellVelocity + player.GetComponent<Rigidbody>().velocity / 2;
         Destroy(spawnedSpell, 5);
         ParticleSystem castSmoked = Instantiate(castSmoke, smokeSpawn.transform);
         castSmoke.Play();

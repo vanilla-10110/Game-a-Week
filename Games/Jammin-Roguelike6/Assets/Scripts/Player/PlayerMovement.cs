@@ -128,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, 8))
         {
-            Debug.Log("wow");
+            //Debug.Log("wow");
         }
     }
 }

@@ -32,10 +32,21 @@ public class FireballScript : MonoBehaviour
 
 
         explosion.transform.parent = null;
-        Transform fire = transform.Find("fireSFX");
-        ParticleSystem.EmissionModule emission = fire.GetComponent<ParticleSystem>().emission;
-        emission.enabled = false;
-        fire.parent = null;
+        if (transform.Find("fireSFX") != null)
+        {
+            Transform fire = transform.Find("fireSFX");
+            if (fire.GetComponent<ParticleSystem>() != null)
+            {
+                ParticleSystem.EmissionModule emission = fire.GetComponent<ParticleSystem>().emission;
+                emission.enabled = false;
+                fire.parent = null;
+            }
+        }
+        
+            
+
+        
+        
 
         Destroy(gameObject, 0.1f);
         //explosionGO.GetComponent<Explosion>().Explode();
