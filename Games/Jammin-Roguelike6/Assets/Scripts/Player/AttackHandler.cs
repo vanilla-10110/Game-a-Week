@@ -11,7 +11,7 @@ public class AttackHandler : MonoBehaviour
     [Header("Objects")]
     Animator animator;
     public GameObject weaponHolder;
-    PlayerMovement playerMovement;
+    
 
 
     [Header("Stats")]
@@ -30,7 +30,7 @@ public class AttackHandler : MonoBehaviour
     };
     private void Awake()
     {
-        playerMovement = GetComponent<PlayerMovement>();
+       
     }
 
     string GetActiveWeaponName()
@@ -65,7 +65,7 @@ public class AttackHandler : MonoBehaviour
             Attack();
         }
         // this being in update could be causing many sillies
-        playerMovement.moveSpeed = Stats[0];
+        
     }
    
 

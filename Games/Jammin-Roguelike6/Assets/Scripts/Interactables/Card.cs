@@ -17,10 +17,10 @@ public class Card : Interactable
     public TextMeshProUGUI enemyDesc;
     GameObject player;
     AttackHandler attackHandler;
+    PlayerMovement playerMovement;
 
 
-
-   [Header("Upgrades")]
+    [Header("Upgrades")]
     private float[] upgradeStats =
     {
         1f,
@@ -51,8 +51,8 @@ public class Card : Interactable
 
     private void Awake()
     {
-        player = GameObject.Find("/Player/Platyer");
-        
+        player = GameObject.Find("Platyer");
+        playerMovement = player.GetComponent<PlayerMovement>();
         attackHandler = player.GetComponent<AttackHandler>();
     }
 
@@ -98,10 +98,10 @@ public class Card : Interactable
 
         attackHandler.Stats[playerUpgrade1] += upgradeStats[playerUpgrade1];
         attackHandler.Stats[playerUpgrade2] += upgradeStats[playerUpgrade2];
-        attackHandler.Stats[enemyUpgrade1] += upgradeStats[enemyUpgrade1];
-        attackHandler.Stats[enemyUpgrade2] += upgradeStats[enemyUpgrade2];
+        //attackHandler.Stats[enemyUpgrade1] += upgradeStats[enemyUpgrade1];
+        //attackHandler.Stats[enemyUpgrade2] += upgradeStats[enemyUpgrade2];
+        
+        playerMovement.moveSpeed = attackHandler.Stats[0];
 
     }
-
-
 }

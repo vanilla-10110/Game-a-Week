@@ -1758,8 +1758,7 @@ MonoBehaviour:
   castSmoke: {fileID: 1696850477740752583}
   spells:
   - {fileID: 5313012063720905964, guid: c85718604b73ae24e9d146f35b67e3c0, type: 3}
-  player: {fileID: 0}
-  spellVelocity: 10
+  spellVelocity: 20
 --- !u!4 &4427603959542859362 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2325068447451520262, guid: 6e23627d16519534f95260b78a6c4247,

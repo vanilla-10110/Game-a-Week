@@ -10,7 +10,7 @@ public class spellScript : MonoBehaviour
     public Transform smokeSpawn;
     public ParticleSystem castSmoke;
     public GameObject[] spells;
-    public GameObject player;
+    GameObject player;
 
     
 

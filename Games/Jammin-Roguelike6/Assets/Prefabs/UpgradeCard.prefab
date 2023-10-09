@@ -356,6 +356,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectPS: {fileID: 198255508796863634, guid: 63206a6b58e89d74483b27ded7f2e41c,
     type: 3}
+  title: {fileID: 2197618391646455607}
+  playerDesc: {fileID: 626047992352524732}
+  enemyDesc: {fileID: 406373327074817398}
 --- !u!1 &2020015473219433350
 GameObject:
   m_ObjectHideFlags: 0
