@@ -11,22 +11,12 @@ public class AttackHandler : MonoBehaviour
     [Header("Objects")]
     Animator animator;
     public GameObject weaponHolder;
+    PlayerMovement playerMovement;
 
 
     [Header("Stats")]
-    //public Dictionary<string, float> upgradeStats = new Dictionary<string, float>()
-    //{
-    //    {"moveSpeed", 0f},
-    //    {"attackSpeed", 0f},
-    //    {"attackDamage", 0f},
-    //    {"criticalStrikeChance", 0f},
-    //    {"fireDOT", 0f},
-    //    {"shockDOT", 0f},
-    //    {"acidDOT", 0f},
-    //    {"voidDOT", 0f}
-    //};
 
-
+    [HideInInspector]
     public float[] Stats =
     {
         0f,
@@ -70,7 +60,7 @@ public class AttackHandler : MonoBehaviour
         {
             Attack();
         }
-        
+        playerMovement.moveSpeed = Stats[0];
     }
    
 

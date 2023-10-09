@@ -22,8 +22,8 @@ public class spellScript : MonoBehaviour
         player = GameObject.Find("Platyer");
         GameObject spawnedSpell = Instantiate(spells[spellIndex]);
         spawnedSpell.transform.position = spellSpawnPoint.position;
-        //                                                                                          (              physics.realistic            )
-        spawnedSpell.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellVelocity + player.GetComponent<Rigidbody>().velocity / 2;
+        //                                                                                          (                                           physics.realistic                                           )
+        spawnedSpell.GetComponent<Rigidbody>().velocity = spellSpawnPoint.forward * spellVelocity + player.GetComponent<Rigidbody>().transform.forward * player.GetComponent<Rigidbody>().velocity.magnitude;
         Destroy(spawnedSpell, 5);
         ParticleSystem castSmoked = Instantiate(castSmoke, smokeSpawn.transform);
         castSmoke.Play();
