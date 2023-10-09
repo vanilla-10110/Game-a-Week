@@ -87,6 +87,8 @@ public class PlayerMovement : MonoBehaviour
         else if (!isGrounded) rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
     }
 
+    
+
     private void SpeedControl()
     {
         Vector3 flatVelocity = new Vector3(rb.velocity.x, 0f , rb.velocity.z);

@@ -1,20 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
-using UnityEngine.InputSystem;
-using Random = UnityEngine.Random;
-
 public class AttackHandler : MonoBehaviour
 {
     [Header("Objects")]
     Animator animator;
     public GameObject weaponHolder;
-    
+    int selectedWeapon = 0;
+    public bool isAttacking;
 
 
     [Header("Stats")]
+
+
 
     //[HideInInspector]
     public float[] Stats =
@@ -28,9 +24,19 @@ public class AttackHandler : MonoBehaviour
         0f,
         0f
     };
-    private void Awake()
+
+
+    void SwitchWeapon()
     {
-       
+        int i = 0;
+
+        foreach (Transform weapon in weaponHolder.transform)
+        {
+            if (i == selectedWeapon)
+                weapon.gameObject.SetActive(true);
+            else weapon.gameObject.SetActive(false);
+            i++;
+        }
     }
 
     string GetActiveWeaponName()
@@ -39,7 +45,9 @@ public class AttackHandler : MonoBehaviour
         {
             if (child.gameObject.activeSelf)
             {
+                
                 return child.name;
+
             }
         }
         return "None";
@@ -51,6 +59,7 @@ public class AttackHandler : MonoBehaviour
             if (child.gameObject.activeSelf)
             {
                 animator = child.GetComponent<Animator>();
+                
                 return animator;
             }
         }
@@ -64,10 +73,36 @@ public class AttackHandler : MonoBehaviour
         {
             Attack();
         }
-        // this being in update could be causing many sillies
-        
+        AnimatorStateInfo currentState = GetActiveWeaponAnimator().GetCurrentAnimatorStateInfo(0);
+
+
+        //Debug.Log(isAttacking);
+        int previousWeapon = selectedWeapon;
+
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+        {
+            if (selectedWeapon >= weaponHolder.transform.childCount - 1)
+            {
+                selectedWeapon = 0;
+            }   else 
+                selectedWeapon++;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+        {
+            if (selectedWeapon <= 0)
+            {
+                selectedWeapon = weaponHolder.transform.childCount - 1;
+            }   else
+                selectedWeapon--;
+            
+        }
+
+        if (previousWeapon != selectedWeapon)
+            SwitchWeapon();
+
     }
-   
+
+
 
 
     public void Attack()
@@ -86,6 +121,8 @@ public class AttackHandler : MonoBehaviour
 
         if (GetActiveWeaponName() == "sword")
         {
+            
+
             int attackIndex = -1;
             AnimatorStateInfo currentState = GetActiveWeaponAnimator().GetCurrentAnimatorStateInfo(0);
             if (currentState.IsName("swordIdle1"))
@@ -106,8 +143,11 @@ public class AttackHandler : MonoBehaviour
             }
             if (attackIndex != -1)
             {
+
                 GetActiveWeaponAnimator().speed = Stats[1];
+                isAttacking = true;
                 GetActiveWeaponAnimator().Play($"swordAttack{attackIndex + 1}");
+                
             }
         }
     }
