@@ -2418,14 +2418,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
-    - target: {fileID: 2485940339618526665, guid: 5f379eda7f3dda84d879f21861063a54,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
->>>>>>> Stashed changes
     - target: {fileID: 3998165003413212684, guid: 5f379eda7f3dda84d879f21861063a54,
         type: 3}
       propertyPath: m_AnchorMax.x

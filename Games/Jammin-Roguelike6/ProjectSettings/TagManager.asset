@@ -7,7 +7,6 @@ TagManager:
   - CinemachineTarget
   - sword
   - FxTemporaire
-  - enemySword
   layers:
   - Default
   - TransparentFX
