@@ -814,9 +814,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 4577667324472210052}
   Stats:
-  - 0
-  - 0
-  - 0
+  - 5
+  - 1
+  - 30
   - 0
   - 0
   - 0

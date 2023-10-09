@@ -24,6 +24,7 @@ public class enemyController : MonoBehaviour
     private void Awake()
     {
         player = GameObject.Find("Platyer").transform;
+        navMeshAgent.speed = 1;
     }
 
 
@@ -31,7 +32,7 @@ public class enemyController : MonoBehaviour
     void Start()
     {
         navMeshAgent.isStopped = false;
-        navMeshAgent.speed = speed;
+        
 
         animator = GetComponent<Animator>();
     }
