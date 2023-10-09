@@ -16,18 +16,22 @@ public class AttackHandler : MonoBehaviour
 
     [Header("Stats")]
 
-    [HideInInspector]
+    //[HideInInspector]
     public float[] Stats =
     {
-        0f,
-        0f,
-        0f,
+        5f,
+        1f,
+        30f,
         0f,
         0f,
         0f,
         0f,
         0f
     };
+    private void Awake()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
 
     string GetActiveWeaponName()
     {
@@ -60,6 +64,7 @@ public class AttackHandler : MonoBehaviour
         {
             Attack();
         }
+        // this being in update could be causing many sillies
         playerMovement.moveSpeed = Stats[0];
     }
    
@@ -101,6 +106,7 @@ public class AttackHandler : MonoBehaviour
             }
             if (attackIndex != -1)
             {
+                GetActiveWeaponAnimator().speed = Stats[1];
                 GetActiveWeaponAnimator().Play($"swordAttack{attackIndex + 1}");
             }
         }
