@@ -23,7 +23,7 @@ public class Card : Interactable
    [Header("Upgrades")]
     private float[] upgradeStats =
     {
-        2f,
+        1f,
         0.3f,
         15f,
         10f,
@@ -95,19 +95,11 @@ public class Card : Interactable
 
     void ChangeStats()
     {
-        
-        //after this is done make the chest and make them come out of the chests or like do that first i dont give a shit
 
-        attackHandler.Stats[playerUpgrade1] = upgradeStats[playerUpgrade1];
-
-        attackHandler.Stats[playerUpgrade2] = upgradeStats[playerUpgrade2];
-
-        attackHandler.Stats[enemyUpgrade1] = upgradeStats[enemyUpgrade1];
-
-        attackHandler.Stats[enemyUpgrade2] = upgradeStats[enemyUpgrade2];
-
-
-
+        attackHandler.Stats[playerUpgrade1] += upgradeStats[playerUpgrade1];
+        attackHandler.Stats[playerUpgrade2] += upgradeStats[playerUpgrade2];
+        attackHandler.Stats[enemyUpgrade1] += upgradeStats[enemyUpgrade1];
+        attackHandler.Stats[enemyUpgrade2] += upgradeStats[enemyUpgrade2];
 
     }
 
