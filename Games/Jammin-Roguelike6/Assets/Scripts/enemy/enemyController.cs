@@ -8,7 +8,7 @@ public class enemyController : MonoBehaviour
 {
     //movement
     public NavMeshAgent navMeshAgent;
-    public int speed;
+    public int speed = 3;
     public float viewDistance;
 
     Animator animator;
