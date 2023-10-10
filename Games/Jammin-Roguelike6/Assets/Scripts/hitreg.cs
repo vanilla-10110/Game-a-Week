@@ -38,5 +38,10 @@ public class HitReg : MonoBehaviour
         }
         if (collision.collider.tag == "enemyWeapon")
             Debug.Log("what the fuk is wrong with you, dont get hit");
+
+
+
+        }
+            
     }
 }
