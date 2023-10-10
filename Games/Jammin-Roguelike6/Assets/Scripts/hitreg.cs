@@ -24,7 +24,7 @@ public class HitReg : MonoBehaviour
             int damage = Mathf.RoundToInt(attackHandler.Stats[2]);
             if (attackHandler.Stats[3] > Random.Range(0, 11))
             {
-                damage *= 2;//critical damage
+                damage *= 2;//critical damage   BUT IT DONT FUCKEN WORK
                 Debug.LogWarning("CRIT");
             }
              
