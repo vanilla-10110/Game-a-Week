@@ -6016,7 +6016,7 @@ MonoBehaviour:
   speed: 4
   viewDistance: 20
   health: 100
-  meleeRange: 2
+  meleeRange: 1.5
 --- !u!195 &7159370492910905767
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6031,7 +6031,7 @@ NavMeshAgent:
   m_Acceleration: 200
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
