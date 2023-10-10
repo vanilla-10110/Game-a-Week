@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - spell
   - enemyWeapon
+  - enemy
   layers:
   - Default
   - TransparentFX

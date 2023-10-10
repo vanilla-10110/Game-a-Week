@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float playerHeight;
     public LayerMask Ground;
-    bool isGrounded;
+    public bool isGrounded;
 
     public Transform orientation;
 

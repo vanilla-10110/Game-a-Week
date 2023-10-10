@@ -16,7 +16,6 @@ public class enemyController : MonoBehaviour
     Transform player;
 
     //combat
-    public int health;
     public float meleeRange;
 
 
@@ -81,10 +80,7 @@ public class enemyController : MonoBehaviour
 
 
 
-        if (health == 0)
-        {
-            Die();
-        }
+       
     }
     void MeleeAttack()
     {
@@ -98,10 +94,6 @@ public class enemyController : MonoBehaviour
         
 
     }
-    void Die()
-    {
-
-    }
- 
+   
 }
 //wait until player is in visible range then move toward player.////////////// if player is in combat range then attack player.
