@@ -28,7 +28,15 @@ public class HitReg : MonoBehaviour
                 // RAGDOLL ANIMATION
             }
         }
-        if (collision.collider.tag == "enemySword")
+        if (collision.collider.CompareTag("enemySword"))
+        {
+            
+            
             Debug.Log("what the fuk is wrong with you, dont get hit");
+
+
+
+        }
+            
     }
 }
