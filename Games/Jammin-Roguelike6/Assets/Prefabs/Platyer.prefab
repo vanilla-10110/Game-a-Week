@@ -813,6 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 4577667324472210052}
+  isAttacking: 0
   Stats:
   - 5
   - 1
@@ -1494,26 +1495,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -48.895
-      objectReference: {fileID: 0}
-    - target: {fileID: 9108063977943002836, guid: aef8cf02538e0144ba9e4a560e48d386,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 69.2465
-      objectReference: {fileID: 0}
-    - target: {fileID: 9108063977943002836, guid: aef8cf02538e0144ba9e4a560e48d386,
-        type: 3}
-      propertyPath: m_Center.x
-      value: -0.000043924898
-      objectReference: {fileID: 0}
-    - target: {fileID: 9108063977943002836, guid: aef8cf02538e0144ba9e4a560e48d386,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 24.694113
-      objectReference: {fileID: 0}
-    - target: {fileID: 9108063977943002836, guid: aef8cf02538e0144ba9e4a560e48d386,
-        type: 3}
-      propertyPath: m_Center.z
-      value: -0.000029150207
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

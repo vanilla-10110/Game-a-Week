@@ -8,7 +8,7 @@ TagManager:
   - sword
   - FxTemporaire
   - spell
-  - enemy
+  - enemyWeapon
   layers:
   - Default
   - TransparentFX
