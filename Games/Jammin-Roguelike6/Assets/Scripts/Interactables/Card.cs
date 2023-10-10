@@ -25,12 +25,12 @@ public class Card : Interactable
     {
         1f,
         0.3f,
-        15f,
+        5f,
         10f,
-        5f,
-        5f,
-        5f,
-        5f
+        //5f,
+        //5f,
+        //5f,
+        //5f
     };
 
     private string[] upgradeStatNames =
@@ -39,10 +39,10 @@ public class Card : Interactable
         "Attack Speed",
         "Attack Damage",
         "Critical Strike Chance",
-        "Fire Damage",
-        "Shock Damage",
-        "Acid Damage",
-        "Void Damage"
+        //"Fire Damage",
+        //"Shock Damage",
+        //"Acid Damage",
+        //"Void Damage"
     };
     int playerUpgrade1;
     int playerUpgrade2;

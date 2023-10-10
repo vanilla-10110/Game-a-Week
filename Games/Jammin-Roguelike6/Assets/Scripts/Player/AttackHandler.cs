@@ -17,12 +17,12 @@ public class AttackHandler : MonoBehaviour
     {
         5f,
         1f,
-        30f,
+        10f,
         0f,
-        0f,
-        0f,
-        0f,
-        0f
+        //0f,
+        //0f,
+        //0f,
+        //0f
     };
 
 

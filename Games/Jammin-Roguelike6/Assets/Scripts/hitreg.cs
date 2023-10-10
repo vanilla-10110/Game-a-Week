@@ -7,6 +7,7 @@ public class HitReg : MonoBehaviour
 {
 
     AttackHandler attackHandler;
+    //EnemyAttack enemyAttack;
 
     public int enemyHealth = 100;
     public int health = 100;
@@ -20,7 +21,14 @@ public class HitReg : MonoBehaviour
         //compare tag better lol
         if ((collision.collider.CompareTag("sword") && attackHandler.isAttacking) || collision.collider.CompareTag("spell"))
         {
-            enemyHealth -= 10;
+            int damage = Mathf.RoundToInt(attackHandler.Stats[2]);
+            if (attackHandler.Stats[3] > Random.Range(0, 11))
+            {
+                damage *= 2;//critical damage
+                Debug.LogWarning("CRIT");
+            }
+             
+            enemyHealth -= Mathf.RoundToInt(attackHandler.Stats[2]);
             Debug.LogAssertion(enemyHealth);
             
             if (enemyHealth <= 0)
@@ -28,7 +36,7 @@ public class HitReg : MonoBehaviour
                 // RAGDOLL ANIMATION
             }
         }
-        if (collision.collider.CompareTag("enemySword"))
+        if (collision.collider.CompareTag("enemyWeapon"))
         {
             
             
