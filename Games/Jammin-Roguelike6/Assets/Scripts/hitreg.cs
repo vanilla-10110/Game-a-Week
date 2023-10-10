@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hitreg : MonoBehaviour
+public class HitReg : MonoBehaviour
 {
 
     AttackHandler attackHandler;
+
+    public int enemyHealth = 100;
+    public int health = 100;
 
     private void Awake()
     {
@@ -16,7 +19,15 @@ public class hitreg : MonoBehaviour
     {
         //compare tag better lol
         if ((collision.collider.CompareTag("sword") && attackHandler.isAttacking) || collision.collider.CompareTag("spell"))
-            Debug.LogWarning("Hit!");
+        {
+            enemyHealth -= 10;
+            Debug.LogAssertion(enemyHealth);
+            
+            if (enemyHealth <= 0)
+            {
+                // RAGDOLL ANIMATION
+            }
+        }
         if (collision.collider.tag == "enemySword")
             Debug.Log("what the fuk is wrong with you, dont get hit");
     }

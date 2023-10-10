@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,8 +7,10 @@ public class FireballScript : MonoBehaviour
 {
     public GameObject explosion;
 
+    HitReg hitReg;
     public float radius = 5.0F;
     public float power = 10.0F;
+    public float explodeDamage = 10;
     public void Detonate()
     {
         //ParticleSystem explosionGO = Instantiate(explosion, transform.position, transform.rotation);
@@ -26,6 +29,13 @@ public class FireballScript : MonoBehaviour
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
                 rb.AddExplosionForce(power, explosionPos, radius, 0F, ForceMode.Impulse);
+            if (hit.CompareTag("enemy"))
+            {
+                 if (GameObject.Find("skeleton") != null) hitReg = GameObject.Find("skeleton").GetComponent<HitReg>();
+
+                 hitReg.enemyHealth -= Mathf.RoundToInt(explodeDamage);
+                 Debug.LogAssertion(hitReg.enemyHealth);
+            }
         }
         //GetComponent<Collider>().enabled = false;
         Destroy(explosion, 2f);

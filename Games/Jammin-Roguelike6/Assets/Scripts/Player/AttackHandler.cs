@@ -69,14 +69,18 @@ public class AttackHandler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        AnimatorStateInfo currentState = GetActiveWeaponAnimator().GetCurrentAnimatorStateInfo(0);
+        //while (currentState.IsName("swordIdle1") || currentState.IsName("swordIdle2") || currentState.IsName("swordIdle3") || currentState.IsName("swordIdle4"))
+        //{
+        //    isAttacking = false;
+        //}
+            if (Input.GetMouseButton(0))
         {
             Attack();
         }
-        AnimatorStateInfo currentState = GetActiveWeaponAnimator().GetCurrentAnimatorStateInfo(0);
+        
 
 
-        //Debug.Log(isAttacking);
         int previousWeapon = selectedWeapon;
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)

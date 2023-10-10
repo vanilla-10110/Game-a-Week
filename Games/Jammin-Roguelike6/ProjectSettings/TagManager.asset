@@ -7,6 +7,8 @@ TagManager:
   - CinemachineTarget
   - sword
   - FxTemporaire
+  - spell
+  - enemy
   layers:
   - Default
   - TransparentFX

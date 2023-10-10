@@ -9621,7 +9621,7 @@ GameObject:
   - component: {fileID: 5782208433068520000}
   m_Layer: 6
   m_Name: fireball
-  m_TagString: Untagged
+  m_TagString: spell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9706,6 +9706,7 @@ MonoBehaviour:
   explosion: {fileID: 3289161515023150484}
   radius: 5
   power: 10
+  explodeDamage: 10
 --- !u!108 &3442485382244205568
 Light:
   m_ObjectHideFlags: 0
