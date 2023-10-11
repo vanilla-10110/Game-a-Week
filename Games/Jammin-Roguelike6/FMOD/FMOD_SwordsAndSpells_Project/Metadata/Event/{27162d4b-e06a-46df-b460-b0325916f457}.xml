@@ -5,7 +5,7 @@
 			<value>SKELETON_HIT</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{7705ccc5-0005-4ec3-ac0b-a2b96cb660d4}</destination>
@@ -53,6 +53,10 @@
 		</relationship>
 	</object>
 	<object class="MixerInput" id="{eb458d09-0335-4102-a2e3-e7b758791288}">
+		<relationship name="masters">
+			<destination>{86d3e70f-1f38-40e8-9faa-cc169ddfd393}</destination>
+			<destination>{29e01831-1425-47f1-8869-113edc577065}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{96fd9a11-3c50-4327-83a7-24efd831b24d}</destination>
 		</relationship>
@@ -145,6 +149,7 @@
 	<object class="MixerBusEffectChain" id="{363d4796-2523-4de8-8420-c56e64b6679c}">
 		<relationship name="effects">
 			<destination>{d4614d3a-7e13-4040-8278-70f21e57a122}</destination>
+			<destination>{8106de69-1d4a-4676-a0e1-5dbd47ac639b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d79cd4b9-b4a2-416e-8d64-4f09f4bfc522}" />
@@ -172,6 +177,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{7cfb0fae-c8d0-4364-8bc3-cb39c035c73e}" />
 	<object class="MixerBusFader" id="{d4614d3a-7e13-4040-8278-70f21e57a122}" />
+	<object class="SpatialiserEffect" id="{8106de69-1d4a-4676-a0e1-5dbd47ac639b}" />
 	<object class="SingleSound" id="{f55b97d5-ac9a-4cff-8bda-72548419727c}">
 		<relationship name="audioFile">
 			<destination>{4b3db42d-538e-4cd7-aa3a-f72d93b8986c}</destination>
