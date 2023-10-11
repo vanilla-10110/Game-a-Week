@@ -30,19 +30,8 @@ public class HitReg : MonoBehaviour
              
             enemyHealth -= Mathf.RoundToInt(attackHandler.Stats[2]);
             Debug.LogAssertion(enemyHealth);
-            
-            if (enemyHealth <= 0)
-            {
-                
-                
-                
-                Debug.Log(ragdoll);
 
-                ragdoll.transform.position = gameObject.transform.position;
-                ragdoll.transform.rotation = gameObject.transform.rotation;
-                ragdoll.SetActive(true);
-                gameObject.SetActive(false);
-            }
+            DieQuestionMark();
         }
         if (collision.collider.CompareTag("enemyWeapon"))
         {
@@ -54,5 +43,17 @@ public class HitReg : MonoBehaviour
 
         }
             
+    }
+
+    public void DieQuestionMark()
+    {
+        if (enemyHealth <= 0)
+        {
+            Debug.Log(ragdoll);
+            ragdoll.transform.position = gameObject.transform.position;
+            ragdoll.transform.rotation = gameObject.transform.rotation;
+            ragdoll.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -4802,6 +4802,7 @@ GameObject:
   - component: {fileID: 3414025922098277958}
   - component: {fileID: 3415139095509035950}
   - component: {fileID: 2941316839132205770}
+  - component: {fileID: 7360023362957722014}
   m_Layer: 0
   m_Name: Explosion01_HighPerformance
   m_TagString: Untagged
@@ -9605,6 +9606,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 3
   power: 10
+--- !u!114 &7360023362957722014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289161515023150484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -223528852
+      Data2: 1161341300
+      Data3: -1633263688
+      Data4: -666783116
+    Path: event:/ENVIRONMENT/FB_IMPACT
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5313012063720905964
 GameObject:
   m_ObjectHideFlags: 0
@@ -9814,8 +9846,8 @@ MonoBehaviour:
       Data4: 929753765
     Path: event:/ENVIRONMENT/FB
   Event: 
-  PlayEvent: 0
-  StopEvent: 0
+  PlayEvent: 1
+  StopEvent: 7
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -9908,7 +9940,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7022468186907151638}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e0905d6e03442d4ca47e9781402a3af, type: 3}
   m_Name: 
