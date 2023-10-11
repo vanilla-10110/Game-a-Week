@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HitReg : MonoBehaviour
 {
+    enemyDeathCount chestManager;
 
     AttackHandler attackHandler;
     //EnemyAttack enemyAttack;
@@ -15,6 +16,7 @@ public class HitReg : MonoBehaviour
     private void Awake()
     {
         attackHandler = GameObject.Find("Platyer").GetComponent<AttackHandler>();
+        chestManager = GameObject.Find("chestManager").GetComponent<enemyDeathCount>();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -33,10 +35,10 @@ public class HitReg : MonoBehaviour
             
             if (enemyHealth <= 0)
             {
+                chestManager.deadCount++;
+
                 
-                
-                
-                Debug.Log(ragdoll);
+                Debug.Log(chestManager.deadCount);
 
                 ragdoll.transform.position = gameObject.transform.position;
                 ragdoll.transform.rotation = gameObject.transform.rotation;
