@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class HitReg : MonoBehaviour
 {
+    enemyDeathCount chestManager;
 
     AttackHandler attackHandler;
     //EnemyAttack enemyAttack;
@@ -15,6 +16,7 @@ public class HitReg : MonoBehaviour
     private void Awake()
     {
         attackHandler = GameObject.Find("Platyer").GetComponent<AttackHandler>();
+        chestManager = GameObject.Find("chestManager").GetComponent<enemyDeathCount>();
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -30,6 +32,13 @@ public class HitReg : MonoBehaviour
              
             enemyHealth -= Mathf.RoundToInt(attackHandler.Stats[2]);
             Debug.LogAssertion(enemyHealth);
+            
+            if (enemyHealth <= 0)
+            {
+                chestManager.deadCount++;
+
+                
+                Debug.Log(chestManager.deadCount);
 
             DieQuestionMark();
         }

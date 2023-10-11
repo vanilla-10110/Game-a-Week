@@ -36,7 +36,7 @@ public class Chest : Interactable
         animator.Play("chestOpen");
 
 
-        GameObject cardClone = Instantiate(card, spawnPos.transform.position, Quaternion.identity);
+        GameObject cardClone = Instantiate(card, spawnPos.transform.position, Quaternion.identity, gameObject.transform);
         Animator cardAnim = cardClone.GetComponent<Animator>();
         card.SetActive(true);
         cardAnim.Play("cardUppies");
