@@ -40,11 +40,7 @@ public class HitReg : MonoBehaviour
                 
                 Debug.Log(chestManager.deadCount);
 
-                ragdoll.transform.position = gameObject.transform.position;
-                ragdoll.transform.rotation = gameObject.transform.rotation;
-                ragdoll.SetActive(true);
-                gameObject.SetActive(false);
-            }
+            DieQuestionMark();
         }
         if (collision.collider.CompareTag("enemyWeapon"))
         {
@@ -56,5 +52,17 @@ public class HitReg : MonoBehaviour
 
         }
             
+    }
+
+    public void DieQuestionMark()
+    {
+        if (enemyHealth <= 0)
+        {
+            Debug.Log(ragdoll);
+            ragdoll.transform.position = gameObject.transform.position;
+            ragdoll.transform.rotation = gameObject.transform.rotation;
+            ragdoll.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -11,6 +11,15 @@ public class FireballScript : MonoBehaviour
     public float radius = 5.0F;
     public float power = 10.0F;
     public float explodeDamage = 10;
+
+    public FMOD.Studio.EventInstance instance;
+
+    private void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/ENVIRONMENT/FB");
+        instance.start();
+
+    }
     public void Detonate()
     {
         //ParticleSystem explosionGO = Instantiate(explosion, transform.position, transform.rotation);
@@ -35,10 +44,16 @@ public class FireballScript : MonoBehaviour
 
                  hitReg.enemyHealth -= Mathf.RoundToInt(explodeDamage);
                  Debug.LogAssertion(hitReg.enemyHealth);
+                 hitReg.DieQuestionMark();
             }
         }
         //GetComponent<Collider>().enabled = false;
         Destroy(explosion, 2f);
+
+        //sfx
+        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        instance.release();
+
 
 
         explosion.transform.parent = null;
