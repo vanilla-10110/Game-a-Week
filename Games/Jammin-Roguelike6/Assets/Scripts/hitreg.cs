@@ -29,18 +29,14 @@ public class HitReg : MonoBehaviour
                 damage *= 2;//critical damage   BUT IT DONT FUCKEN WORK
                 Debug.LogWarning("CRIT");
             }
-             
+
             enemyHealth -= Mathf.RoundToInt(attackHandler.Stats[2]);
             Debug.LogAssertion(enemyHealth);
-            
+
             if (enemyHealth <= 0)
             {
-                chestManager.deadCount++;
-
-                
-                Debug.Log(chestManager.deadCount);
-
-            DieQuestionMark();
+                DieQuestionMark();
+            }
         }
         if (collision.collider.CompareTag("enemyWeapon"))
         {
@@ -58,11 +54,13 @@ public class HitReg : MonoBehaviour
     {
         if (enemyHealth <= 0)
         {
+            chestManager.deadCount++;
             Debug.Log(ragdoll);
             ragdoll.transform.position = gameObject.transform.position;
             ragdoll.transform.rotation = gameObject.transform.rotation;
             ragdoll.SetActive(true);
             gameObject.SetActive(false);
+
         }
     }
 }

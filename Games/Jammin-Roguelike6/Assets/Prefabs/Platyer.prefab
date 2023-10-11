@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 5836813933849673592}
   m_Layer: 12
   m_Name: staff
-  m_TagString: Untagged
+  m_TagString: staff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

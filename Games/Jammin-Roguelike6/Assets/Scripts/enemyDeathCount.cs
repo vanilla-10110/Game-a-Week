@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using TMPro;
 
 public class enemyDeathCount : MonoBehaviour
 {
@@ -9,11 +9,14 @@ public class enemyDeathCount : MonoBehaviour
     public GameObject chest;
     GameObject player;
     Vector3 chestSpawn;
+    TextMeshProUGUI killCount;
+
 
 
     public void Awake()
     {
-        player = GameObject.Find("Capsule");
+        player = GameObject.Find("Platyer");
+        killCount = GameObject.Find("killCount").GetComponent<TextMeshProUGUI>();
     }
 
     public void Update()
@@ -55,7 +58,7 @@ public class enemyDeathCount : MonoBehaviour
 
     void IncreaseCount(int number)
     {
-
+        killCount.text = "Kills: " + number.ToString();
     }
 
 }
