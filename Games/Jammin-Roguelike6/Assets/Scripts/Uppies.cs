@@ -31,10 +31,14 @@ public class Uppies : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("sword") || collision.gameObject.CompareTag("staff"))
         {
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             player.transform.position = lastLocation;
+        }
+        else
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

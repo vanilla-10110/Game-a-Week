@@ -68,7 +68,7 @@ public class Card : Interactable
         Vector3 particlePos = gameObject.transform.position;
         ParticleSystem cardSmoke = Instantiate(collectPS, particlePos, gameObject.transform.rotation);
         cardSmoke.Play();
-        Destroy(cardSmoke, 5);
+        Destroy(cardSmoke, 5f);
         ChangeStats();
         Destroy(gameObject);
     }

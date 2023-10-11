@@ -50,6 +50,7 @@ public class FireballScript : MonoBehaviour
                 ParticleSystem.EmissionModule emission = fire.GetComponent<ParticleSystem>().emission;
                 emission.enabled = false;
                 fire.parent = null;
+                Destroy(fire.gameObject, 5f);
             }
         }
         

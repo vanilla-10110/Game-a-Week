@@ -134,6 +134,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4189517499815279616, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
+        type: 3}
+      propertyPath: m_Name
+      value: Capsule
+      objectReference: {fileID: 0}
     - target: {fileID: 4973470939741162957, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -152,17 +157,17 @@ PrefabInstance:
     - target: {fileID: 7893047672377247182, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7893047672377247182, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7893047672377247182, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7893047672377247182, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
         type: 3}

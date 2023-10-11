@@ -16,7 +16,7 @@ public class Chest : Interactable
     Animator animator;
     public GameObject card;
     public GameObject spawnPos;
-
+    bool cardActive;
 
     private void Awake()
     {
@@ -26,6 +26,7 @@ public class Chest : Interactable
 
     private void Start()
     {
+        Timer();
     }
 
     protected override void Interact()
@@ -37,6 +38,7 @@ public class Chest : Interactable
 
 
         GameObject cardClone = Instantiate(card, spawnPos.transform.position, Quaternion.identity, gameObject.transform);
+        cardActive = true;
         Animator cardAnim = cardClone.GetComponent<Animator>();
         card.SetActive(true);
         cardAnim.Play("cardUppies");
@@ -46,9 +48,18 @@ public class Chest : Interactable
     }
 
 
-
-
-
+    void Timer()
+    {
+        Invoke("Delete", 120f);
+    }
+    void Delete()
+    {
+        if(cardActive == true)
+        {
+            Destroy(card);
+        }
+        Destroy(gameObject);
+    }
 
 
 }
