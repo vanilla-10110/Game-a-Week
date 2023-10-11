@@ -65,7 +65,10 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{c9d37b2f-d52b-4b66-984c-a2351094b6a6}">
 		<property name="maxVoices">
-			<value>3</value>
+			<value>2</value>
+		</property>
+		<property name="voiceStealing">
+			<value>4</value>
 		</property>
 		<property name="dopplerEnabled">
 			<value>true</value>
@@ -147,7 +150,23 @@
 	</object>
 	<object class="MixerBusFader" id="{63959649-5c49-458a-89b9-4bd69a3859f6}" />
 	<object class="MixerBusFader" id="{8a7c32ae-0ea0-4c0e-8054-89a4fd145393}" />
-	<object class="SpatialiserEffect" id="{777d8ebe-3ddc-4470-b8e8-f2861ba83290}" />
+	<object class="SpatialiserEffect" id="{777d8ebe-3ddc-4470-b8e8-f2861ba83290}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+		<property name="minimumDistance">
+			<value>1.20000005</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>0.150000006</value>
+		</property>
+	</object>
 	<object class="RandomizerModulator" id="{0e3d1167-c60e-4561-a5b8-75462952a2b6}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>startOffset</value>
