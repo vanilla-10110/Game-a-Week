@@ -112,6 +112,12 @@ public class AttackHandler : MonoBehaviour
                 selectedWeapon--;
             
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) selectedWeapon = 0;
+        
+        
+        if (Input.GetKeyDown(KeyCode.Alpha2) && weaponHolder.transform.childCount >=2) selectedWeapon = 1;
+
+        
 
         if (previousWeapon != selectedWeapon)
             SwitchWeapon();

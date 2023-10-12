@@ -78,7 +78,7 @@ public class HitReg : MonoBehaviour
     }
     void PlayerTakeDamage()
     {
-        healthBar health = GameObject.Find("HealthBar").GetComponent<healthBar>();
+        HealthBar health = GameObject.Find("HealthBar").GetComponent<HealthBar>();
         health.TakeDamage(); 
     }
 }
