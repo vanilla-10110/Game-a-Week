@@ -2102,6 +2102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6c3ac862bb824c428f7ae1c60fee040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slider: {fileID: 4663961057741143323}
+  deathScreen: {fileID: 6654475894815709781}
+  UI: {fileID: 2314074178712878052}
+  deathCam: {fileID: 1873913846}
 --- !u!1 &4391307092148723761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2351262653883665521, guid: bcb543ab94065254f9685622d9e11a71,
