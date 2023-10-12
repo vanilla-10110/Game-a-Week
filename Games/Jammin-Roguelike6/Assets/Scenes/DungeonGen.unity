@@ -2088,6 +2088,7 @@ GameObject:
   - component: {fileID: 9175187508248775963}
   - component: {fileID: 5282150905487384910}
   - component: {fileID: 4815597559970599435}
+  - component: {fileID: 9175187508248775964}
   m_Layer: 11
   m_Name: Platyer
   m_TagString: Player
@@ -6940,6 +6941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponHolder: {fileID: 4577667325885201562}
   isAttacking: 0
+  skeleAttacking: 0
   Stats:
   - 5
   - 1
@@ -7210,6 +7212,21 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9175187508248775964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570711833371619955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f09888d3b5ffc8498d52f3bde3c1ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
+  health: 100
+  ragdoll: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

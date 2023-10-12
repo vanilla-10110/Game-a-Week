@@ -32,6 +32,7 @@ public class Chest : Interactable
     protected override void Interact()
     {
         base.Interact();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/ENVIRONMENT/CHEST_OPEN");
         gameObject.GetComponent<Collider>().enabled = false;
         Debug.Log("*opens*");
         animator.Play("chestOpen");

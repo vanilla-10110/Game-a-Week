@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -132,5 +133,21 @@ public class PlayerMovement : MonoBehaviour
         {
             //Debug.Log("wow");
         }
+
+
+        int i = 0;
+        Collider[] colliders = Physics.OverlapSphere(gameObject.transform.position, 30);
+        foreach (Collider thing in colliders)
+        {
+
+            if (thing.CompareTag("enemy"))
+            {
+                i++;
+                Debug.Log("chillers");
+            }
+        }
+        if (i > 0)  FMODUnity.RuntimeManager.PlayOneShot("event:/MUSIC/MUSIC_COMBAT_START");
+        else FMODUnity.RuntimeManager.PlayOneShot("event:/MUSIC/MUSIC_COMBAT_END");
+
     }
 }

@@ -10,19 +10,24 @@ public class enemyController : MonoBehaviour
     public NavMeshAgent navMeshAgent;
     public int speed = 3;
     public float viewDistance;
+    
 
     Animator animator;
 
-    Transform player;
+    GameObject player;
 
     //combat
     public float meleeRange;
-
+    private FMOD.Studio.EventInstance instanceFEET;
+    private FMOD.Studio.EventInstance instanceDEATH;
+    private FMOD.Studio.EventInstance instanceHIT;
+    private FMOD.Studio.EventInstance instanceCRIT;
+    private FMOD.Studio.EventInstance instanceSWING;
 
 
     private void Awake()
     {
-        player = GameObject.Find("Platyer").transform;
+        player = GameObject.Find("Platyer");
     }
 
 
@@ -31,20 +36,32 @@ public class enemyController : MonoBehaviour
     {
         navMeshAgent.isStopped = false;
         navMeshAgent.speed = speed;
-
+        
         animator = GetComponent<Animator>();
+        instanceFEET = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_FOOTSTEP");
+        instanceDEATH = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_DEATH");
+        instanceHIT = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_HIT");
+        instanceCRIT = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_HIT_CRIT");
+        instanceSWING = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_SWING");
     }
+
+    public void RUNBITCH()
+    {
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(instanceFEET, GetComponent<Transform>(), GetComponent<Rigidbody>());
+        instanceFEET.start();
+    }
+
 
     // Update is called once per frame
     void Update()
     {
         AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
 
-        if (Vector3.Distance(transform.position, player.position) <= viewDistance && !currentState.IsName("Attack"))
+        if (Vector3.Distance(transform.position, player.transform.position) <= viewDistance && !currentState.IsName("Attack"))
         {
-            transform.LookAt(player.position);
 
-
+            transform.LookAt(player.transform.position);
+            
             currentState = animator.GetCurrentAnimatorStateInfo(0);
             if (!currentState.IsName("Run"))
             {
@@ -54,7 +71,7 @@ public class enemyController : MonoBehaviour
 
 
 
-            if (Vector3.Distance(transform.position, player.position) <= meleeRange)
+            if (Vector3.Distance(transform.position, player.transform.position) <= meleeRange)
             {
                 navMeshAgent.destination = transform.position;
                 MeleeAttack();
@@ -64,7 +81,7 @@ public class enemyController : MonoBehaviour
                 
 
 
-                navMeshAgent.destination = player.position;
+                navMeshAgent.destination = player.transform.position;
 
             }
             
@@ -82,12 +99,16 @@ public class enemyController : MonoBehaviour
 
        
     }
+    
     void MeleeAttack()
     {
         
         AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
         if (!currentState.IsName("Attack"))
         {
+            player.GetComponent<AttackHandler>().skeleAttacking = true;
+            FMODUnity.RuntimeManager.AttachInstanceToGameObject(instanceSWING, GetComponent<Transform>(), GetComponent<Rigidbody>());
+            instanceSWING.start();
             animator.Play("Attack");
         }
        

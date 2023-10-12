@@ -16,8 +16,8 @@ public class FireballScript : MonoBehaviour
 
     private void Start()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/ENVIRONMENT/FB");
-        instance.start();
+        //instance = FMODUnity.RuntimeManager.CreateInstance("event:/ENVIRONMENT/FB");
+        //instance.start();
 
     }
     public void Detonate()
@@ -51,8 +51,8 @@ public class FireballScript : MonoBehaviour
         Destroy(explosion, 2f);
 
         //sfx
-        instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        instance.release();
+        //instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //instance.release();
 
 
 

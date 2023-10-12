@@ -6,7 +6,7 @@ public class AttackHandler : MonoBehaviour
     public GameObject weaponHolder;
     int selectedWeapon = 0;
     public bool isAttacking;
-
+    public bool skeleAttacking;
 
     [Header("Stats")]
 

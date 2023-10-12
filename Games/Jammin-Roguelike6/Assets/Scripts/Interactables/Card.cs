@@ -66,6 +66,7 @@ public class Card : Interactable
         base.Interact();
         Debug.Log("You got it!");
         Vector3 particlePos = gameObject.transform.position;
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PICKUP/PU_CARD");
         ParticleSystem cardSmoke = Instantiate(collectPS, particlePos, gameObject.transform.rotation);
         cardSmoke.Play();
         Destroy(cardSmoke, 5f);
@@ -75,10 +76,10 @@ public class Card : Interactable
 
     void SetCardStatsAndText()
     {
-        playerUpgrade1 = Random.Range(0, 8);
-        while ( playerUpgrade1 == playerUpgrade2) playerUpgrade2 = Random.Range(0, 8);
-        enemyUpgrade1 = Random.Range(0, 8);
-        while (enemyUpgrade1 == enemyUpgrade2) enemyUpgrade2 = Random.Range(0, 8);
+        playerUpgrade1 = Random.Range(0, 3);
+        while ( playerUpgrade1 == playerUpgrade2) playerUpgrade2 = Random.Range(0, 3);
+        enemyUpgrade1 = Random.Range(0, 3);
+        while (enemyUpgrade1 == enemyUpgrade2) enemyUpgrade2 = Random.Range(0, 3);
 
         playerDesc.text = "+ " + upgradeStats[playerUpgrade1] + " " + upgradeStatNames[playerUpgrade1] + "\n+ " + upgradeStats[playerUpgrade2] + " " + upgradeStatNames[playerUpgrade2];
         enemyDesc.text = "+ " + upgradeStats[enemyUpgrade1] + " " + upgradeStatNames[enemyUpgrade1] + "\n+ " + upgradeStats[enemyUpgrade2] + " " + upgradeStatNames[enemyUpgrade2];
