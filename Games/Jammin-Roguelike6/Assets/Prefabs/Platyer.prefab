@@ -1038,7 +1038,6 @@ GameObject:
   - component: {fileID: 9175187508715946757}
   - component: {fileID: 5282150905960853328}
   - component: {fileID: 4815597558155025429}
-  - component: {fileID: 1579062439958783186}
   m_Layer: 11
   m_Name: Platyer
   m_TagString: Player
@@ -1288,19 +1287,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!114 &1579062439958783186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6570711831831821421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!1 &6728980649265271797
 GameObject:
   m_ObjectHideFlags: 0

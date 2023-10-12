@@ -520,6 +520,8 @@ GameObject:
   - component: {fileID: 1318447405}
   - component: {fileID: 1318447404}
   - component: {fileID: 1318447406}
+  - component: {fileID: 1318447408}
+  - component: {fileID: 1318447407}
   m_Layer: 0
   m_Name: Dungeon Generator
   m_TagString: Untagged
@@ -668,6 +670,68 @@ MonoBehaviour:
   objForDisEffect:
   - {fileID: 0}
   disEffect: {fileID: 0}
+--- !u!114 &1318447407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318447403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1723372214
+      Data2: 1249391253
+      Data3: -1184721746
+      Data4: 154130580
+    Path: event:/MUSIC/MUSIC_DUNGEON
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1318447408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318447403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 351759515
+      Data2: 1306297281
+      Data3: 970416262
+      Data4: 1000401760
+    Path: event:/ENVIRONMENT/AMB_DUNGEON
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &746218838964167986
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,19 +986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89e14d2661776014e8e52cf9e0d6f5f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1579062439889021644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6570711833371619955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!23 &1626368922879566169
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1320,14 +1371,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!81 &3663825171474328774
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3745164391042581062}
-  m_Enabled: 1
 --- !u!1 &3745164391042581062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,10 +1381,10 @@ GameObject:
   m_Component:
   - component: {fileID: 950668820165684790}
   - component: {fileID: 3776833059464981808}
-  - component: {fileID: 3663825171474328774}
   - component: {fileID: 958798355881741523}
   - component: {fileID: 2457935023816275865}
   - component: {fileID: 6457944415724703599}
+  - component: {fileID: 6457944415724703600}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -2001,6 +2044,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6457944415724703600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3745164391042581062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!4 &6519264419498957145
 Transform:
   m_ObjectHideFlags: 0
@@ -2032,7 +2088,6 @@ GameObject:
   - component: {fileID: 9175187508248775963}
   - component: {fileID: 5282150905487384910}
   - component: {fileID: 4815597559970599435}
-  - component: {fileID: 1579062439889021644}
   m_Layer: 11
   m_Name: Platyer
   m_TagString: Player
