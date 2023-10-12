@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Animations;
 
 public class enemyController : MonoBehaviour
 {
@@ -19,10 +16,21 @@ public class enemyController : MonoBehaviour
     //combat
     public float meleeRange;
     private FMOD.Studio.EventInstance instanceFEET;
-    private FMOD.Studio.EventInstance instanceDEATH;
-    private FMOD.Studio.EventInstance instanceHIT;
-    private FMOD.Studio.EventInstance instanceCRIT;
     private FMOD.Studio.EventInstance instanceSWING;
+
+
+    public float[] Stats =
+    {
+        5f,
+        1f,
+        10f,
+        0f,
+        //0f,
+        //0f,
+        //0f,
+        //0f
+    };
+
 
 
     private void Awake()
@@ -39,9 +47,7 @@ public class enemyController : MonoBehaviour
         
         animator = GetComponent<Animator>();
         instanceFEET = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_FOOTSTEP");
-        instanceDEATH = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_DEATH");
-        instanceHIT = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_HIT");
-        instanceCRIT = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_HIT_CRIT");
+        
         instanceSWING = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_SWING");
     }
 

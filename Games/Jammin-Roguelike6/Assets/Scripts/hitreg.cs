@@ -35,7 +35,7 @@ public class HitReg : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //compare tag better lol
-        if ((collision.collider.CompareTag("sword") && attackHandler.isAttacking) || collision.collider.CompareTag("spell"))
+        if ((collision.collider.CompareTag("sword") && attackHandler.isAttacking && gameObject.name == "skeleton") || (collision.collider.CompareTag("spell") && gameObject.name == "skeleton"))
         {
             int damage = Mathf.RoundToInt(attackHandler.Stats[2]);
             if (Random.value < attackHandler.Stats[3])

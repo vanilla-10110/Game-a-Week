@@ -360,6 +360,7 @@ MonoBehaviour:
   title: {fileID: 2197618391646455607}
   playerDesc: {fileID: 626047992352524732}
   enemyDesc: {fileID: 406373327074817398}
+  enemyPrefab: {fileID: 0}
 --- !u!95 &133196380130566184
 Animator:
   serializedVersion: 5

@@ -2,11 +2,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
-using UnityEngine.InputSystem;
-using UnityEngine.Rendering;
 using TMPro;
-using Unity.VisualScripting;
 
 public class Card : Interactable
 {
@@ -18,7 +14,7 @@ public class Card : Interactable
     GameObject player;
     AttackHandler attackHandler;
     PlayerMovement playerMovement;
-
+    enemyController enemyController;
 
     [Header("Upgrades")]
     private float[] upgradeStats =
@@ -76,10 +72,10 @@ public class Card : Interactable
 
     void SetCardStatsAndText()
     {
-        playerUpgrade1 = Random.Range(0, 3);
-        while ( playerUpgrade1 == playerUpgrade2) playerUpgrade2 = Random.Range(0, 3);
-        enemyUpgrade1 = Random.Range(0, 3);
-        while (enemyUpgrade1 == enemyUpgrade2) enemyUpgrade2 = Random.Range(0, 3);
+        playerUpgrade1 = Random.Range(0, 2);
+        /*while ( playerUpgrade1 == playerUpgrade2) */playerUpgrade2 = Random.Range(0, 2);
+        enemyUpgrade1 = Random.Range(0, 1);
+        /*while (enemyUpgrade1 == enemyUpgrade2)*/ enemyUpgrade2 = Random.Range(0, 1);
 
         playerDesc.text = "+ " + upgradeStats[playerUpgrade1] + " " + upgradeStatNames[playerUpgrade1] + "\n+ " + upgradeStats[playerUpgrade2] + " " + upgradeStatNames[playerUpgrade2];
         enemyDesc.text = "+ " + upgradeStats[enemyUpgrade1] + " " + upgradeStatNames[enemyUpgrade1] + "\n+ " + upgradeStats[enemyUpgrade2] + " " + upgradeStatNames[enemyUpgrade2];
@@ -104,5 +100,8 @@ public class Card : Interactable
         
         playerMovement.moveSpeed = attackHandler.Stats[0];
 
+        enemyController.Stats[enemyUpgrade1] += upgradeStats[enemyUpgrade1];
+
+        Debug.Log(enemyController.Stats[enemyUpgrade1]);
     }
 }
