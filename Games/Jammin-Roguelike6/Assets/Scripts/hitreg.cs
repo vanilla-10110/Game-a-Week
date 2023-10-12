@@ -55,7 +55,7 @@ public class HitReg : MonoBehaviour
         if (collision.collider.CompareTag("enemyWeapon") && player.GetComponent<AttackHandler>().skeleAttacking && gameObject.name == "Platyer")
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/PC/PC_HIT_SLASH");
-            Debug.Log("what the fuk is wrong with you, dont get hit");
+            PlayerTakeDamage();
         }
             
     }
@@ -75,5 +75,10 @@ public class HitReg : MonoBehaviour
             gameObject.SetActive(false);
 
         }
+    }
+    void PlayerTakeDamage()
+    {
+        healthBar health = GameObject.Find("HealthBar").GetComponent<healthBar>();
+        health.TakeDamage(); 
     }
 }

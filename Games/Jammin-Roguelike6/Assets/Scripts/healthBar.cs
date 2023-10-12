@@ -6,13 +6,58 @@ using UnityEngine.UI;
 public class healthBar : MonoBehaviour
 {
     public Slider slider;
-    public void SetHealth(int health)
+    GameObject player;
+    public GameObject deathScreen;
+    public GameObject UI;
+    public GameObject deathCam;
+    private void Awake()
     {
-        slider.value = health;
+        slider.value = 100f;
+        player = GameObject.Find("Platyer");
     }
-    public void SetMaxHealth(int health)
+
+
+    /* public void SetHealth(int health)
+     {
+         slider.value = health;
+     }
+     public void SetMaxHealth(int health)
+     {
+         slider.maxValue = health;
+         slider.value = health;
+     }
+
+     */
+    private void Update()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        if (slider.value <= 0)
+        {
+            Die();
+        }
     }
+    public void TakeDamage()
+    {
+        Debug.Log("silly william");
+        slider.value -= 5f;
+    }
+
+    void Die()
+    {
+        UI.SetActive(false);
+        player.SetActive(false);
+        deathScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        deathCam.SetActive(true);
+
+        //put death sound in here and gameover sounds
+
+
+        
+        
+
+        
+    }
+
+
 }
