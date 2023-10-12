@@ -12,6 +12,7 @@ public class menuButtonScript : MonoBehaviour
 
     public void Commence()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("DungeonGen");
     }
 
