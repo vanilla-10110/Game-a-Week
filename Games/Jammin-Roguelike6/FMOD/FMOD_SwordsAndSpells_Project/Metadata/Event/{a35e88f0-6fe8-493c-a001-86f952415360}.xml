@@ -5,7 +5,7 @@
 			<value>PC_DEATH</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{a7d86a18-4f6f-4a81-ba01-a7451d943279}</destination>
@@ -87,8 +87,11 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{43bb7a9b-8c34-4ff5-9d82-33887c83bcb3}">
+		<property name="playbackMode">
+			<value>1</value>
+		</property>
 		<relationship name="sounds">
-			<destination>{0f5d8555-c49f-4afc-a5f9-3a917f05787f}</destination>
+			<destination>{b52540d9-ae95-4be0-b714-2a3ca9d5ead9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{227606c7-f629-4018-a0d4-34039eaa5943}">
@@ -103,12 +106,9 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{360d13bf-de02-43d9-a84e-0ea8e1b957fd}" />
-	<object class="SingleSound" id="{0f5d8555-c49f-4afc-a5f9-3a917f05787f}">
-		<property name="startOffset">
-			<value>26.5</value>
-		</property>
+	<object class="SingleSound" id="{b52540d9-ae95-4be0-b714-2a3ca9d5ead9}">
 		<relationship name="audioFile">
-			<destination>{0ce9f976-c614-4d7c-8915-f3c32cf74dc4}</destination>
+			<destination>{b9542b7c-9b0a-4ffe-b5a0-2fd2166d5961}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{6131f8a4-b33a-479f-b96c-d2e9a4850da7}" />

@@ -66,6 +66,10 @@
 		<relationship name="modules">
 			<destination>{ca39e76c-db60-4ee7-910c-4dfeba590933}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{e69da5a0-222f-4084-b143-e7ab6776847f}</destination>
+			<destination>{1e23e864-0e52-4fac-80ce-d71d0ebf3e7b}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{a155920c-6206-4382-ac7c-e9336e7a56df}">
 		<relationship name="effectChain">
@@ -80,7 +84,7 @@
 	</object>
 	<object class="SingleSound" id="{ca39e76c-db60-4ee7-910c-4dfeba590933}">
 		<property name="length">
-			<value>81.678253968253969</value>
+			<value>80.963855421686745</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{dda7764b-716d-491d-9a2d-887550589581}</destination>
@@ -92,6 +96,34 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{777e005f-c085-4717-810b-223809ade373}" />
+	<object class="LoopRegion" id="{e69da5a0-222f-4084-b143-e7ab6776847f}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="length">
+			<value>80.963855421686745</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{37397633-5b8b-45d3-9e31-903428e619b9}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{8c77ca51-bb15-41a6-8dd6-96ce52da7dbc}</destination>
+		</relationship>
+	</object>
+	<object class="TempoMarker" id="{1e23e864-0e52-4fac-80ce-d71d0ebf3e7b}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="tempo">
+			<value>83</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{37397633-5b8b-45d3-9e31-903428e619b9}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{8c77ca51-bb15-41a6-8dd6-96ce52da7dbc}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{982d2f80-322d-4019-9d51-906193d791e6}">
 		<relationship name="effects">
 			<destination>{6b1c3c82-82ed-41ec-9189-15abc84795aa}</destination>
