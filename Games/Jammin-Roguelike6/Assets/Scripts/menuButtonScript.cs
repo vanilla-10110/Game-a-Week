@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class menuButtonScript : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class menuButtonScript : MonoBehaviour
     public GameObject mainMenu;
     public GameObject volumeSettings;
 
+    public Slider musicVolumeSlider;
+    public Slider SFXVolumeSlider;
 
     public void Commence()
     {
@@ -51,14 +54,13 @@ public class menuButtonScript : MonoBehaviour
         settingsMenu.SetActive(false);
     }
 
-
     public void MusicVolume()
     {
-        //music slider
+        FMODUnity.RuntimeManager.GetBus("bank:/MUSIC").setVolume(musicVolumeSlider.value);
     }
     public void SFXVolume()
     {
-        //sfx slider
+        FMODUnity.RuntimeManager.GetBus("bank:/SFX").setVolume(SFXVolumeSlider.value);
     }
 
 

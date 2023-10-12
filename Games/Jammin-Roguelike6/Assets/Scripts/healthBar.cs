@@ -50,13 +50,13 @@ public class healthBar : MonoBehaviour
         Cursor.visible = true;
         deathCam.SetActive(true);
 
-        //put death sound in here and gameover sounds
+        FMODUnity.RuntimeManager.PlayOneShot("event:/MUSIC/MUSIC_STINGER_DEATH");
 
 
-        
-        
 
-        
+
+
+
     }
 
 
