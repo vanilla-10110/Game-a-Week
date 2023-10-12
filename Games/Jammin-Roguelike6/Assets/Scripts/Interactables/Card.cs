@@ -22,7 +22,7 @@ public class Card : Interactable
         1f,
         0.3f,
         5f,
-        10f,
+        15f,
         //5f,
         //5f,
         //5f,
@@ -34,7 +34,7 @@ public class Card : Interactable
         "Movement Speed", 
         "Attack Speed",
         "Attack Damage",
-        "Critical Strike Chance",
+        "Health",
         //"Fire Damage",
         //"Shock Damage",
         //"Acid Damage",
@@ -72,10 +72,13 @@ public class Card : Interactable
 
     void SetCardStatsAndText()
     {
-        playerUpgrade1 = Random.Range(0, 2);
-        /*while ( playerUpgrade1 == playerUpgrade2) */playerUpgrade2 = Random.Range(0, 2);
-        enemyUpgrade1 = Random.Range(0, 1);
-        /*while (enemyUpgrade1 == enemyUpgrade2)*/ enemyUpgrade2 = Random.Range(0, 1);
+        playerUpgrade1 = Random.Range(0, 3);
+        playerUpgrade2 = Random.Range(0, 3);
+        enemyUpgrade1 = Random.Range(0, 4);
+        while (enemyUpgrade1 == 2) enemyUpgrade1 = Random.Range(0, 4);
+        
+        enemyUpgrade2 = Random.Range(0, 4);
+        while (enemyUpgrade2 == 2) enemyUpgrade2 = Random.Range(0, 4);
 
         playerDesc.text = "+ " + upgradeStats[playerUpgrade1] + " " + upgradeStatNames[playerUpgrade1] + "\n+ " + upgradeStats[playerUpgrade2] + " " + upgradeStatNames[playerUpgrade2];
         enemyDesc.text = "+ " + upgradeStats[enemyUpgrade1] + " " + upgradeStatNames[enemyUpgrade1] + "\n+ " + upgradeStats[enemyUpgrade2] + " " + upgradeStatNames[enemyUpgrade2];

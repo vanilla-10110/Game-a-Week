@@ -56,11 +56,11 @@ public class menuButtonScript : MonoBehaviour
 
     public void MusicVolume()
     {
-        FMODUnity.RuntimeManager.GetBus("bank:/MUSIC").setVolume(musicVolumeSlider.value);
+        FMODUnity.RuntimeManager.GetBus("bus:/MUSIC").setVolume(musicVolumeSlider.value);
     }
     public void SFXVolume()
     {
-        FMODUnity.RuntimeManager.GetBus("bank:/SFX").setVolume(SFXVolumeSlider.value);
+        FMODUnity.RuntimeManager.GetBus("bus:/SFX").setVolume(SFXVolumeSlider.value);
     }
 
 

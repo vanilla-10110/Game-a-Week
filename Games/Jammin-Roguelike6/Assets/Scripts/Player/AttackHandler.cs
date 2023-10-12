@@ -136,6 +136,7 @@ public class AttackHandler : MonoBehaviour
             AnimatorStateInfo currentState = GetActiveWeaponAnimator().GetCurrentAnimatorStateInfo(0);
             if (currentState.IsName("staffIdle1"))
             {
+                GetActiveWeaponAnimator().speed = Stats[1];
                 GetActiveWeaponAnimator().Play($"staffAttack{Random.Range(1, 4)}");
             }           
         }
