@@ -266,7 +266,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4391307091678059053, guid: 91ef7bc73f5432f41a2aa2a97edddd28,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1609225937}
   m_SourcePrefab: {fileID: 100100000, guid: 91ef7bc73f5432f41a2aa2a97edddd28, type: 3}
 --- !u!1 &695132335
 GameObject:
@@ -675,6 +679,21 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 473070108}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1609225937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609225928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f09888d3b5ffc8498d52f3bde3c1ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
+  health: 100
+  ragdoll: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
