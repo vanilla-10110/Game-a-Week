@@ -7,7 +7,7 @@ public class menuButtonScript : MonoBehaviour
 {
     public GameObject settingsMenu;
     public GameObject mainMenu;
-  
+    public GameObject volumeSettings;
 
 
     public void Commence()
@@ -28,7 +28,7 @@ public class menuButtonScript : MonoBehaviour
     {
         mainMenu.SetActive(true);
         settingsMenu.SetActive(false);
-
+        volumeSettings.SetActive(false);
         IncreaseSound();
     }
 
@@ -44,6 +44,26 @@ public class menuButtonScript : MonoBehaviour
 
     }
 
+    
+    public void OpenVolumeSettings()
+    {
+        volumeSettings.SetActive(true);
+        settingsMenu.SetActive(false);
+    }
+
+
+    public void MusicVolume()
+    {
+        //music slider
+    }
+    public void SFXVolume()
+    {
+        //sfx slider
+    }
+
+
+
+
     void ReduceSound()
     {
         //decrease music volume here
@@ -52,5 +72,11 @@ public class menuButtonScript : MonoBehaviour
     {
         //increase music volume here
     }
+
+   
+
+
+
+
 
 }
