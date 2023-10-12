@@ -14,7 +14,7 @@ public class Card : Interactable
     GameObject player;
     AttackHandler attackHandler;
     PlayerMovement playerMovement;
-    enemyController enemyController;
+    public enemyController enemyController;
 
     [Header("Upgrades")]
     private float[] upgradeStats =
@@ -87,7 +87,7 @@ public class Card : Interactable
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T)) SetCardStatsAndText();
+        //if (Input.GetKeyDown(KeyCode.T)) SetCardStatsAndText();
     }
 
     void ChangeStats()
@@ -100,8 +100,9 @@ public class Card : Interactable
         
         playerMovement.moveSpeed = attackHandler.Stats[0];
 
-        enemyController.Stats[enemyUpgrade1] += upgradeStats[enemyUpgrade1];
-
-        Debug.Log(enemyController.Stats[enemyUpgrade1]);
+        attackHandler.enemStats[enemyUpgrade1] += upgradeStats[enemyUpgrade1];
+        attackHandler.enemStats[enemyUpgrade2] += upgradeStats[enemyUpgrade2];
+        
+       // Debug.Log(enemyController.Stats[enemyUpgrade1]);
     }
 }

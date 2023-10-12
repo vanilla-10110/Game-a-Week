@@ -25,20 +25,20 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: a4be220830e90ea4eb88b48b7fd376ce, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 0}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1580,45 +1580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platyer
       objectReference: {fileID: 0}
-    - target: {fileID: 3607647967855025514, guid: bcb543ab94065254f9685622d9e11a71,
+    - target: {fileID: 3194850673751154014, guid: bcb543ab94065254f9685622d9e11a71,
         type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5221804247605733650, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953681069415573967, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_Name
-      value: sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953681069415573967, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5953681069415573967, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_TagString
-      value: sword
-      objectReference: {fileID: 0}
-    - target: {fileID: 6688347909989173380, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7645784743058768807, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7739950221105457990, guid: bcb543ab94065254f9685622d9e11a71,
-        type: 3}
-      propertyPath: m_Layer
-      value: 12
+      propertyPath: m_ClearFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8413937612942780502, guid: bcb543ab94065254f9685622d9e11a71,
         type: 3}
@@ -2090,22 +2055,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4240016757374761558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746569321329841098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c3ac862bb824c428f7ae1c60fee040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 4663961057741143323}
-  deathScreen: {fileID: 6654475894815709781}
-  UI: {fileID: 2314074178712878052}
-  deathCam: {fileID: 1873913846}
 --- !u!1 &4391307092148723761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2351262653883665521, guid: bcb543ab94065254f9685622d9e11a71,
@@ -2984,7 +2933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4152988365556656497}
   - component: {fileID: 4663961057741143323}
-  - component: {fileID: 4240016757374761558}
+  - component: {fileID: 7746569321329841099}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -2992,6 +2941,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7746569321329841099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746569321329841098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c3ac862bb824c428f7ae1c60fee040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 4663961057741143323}
+  deathScreen: {fileID: 6654475894815709781}
+  UI: {fileID: 2314074178712878052}
+  deathCam: {fileID: 1873913846}
 --- !u!1 &7758044770274759685
 GameObject:
   m_ObjectHideFlags: 0

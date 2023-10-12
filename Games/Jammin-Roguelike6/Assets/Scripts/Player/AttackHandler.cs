@@ -25,6 +25,18 @@ public class AttackHandler : MonoBehaviour
         //0f
     };
 
+    public float[] enemStats =
+    {
+        3f,
+        1f,
+        5f,
+        0f,
+        //0f,
+        //0f,
+        //0f,
+        //0f
+    };
+
 
     void SwitchWeapon()
     {
@@ -100,6 +112,12 @@ public class AttackHandler : MonoBehaviour
                 selectedWeapon--;
             
         }
+        if (Input.GetKeyDown(KeyCode.Alpha1)) selectedWeapon = 0;
+        
+        
+        if (Input.GetKeyDown(KeyCode.Alpha2) && weaponHolder.transform.childCount >=2) selectedWeapon = 1;
+
+        
 
         if (previousWeapon != selectedWeapon)
             SwitchWeapon();

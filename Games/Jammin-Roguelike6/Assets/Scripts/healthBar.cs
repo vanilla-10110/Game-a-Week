@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class healthBar : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     public Slider slider;
     GameObject player;
@@ -17,17 +17,7 @@ public class healthBar : MonoBehaviour
     }
 
 
-    /* public void SetHealth(int health)
-     {
-         slider.value = health;
-     }
-     public void SetMaxHealth(int health)
-     {
-         slider.maxValue = health;
-         slider.value = health;
-     }
-
-     */
+    
     private void Update()
     {
         if (slider.value <= 0)

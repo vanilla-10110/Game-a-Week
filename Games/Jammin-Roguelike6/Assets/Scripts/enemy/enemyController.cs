@@ -19,17 +19,7 @@ public class enemyController : MonoBehaviour
     private FMOD.Studio.EventInstance instanceSWING;
 
 
-    public float[] Stats =
-    {
-        5f,
-        1f,
-        10f,
-        0f,
-        //0f,
-        //0f,
-        //0f,
-        //0f
-    };
+    
 
 
 
@@ -43,7 +33,7 @@ public class enemyController : MonoBehaviour
     void Start()
     {
         navMeshAgent.isStopped = false;
-        navMeshAgent.speed = speed;
+        
         
         animator = GetComponent<Animator>();
         instanceFEET = FMODUnity.RuntimeManager.CreateInstance("event:/SKELETON/SKELETON_FOOTSTEP");
@@ -61,6 +51,7 @@ public class enemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        navMeshAgent.speed = player.GetComponent<AttackHandler>().enemStats[0];
         AnimatorStateInfo currentState = animator.GetCurrentAnimatorStateInfo(0);
 
         if (Vector3.Distance(transform.position, player.transform.position) <= viewDistance && !currentState.IsName("Attack"))
@@ -115,6 +106,7 @@ public class enemyController : MonoBehaviour
             player.GetComponent<AttackHandler>().skeleAttacking = true;
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(instanceSWING, GetComponent<Transform>(), GetComponent<Rigidbody>());
             instanceSWING.start();
+            animator.speed = player.GetComponent<AttackHandler>().enemStats[1];
             animator.Play("Attack");
         }
        
