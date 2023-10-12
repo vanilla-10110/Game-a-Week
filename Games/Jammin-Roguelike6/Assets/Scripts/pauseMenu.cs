@@ -10,10 +10,18 @@ public class pauseMenu : MonoBehaviour
     
     public GameObject pauseMenuUI;
     public GameObject canvas;
-    
+    public GameObject deathCam;
+    public GameObject playerCam;
 
     private void Update()
     {
+
+        deathCam.transform.position = playerCam.transform.position;
+        deathCam.transform.rotation = playerCam.transform.rotation;
+
+
+
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (gameIsPaused)

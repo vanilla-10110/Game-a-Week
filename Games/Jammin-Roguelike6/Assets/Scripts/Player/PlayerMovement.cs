@@ -143,7 +143,7 @@ public class PlayerMovement : MonoBehaviour
             if (thing.CompareTag("enemy"))
             {
                 i++;
-                Debug.Log("chillers");
+                
             }
         }
         if (i > 0)  FMODUnity.RuntimeManager.PlayOneShot("event:/MUSIC/MUSIC_COMBAT_START");
