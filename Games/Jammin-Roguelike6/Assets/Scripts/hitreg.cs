@@ -46,7 +46,7 @@ public class HitReg : MonoBehaviour
             
 
             enemyHealth -= damage;
-            Debug.LogAssertion(enemyHealth);
+            
             FMODUnity.RuntimeManager.AttachInstanceToGameObject(instanceHIT, GetComponent<Transform>(), GetComponent<Rigidbody>());
             instanceHIT.start();
 

@@ -504,6 +504,7 @@ MonoBehaviour:
   - {fileID: 2055299094646073251, guid: 6de3745d611b88c42a8a08b6d33b836f, type: 3}
   - {fileID: 7918641300060978087, guid: 6b35239b5c7ed1a41866dd00e2e661cd, type: 3}
   - {fileID: 2055299094646073251, guid: 6de3745d611b88c42a8a08b6d33b836f, type: 3}
+  - {fileID: 4478348824598320348, guid: ce138e6ee24354749828fd95df96ebd4, type: 3}
   roofs:
   - {fileID: 4242690718932971660, guid: b3bf4d80ba56dc844ae3df7f7ce84155, type: 3}
   player: {fileID: 4391307092148723761}

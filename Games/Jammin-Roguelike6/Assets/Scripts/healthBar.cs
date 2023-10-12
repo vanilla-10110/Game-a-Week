@@ -37,7 +37,7 @@ public class healthBar : MonoBehaviour
     }
     public void TakeDamage()
     {
-        Debug.Log("silly william");
+       
         slider.value -= 5f;
     }
 
