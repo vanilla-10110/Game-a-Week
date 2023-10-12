@@ -99,6 +99,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{998f39ef-a1c9-4462-90b4-eae959bbf770}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{e30f4329-f1ad-49af-914b-123acf479aaf}</destination>
 		</relationship>
@@ -173,6 +176,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c9e15e3e-8098-4dfe-a22f-d71b3c8767d9}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Water Drips</value>
 		</property>
@@ -213,6 +219,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{1f06ac99-03ef-469a-a492-05001099fd08}">
+		<property name="volume">
+			<value>-5</value>
+		</property>
 		<property name="name">
 			<value>Chains</value>
 		</property>
