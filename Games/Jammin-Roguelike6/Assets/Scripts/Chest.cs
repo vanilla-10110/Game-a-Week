@@ -24,10 +24,7 @@ public class Chest : Interactable
         animator = gameObject.GetComponent<Animator>();
     }
 
-    private void Start()
-    {
-        Timer();
-    }
+    
 
     protected override void Interact()
     {
@@ -49,16 +46,13 @@ public class Chest : Interactable
     }
 
 
-    void Timer()
+    public void Timer()
     {
         Invoke("Delete", 120f);
     }
     void Delete()
     {
-        if(cardActive == true)
-        {
-            Destroy(card);
-        }
+        
         Destroy(gameObject);
     }
 
