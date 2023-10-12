@@ -10,13 +10,16 @@ public class enemyDeathCount : MonoBehaviour
     GameObject player;
     Vector3 chestSpawn;
     TextMeshProUGUI killCount;
-
+    int highScore;
+    TextMeshProUGUI highScoreCount;
 
 
     public void Awake()
     {
         player = GameObject.Find("Platyer");
         killCount = GameObject.Find("killCount").GetComponent<TextMeshProUGUI>();
+        highScore = PlayerPrefs.GetInt("highScore", 0);
+        highScoreCount = GameObject.Find("highScoreCount").GetComponent<TextMeshProUGUI>();
     }
 
     public void Update()
@@ -27,7 +30,7 @@ public class enemyDeathCount : MonoBehaviour
         {
             
             deadCountTemp ++;
-            IncreaseCount(deadCount);
+            IncreaseCount();
 
             int temp = Random.Range(0, chestChance);
             if (temp == 0 || chestChance == 0)
@@ -48,6 +51,12 @@ public class enemyDeathCount : MonoBehaviour
                 chestChance --;
                 Debug.Log("chest chance = " + chestChance);
             }
+            if (highScore <= deadCount)
+            {
+                highScore = deadCount;
+                PlayerPrefs.SetInt("highScore", highScore);
+                IncreaseCount() ;
+            }
         }
 
 
@@ -56,9 +65,10 @@ public class enemyDeathCount : MonoBehaviour
 
     }
 
-    void IncreaseCount(int number)
+    void IncreaseCount()
     {
-        killCount.text = "Kills: " + number.ToString();
+        killCount.text = "Kills: " + deadCount.ToString();
+        highScoreCount.text = "High Score: " + highScore.ToString();
     }
 
 }
