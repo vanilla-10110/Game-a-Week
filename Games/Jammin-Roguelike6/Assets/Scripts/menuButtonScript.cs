@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,6 +13,17 @@ public class menuButtonScript : MonoBehaviour
 
     public Slider musicVolumeSlider;
     public Slider SFXVolumeSlider;
+    float volume;
+
+    FMOD.Studio.Bus musicBus;
+    FMOD.Studio.Bus SFXBus;
+
+
+    private void Start()
+    {
+        musicBus = FMODUnity.RuntimeManager.GetBus("bus:/MUSIC");
+        SFXBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+    }
 
     public void Commence()
     {
@@ -56,11 +68,13 @@ public class menuButtonScript : MonoBehaviour
 
     public void MusicVolume()
     {
-        FMODUnity.RuntimeManager.GetBus("bus:/MUSIC").setVolume(musicVolumeSlider.value);
+        volume = Mathf.Pow(10.0f, musicVolumeSlider.value / 20f);
+        musicBus.setVolume(volume);
     }
     public void SFXVolume()
     {
-        FMODUnity.RuntimeManager.GetBus("bus:/SFX").setVolume(SFXVolumeSlider.value);
+        volume = Mathf.Pow(10.0f, SFXVolumeSlider.value / 20f);
+        SFXBus.setVolume(volume);
     }
 
 
@@ -74,11 +88,4 @@ public class menuButtonScript : MonoBehaviour
     {
         //increase music volume here
     }
-
-   
-
-
-
-
-
 }
