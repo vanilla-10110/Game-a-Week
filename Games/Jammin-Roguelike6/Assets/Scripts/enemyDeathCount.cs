@@ -22,6 +22,11 @@ public class enemyDeathCount : MonoBehaviour
         highScoreCount = GameObject.Find("highScoreCount").GetComponent<TextMeshProUGUI>();
     }
 
+    private void Start()
+    {
+        highScoreCount.text = "High Score: " + highScore.ToString();
+    }
+
     public void Update()
     {
         
