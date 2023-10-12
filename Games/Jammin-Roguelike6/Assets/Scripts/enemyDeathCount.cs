@@ -12,7 +12,7 @@ public class enemyDeathCount : MonoBehaviour
     TextMeshProUGUI killCount;
     int highScore;
     TextMeshProUGUI highScoreCount;
-
+    Chest cesth;
 
     public void Awake()
     {
@@ -20,6 +20,7 @@ public class enemyDeathCount : MonoBehaviour
         killCount = GameObject.Find("killCount").GetComponent<TextMeshProUGUI>();
         highScore = PlayerPrefs.GetInt("highScore", 0);
         highScoreCount = GameObject.Find("highScoreCount").GetComponent<TextMeshProUGUI>();
+        
     }
 
     private void Start()
@@ -50,6 +51,8 @@ public class enemyDeathCount : MonoBehaviour
                 direction.y = 0;
                 chestClone.transform.rotation = Quaternion.LookRotation(direction);
                 Debug.Log("and dey say");
+                cesth = chestClone.GetComponent<Chest>();
+                cesth.Timer();
             }
             if (highScore <= deadCount)
             {
