@@ -25,6 +25,18 @@ public class AttackHandler : MonoBehaviour
         //0f
     };
 
+    public float[] enemStats =
+    {
+        3f,
+        1f,
+        5f,
+        0f,
+        //0f,
+        //0f,
+        //0f,
+        //0f
+    };
+
 
     void SwitchWeapon()
     {

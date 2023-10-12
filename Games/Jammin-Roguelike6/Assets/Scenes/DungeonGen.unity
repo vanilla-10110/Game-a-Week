@@ -2090,22 +2090,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &4240016757374761558
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746569321329841098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6c3ac862bb824c428f7ae1c60fee040, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slider: {fileID: 4663961057741143323}
-  deathScreen: {fileID: 6654475894815709781}
-  UI: {fileID: 2314074178712878052}
-  deathCam: {fileID: 1873913846}
 --- !u!1 &4391307092148723761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2351262653883665521, guid: bcb543ab94065254f9685622d9e11a71,
@@ -2984,7 +2968,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4152988365556656497}
   - component: {fileID: 4663961057741143323}
-  - component: {fileID: 4240016757374761558}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
