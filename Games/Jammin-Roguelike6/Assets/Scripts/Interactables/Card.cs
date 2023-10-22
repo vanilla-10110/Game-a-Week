@@ -80,8 +80,8 @@ public class Card : Interactable
         enemyUpgrade2 = Random.Range(0, 4);
         while (enemyUpgrade2 == 2) enemyUpgrade2 = Random.Range(0, 4);
 
-        playerDesc.text = "+ " + upgradeStats[playerUpgrade1] + " " + upgradeStatNames[playerUpgrade1] + "\n+ " + upgradeStats[playerUpgrade2] + " " + upgradeStatNames[playerUpgrade2];
-        enemyDesc.text = "+ " + upgradeStats[enemyUpgrade1] + " " + upgradeStatNames[enemyUpgrade1] + "\n+ " + upgradeStats[enemyUpgrade2] + " " + upgradeStatNames[enemyUpgrade2];
+        playerDesc.text = "You:\n+ " + upgradeStats[playerUpgrade1] + " " + upgradeStatNames[playerUpgrade1] + "\n+ " + upgradeStats[playerUpgrade2] + " " + upgradeStatNames[playerUpgrade2];
+        enemyDesc.text = "Skellies:\n+ " + upgradeStats[enemyUpgrade1] + " " + upgradeStatNames[enemyUpgrade1] + "\n+ " + upgradeStats[enemyUpgrade2] + " " + upgradeStatNames[enemyUpgrade2];
         
 
     }
