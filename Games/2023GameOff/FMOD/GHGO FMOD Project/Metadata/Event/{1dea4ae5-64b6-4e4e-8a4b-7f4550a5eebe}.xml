@@ -5,7 +5,7 @@
 			<value>SHIP_LASER_DRILL</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e3513aa4-c209-44e6-9a49-8fd414d06741}</destination>
@@ -56,7 +56,7 @@
 			<destination>{d6adc0dd-abed-455a-a42a-cf42d99e3d8a}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{b5cc6ae8-476d-4d88-b166-d5f29d26f6bc}</destination>
+			<destination>{19462831-fa92-4d38-bd50-05aad193321a}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{d53d3f49-0454-42dc-8824-77e986b794ad}" />
@@ -86,8 +86,13 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{93da96bf-da1a-4e5a-b27f-d824f26f63ce}">
+		<property name="playbackMode">
+			<value>1</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{c9f41903-45dc-4ae4-9591-f999660d3675}</destination>
+			<destination>{52eeb5ef-59a0-4711-bd16-d331b339d766}</destination>
+			<destination>{df79ddee-0013-41ce-8db9-b1c205d92436}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{61513e58-c07c-4bf7-80f3-fc25dd79e5f9}">
@@ -116,6 +121,7 @@
 	<object class="MixerBusEffectChain" id="{1721ae48-9287-4b6f-b57c-eedf39a3198b}">
 		<relationship name="effects">
 			<destination>{287e7588-1eed-46a5-b029-f51103e5c407}</destination>
+			<destination>{6d952407-d727-454b-ad1e-67daee763216}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{513b0860-80b3-401d-bf4e-75e9f142bc38}" />
@@ -127,6 +133,36 @@
 			<destination>{8a4914ba-220c-4833-a6a4-db6c9223f383}</destination>
 		</relationship>
 	</object>
+	<object class="SingleSound" id="{52eeb5ef-59a0-4711-bd16-d331b339d766}">
+		<property name="volume">
+			<value>-9</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{94255179-8df0-43a4-8ff4-58d4e088ee74}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{df79ddee-0013-41ce-8db9-b1c205d92436}">
+		<property name="volume">
+			<value>-14</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{cb14e362-1285-4adf-9a30-a5b53bc778cd}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{58970326-e5e9-4a85-b5a2-753b2e62514d}" />
 	<object class="MixerBusFader" id="{287e7588-1eed-46a5-b029-f51103e5c407}" />
+	<object class="SpatialiserEffect" id="{6d952407-d727-454b-ad1e-67daee763216}">
+		<property name="distanceRolloffType">
+			<value>4</value>
+		</property>
+		<property name="extentMode">
+			<value>2</value>
+		</property>
+	</object>
 </objects>
