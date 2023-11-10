@@ -6,7 +6,8 @@ using Unity.VisualScripting;
 
 public class Main_Menu_Button_Script_v1 : MonoBehaviour
 {
-   //public GameObject Base_Sprite;
+    //public GameObject Base_Sprite;
+    [Header("Put the respektive panels here")]
     public GameObject Options_menu_Script;
     public GameObject Options_menu_Script_Sound;
     public GameObject Options_menu_Script_Controlls;
