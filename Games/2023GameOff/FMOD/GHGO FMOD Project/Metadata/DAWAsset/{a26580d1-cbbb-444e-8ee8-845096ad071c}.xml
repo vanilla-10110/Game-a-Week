@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="DAWAsset" id="{8a4914ba-220c-4833-a6a4-db6c9223f383}">
+	<object class="DAWAsset" id="{a26580d1-cbbb-444e-8ee8-845096ad071c}">
 		<property name="assetPath">
-			<value>2023_GHGO_SFX.rpp.link/LASER_PitchedNoiseLoop.wav</value>
+			<value>2023_GHGO_SFX.rpp.link/UI_BEEP.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>0.12470833333333334</value>
+			<value>0.20572916666666666</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ae20a2a6-a7e3-4e47-96d9-afd90f67aaf4}</destination>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="DAWAsset" id="{40d9ba02-1265-4cd0-bdcb-81e5825a3eae}">
+	<object class="DAWAsset" id="{c17c48c4-a63d-48b3-97be-e6c1c1c8186c}">
 		<property name="assetPath">
-			<value>2023_GHGO_SFX.rpp.link/TestRaySoundRETRO.wav</value>
+			<value>2023_GHGO_SFX.rpp.link/LASER_PWM+PITCHLFO_LOOP.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>

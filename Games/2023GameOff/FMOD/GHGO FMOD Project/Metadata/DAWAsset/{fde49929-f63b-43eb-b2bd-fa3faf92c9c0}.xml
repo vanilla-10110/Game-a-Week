@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="DAWAsset" id="{94255179-8df0-43a4-8ff4-58d4e088ee74}">
+	<object class="DAWAsset" id="{fde49929-f63b-43eb-b2bd-fa3faf92c9c0}">
 		<property name="assetPath">
-			<value>2023_GHGO_SFX.rpp.link/LASER_TriangleLoop.wav</value>
+			<value>2023_GHGO_SFX.rpp.link/UI_SUCCESSBEEP.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>0.12291666666666666</value>
+			<value>0.35208333333333336</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ae20a2a6-a7e3-4e47-96d9-afd90f67aaf4}</destination>
