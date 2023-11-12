@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    Rigidbody2D _playerRB;
-    Vector2 _playerForces = Vector2.zero;
+    private Rigidbody2D _playerRB;
+    private Vector2 _playerForces = Vector2.zero;
 
-    public float thrustForce = 75f;
-    
+
+    [Header("Thruster Stats")]
+    public float thrustForce = 75.0f;
+    public float fuelEfficiency = 1.0f;
+    public float fuelCapacity = 100.0f;
+    public bool autoBrake = false;
+
     void Start()
     {
         _playerRB = GameObject.Find("Player").GetComponent<Rigidbody2D>();
