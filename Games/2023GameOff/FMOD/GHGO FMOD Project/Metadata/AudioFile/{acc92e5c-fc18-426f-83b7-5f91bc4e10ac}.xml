@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{acc92e5c-fc18-426f-83b7-5f91bc4e10ac}">
+		<property name="assetPath">
+			<value>PH_TestRaySoundRETRO.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.12997916666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ae20a2a6-a7e3-4e47-96d9-afd90f67aaf4}</destination>
+		</relationship>
+	</object>
+</objects>

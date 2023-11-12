@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DAWProject" id="{43c11045-05b0-497b-ba14-02dcd88be437}">
+		<property name="assetPath">
+			<value>2023_GHGO_SFX.rpp.link/</value>
+		</property>
+		<property name="dawProjectPath">
+			<value>C:/SVN/Reaper/GameJams/2023_GHGO_SFX/2023_GHGO_SFX.rpp</value>
+		</property>
+		<property name="renderedAssetsPath">
+			<value>Bounces</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ae20a2a6-a7e3-4e47-96d9-afd90f67aaf4}</destination>
+		</relationship>
+	</object>
+</objects>
