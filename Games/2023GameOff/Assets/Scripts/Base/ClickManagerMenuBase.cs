@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Click_manager_menu_Base : MonoBehaviour
+public class ClickManagerMenuBase : MonoBehaviour
 {
     public GameObject Options_Pause_Screen;
     public GameObject Options_Sound_Screen;

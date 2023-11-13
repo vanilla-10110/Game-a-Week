@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class Button_Script_Base_General_v1 : MonoBehaviour
+public class ButtonScriptBaseGeneral : MonoBehaviour
 {
     //private GameObject Base_Sprite;
     [Header("Put the respective panels here")]

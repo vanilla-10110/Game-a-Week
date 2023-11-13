@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 using Unity.VisualScripting;
 
-public class Main_Menu_Button_Script_v1 : MonoBehaviour
+public class MainMenuButtonScript : MonoBehaviour
 {
     //public GameObject Base_Sprite;
     [Header("Put the respektive panels here")]
