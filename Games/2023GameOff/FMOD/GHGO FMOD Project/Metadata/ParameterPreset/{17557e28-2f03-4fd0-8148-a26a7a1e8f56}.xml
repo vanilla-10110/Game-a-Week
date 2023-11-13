@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{17557e28-2f03-4fd0-8148-a26a7a1e8f56}">
 		<property name="name">
-			<value>SHRINK_PITCH</value>
+			<value>Speed</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
@@ -12,11 +12,20 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{52a08c3a-b425-4069-8b1b-7f1c636550a5}">
+		<property name="parameterType">
+			<value>9</value>
+		</property>
+		<property name="maximum">
+			<value>10</value>
+		</property>
 		<property name="initialValue">
 			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>1.7000000476837158</value>
+			<value>100</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
 		</property>
 	</object>
 </objects>

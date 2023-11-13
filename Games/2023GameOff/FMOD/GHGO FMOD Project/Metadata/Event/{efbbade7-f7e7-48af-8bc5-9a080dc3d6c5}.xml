@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{efbbade7-f7e7-48af-8bc5-9a080dc3d6c5}">
 		<property name="name">
-			<value>SHIP_THRUSTER</value>
+			<value>SHIP_THRUSTER_FIRE</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -101,6 +101,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{afd0d8be-a40e-4e9c-93a9-1d0c6a07cd44}" />
 	<object class="SingleSound" id="{0aa9c19a-5957-4398-8c45-0b3c6f66b9b0}">
+		<property name="pitch">
+			<value>-12</value>
+		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
