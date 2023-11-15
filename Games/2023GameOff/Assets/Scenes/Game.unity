@@ -238,7 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e4ab6dcedc1846b527e01652315a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustForce: 200
+  thrustForce: 230
+  maxSpeed: 10
   fuelEfficiency: 1
   fuelCapacity: 100
   autoBrake: 0
