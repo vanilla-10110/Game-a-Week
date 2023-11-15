@@ -313,7 +313,6 @@ GameObject:
   - component: {fileID: 170714772}
   - component: {fileID: 170714774}
   - component: {fileID: 170714773}
-  - component: {fileID: 170714775}
   m_Layer: 3
   m_Name: Cockpit
   m_TagString: Untagged
@@ -423,19 +422,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &170714775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170714771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!1 &539483675
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +834,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 956584696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -866,7 +852,7 @@ MonoBehaviour:
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 1
-  Preload: 0
+  Preload: 1
   AllowNonRigidbodyDoppler: 1
   Params: []
   OverrideAttenuation: 0
@@ -912,6 +898,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 967995684}
+  - component: {fileID: 967995685}
   m_Layer: 3
   m_Name: Thruster
   m_TagString: Untagged
@@ -935,6 +922,37 @@ Transform:
   - {fileID: 956584697}
   m_Father: {fileID: 129632226}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &967995685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967995683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -272912921
+      Data2: 1219491815
+      Data3: 144360843
+      Data4: -975781107
+    Path: event:/SHIP/SHIP_THRUSTER_FIRE
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 1
+  AllowNonRigidbodyDoppler: 1
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1082112642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,8 +1215,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1832428584}
   - component: {fileID: 1832428583}
-  - component: {fileID: 1832428582}
   - component: {fileID: 1832428581}
+  - component: {fileID: 1832428585}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1250,14 +1268,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1832428582
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832428580}
-  m_Enabled: 1
 --- !u!20 &1832428583
 Camera:
   m_ObjectHideFlags: 0
@@ -1324,6 +1334,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 539483676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1832428585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832428580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1 &1860826448
 GameObject:
   m_ObjectHideFlags: 0
