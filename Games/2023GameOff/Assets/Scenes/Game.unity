@@ -485,7 +485,7 @@ MonoBehaviour:
   - id: PLAYER
     priority: 0
     transform: {fileID: 129632226}
-    orthographicSize: 5
+    orthographicSize: 6
   camera: {fileID: 1832428583}
   movementSpeed: 10
   zoomSpeed: 2.5
