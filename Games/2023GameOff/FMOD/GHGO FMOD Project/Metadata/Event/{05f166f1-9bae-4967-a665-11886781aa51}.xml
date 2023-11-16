@@ -114,6 +114,9 @@
 		<property name="isAsync">
 			<value>true</value>
 		</property>
+		<property name="length">
+			<value>10</value>
+		</property>
 		<property name="pitch">
 			<value>-24</value>
 		</property>
@@ -239,7 +242,7 @@
 	</object>
 	<object class="AutomationPoint" id="{8cad5787-8eac-4a25-9e3a-f6a4e582956d}">
 		<property name="position">
-			<value>1</value>
+			<value>10</value>
 		</property>
 		<property name="value">
 			<value>24</value>
@@ -255,7 +258,7 @@
 	</object>
 	<object class="AutomationPoint" id="{0e1d04ad-7e23-4018-8236-ded34bb1c288}">
 		<property name="position">
-			<value>1</value>
+			<value>10</value>
 		</property>
 		<property name="value">
 			<value>0</value>
