@@ -48,8 +48,6 @@ public class PlayerController : MonoBehaviour
 
     private void RotateThruster()
     {
-        //Does not rotate based on acceleration (force applied) and instead rotates
-        currentAcceleration = (_rb.velocity - lastVelocity) / Time.deltaTime;
         float angle = Mathf.Atan2(_forces.y, _forces.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         _thruster.rotation = Quaternion.Slerp(_thruster.rotation, rotation, thrusterRotateSpeed * Time.deltaTime);
