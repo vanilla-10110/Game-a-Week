@@ -218,7 +218,6 @@ GameObject:
   - component: {fileID: 129632226}
   - component: {fileID: 129632225}
   - component: {fileID: 129632224}
-  - component: {fileID: 129632227}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -238,6 +237,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e4ab6dcedc1846b527e01652315a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thrusterRotateSpeed: 5
+  armsRotateSpeed: 5
   thrustForce: 230
   maxSpeed: 10
   fuelEfficiency: 1
@@ -288,20 +289,6 @@ Transform:
   - {fileID: 967995684}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &129632227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 129632223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6916af69d06fa24e865c7eb77d532cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thrusterRotateSpeed: 5
-  armsRotateSpeed: 5
 --- !u!1 &170714771
 GameObject:
   m_ObjectHideFlags: 0
