@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,18 +20,22 @@ public class PlayerController : MonoBehaviour
     public float fuelCapacity = 100.0f;
     public bool autoBrake = false;
 
+
+    
+
+
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _arms = transform.Find("Arms");
         _thruster = transform.Find("Thruster");
+        
     }
     
     void Update()
     {
         MovePlayer();
         if (_forces != Vector2.zero) RotateThruster();
-        
         RotateArms();
     }
 
