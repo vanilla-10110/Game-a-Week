@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{18537afd-01a8-43c5-92e8-bcfa6a98715e}">
+		<property name="name">
+			<value>PARAMETER_NAME</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{77242085-48a4-4161-927d-8cb0e908ee99}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{77242085-48a4-4161-927d-8cb0e908ee99}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.77999997138977051</value>
+		</property>
+	</object>
+</objects>
