@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrusterRotateSpeed: 10
   armsRotateSpeed: 5
-  thrustForce: 230
+  thrustForce: 250
   maxSpeed: 10
   fuelEfficiency: 1
   fuelCapacity: 100
@@ -306,7 +306,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 59bf314df46152348ac99e8ec240ddc6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
