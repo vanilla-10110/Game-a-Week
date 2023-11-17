@@ -13,8 +13,8 @@ public class MouseCursor : MonoBehaviour
         transform.position = _mousePosition + new Vector3(0, 0, 10);
     }
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.collider.CompareTag("rock")) Debug.LogWarning("jeb issue right here");
+        if (collision.GetComponent<Collider2D>().CompareTag("Rock")) Debug.LogWarning("jeb issue right here");
     }
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 
 
+
 public class PlayerController : MonoBehaviour
 {
     [Header("")]
@@ -12,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private Transform _arms;
     private Transform _thruster;
     private Rigidbody2D _rb;
+    private Animator _thrusterAnimator;
     
     [Header("Thruster Stats")]
     public float thrustForce = 75.0f;
@@ -29,13 +31,18 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _arms = transform.Find("Arms");
         _thruster = transform.Find("Thruster");
+        _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>(); 
         
     }
     
     void Update()
     {
         MovePlayer();
-        if (_forces != Vector2.zero) RotateThruster();
+        if (_forces != Vector2.zero)
+        {
+            _thrusterAnimator.Play("Flame", 1);
+            RotateThruster();
+        } else
         RotateArms();
     }
 
@@ -45,7 +52,7 @@ public class PlayerController : MonoBehaviour
         _rb.AddForce(_forces);
         
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
-        Debug.Log(_rb.velocity);
+       // Debug.Log(_rb.velocity);
     }
 
 
