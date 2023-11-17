@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 543fb4bd12d9fcf4497ad60857ba17ef
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: TractorArm_1_Frame_0
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 47
+      height: 49
+    spriteID: cfdd5dbb39f59fc4aae2f13d616e0fcd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: TractorArm_1_Frame_1
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 61
+      width: 47
+      height: 49
+    spriteID: 3ab25f8c173ab1f41bd6e7b9e11ce9d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 61}
+  - name: TractorArm_1_Frame_2
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 118
+      width: 47
+      height: 49
+    spriteID: 8f8a993ead94b3545bd8e63ff8393817
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 118}
+  - name: TractorArm_1_Frame_3
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 175
+      width: 47
+      height: 49
+    spriteID: b5b0905d7e885b545b3c0f60818e69ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 175}
+  - name: TractorArm_1_Frame_4
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 47
+      height: 49
+    spriteID: d25c0c92fc49c2a4d8ef31fb26ff3a7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: TractorArm_1_Frame_5
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 460
+      width: 46
+      height: 47
+    spriteID: 22b0c82b89ee0b447a5c451b60d210a3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 460}
+  - name: TractorArm_1_Frame_6
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 118
+      width: 46
+      height: 47
+    spriteID: 5ce98e0caf1d6b14d9d5f76ba415af97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 118}
+  - name: TractorArm_1_Frame_7
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 173
+      width: 46
+      height: 47
+    spriteID: 28f5cdb721a824648a020bc19dfadc73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 173}
+  - name: TractorArm_1_Frame_8
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 228
+      width: 46
+      height: 47
+    spriteID: 607ff89aee692cc41be8e5a293817f85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 228}
+  - name: TractorArm_1_Frame_9
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 283
+      width: 46
+      height: 47
+    spriteID: 740e44b894ca9454199262cde0d2a9de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 283}
+  - name: TractorArm_1_Frame_10
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 289
+      width: 47
+      height: 49
+    spriteID: 44995bbca2a6fc34dae23696d102f2ec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 289}
+  - name: TractorArm_1_Frame_11
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 346
+      width: 47
+      height: 49
+    spriteID: 48982d4c180cb1740a203ad989e69fd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 346}
+  - name: TractorArm_1_Frame_12
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 403
+      width: 47
+      height: 49
+    spriteID: d07d77d6ad4a78044bb2f9eea12f6a2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 403}
+  - name: TractorArm_1_Frame_13
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 4
+      width: 47
+      height: 49
+    spriteID: 740c07ee3861ad04fa2e0418988d0775
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 4}
+  - name: TractorArm_1_Frame_14
+    originalName: 
+    pivot: {x: 0.4468085, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 61
+      width: 47
+      height: 49
+    spriteID: 482b526e066a942498d70448882d7e56
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 61}
+  - name: TractorArm_1_Frame_15
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 338
+      width: 46
+      height: 47
+    spriteID: 11238b46313fb7a4eb75498d2689ccc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 338}
+  - name: TractorArm_1_Frame_16
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 393
+      width: 46
+      height: 47
+    spriteID: d8db40207d9483e4eb312c28cfb0309d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 393}
+  - name: TractorArm_1_Frame_17
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 448
+      width: 46
+      height: 47
+    spriteID: a16f3d3925ad8244cb7a35bf10266a1f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 59, y: 448}
+  - name: TractorArm_1_Frame_18
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 4
+      width: 46
+      height: 47
+    spriteID: e60d8933dc662e14e8b36623baca45bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 4}
+  - name: TractorArm_1_Frame_19
+    originalName: 
+    pivot: {x: 0.43478262, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 114
+      y: 59
+      width: 46
+      height: 47
+    spriteID: f62325c46bfcc0b4dad53764eae0d8b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 114, y: 59}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -307635451
+    name: TractorArm_1
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: TractorArm_1_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: cfdd5dbb39f59fc4aae2f13d616e0fcd
+    - name: TractorArm_1_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: 3ab25f8c173ab1f41bd6e7b9e11ce9d0
+    - name: TractorArm_1_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: 8f8a993ead94b3545bd8e63ff8393817
+    - name: TractorArm_1_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: b5b0905d7e885b545b3c0f60818e69ee
+    - name: TractorArm_1_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: d25c0c92fc49c2a4d8ef31fb26ff3a7d
+    - name: TractorArm_1_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: 22b0c82b89ee0b447a5c451b60d210a3
+    - name: TractorArm_1_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: 5ce98e0caf1d6b14d9d5f76ba415af97
+    - name: TractorArm_1_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: 28f5cdb721a824648a020bc19dfadc73
+    - name: TractorArm_1_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: 607ff89aee692cc41be8e5a293817f85
+    - name: TractorArm_1_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: 740e44b894ca9454199262cde0d2a9de
+    - name: TractorArm_1_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: 44995bbca2a6fc34dae23696d102f2ec
+    - name: TractorArm_1_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: 48982d4c180cb1740a203ad989e69fd3
+    - name: TractorArm_1_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: d07d77d6ad4a78044bb2f9eea12f6a2e
+    - name: TractorArm_1_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: 740c07ee3861ad04fa2e0418988d0775
+    - name: TractorArm_1_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 11
+        y: 10
+        width: 47
+        height: 49
+      spriteId: 482b526e066a942498d70448882d7e56
+    - name: TractorArm_1_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: 11238b46313fb7a4eb75498d2689ccc8
+    - name: TractorArm_1_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: d8db40207d9483e4eb312c28cfb0309d
+    - name: TractorArm_1_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: a16f3d3925ad8244cb7a35bf10266a1f
+    - name: TractorArm_1_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: e60d8933dc662e14e8b36623baca45bb
+    - name: TractorArm_1_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 12
+        y: 12
+        width: 46
+        height: 47
+      spriteId: f62325c46bfcc0b4dad53764eae0d8b9
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}

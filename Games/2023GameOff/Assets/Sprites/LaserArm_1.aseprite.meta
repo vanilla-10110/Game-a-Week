@@ -1,0 +1,696 @@
+fileFormatVersion: 2
+guid: 47d3eb02053d6d94bbe08fe4c80eccad
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: LaserArm_1_Frame_0
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 46
+      height: 49
+    spriteID: cf9b2c07440a2ad4ba6e88a9cdde6786
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: LaserArm_1_Frame_1
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 61
+      width: 46
+      height: 49
+    spriteID: b3381bc6f2c28df4b8442670eeedb4fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 61}
+  - name: LaserArm_1_Frame_2
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 118
+      width: 46
+      height: 49
+    spriteID: 1231321de9c815f49ac7bd53da244972
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 118}
+  - name: LaserArm_1_Frame_3
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 175
+      width: 46
+      height: 49
+    spriteID: f3115ef5d33d62048a226b9fead83e7e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 175}
+  - name: LaserArm_1_Frame_4
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 232
+      width: 46
+      height: 49
+    spriteID: b107c92510f025d4d8606b83b1b16962
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 232}
+  - name: LaserArm_1_Frame_5
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 460
+      width: 45
+      height: 47
+    spriteID: 98c2033716076a94a8be3366d1cc21dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 460}
+  - name: LaserArm_1_Frame_6
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 118
+      width: 45
+      height: 47
+    spriteID: cd53bed1fe7a8214e9fa2034601fdf1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 118}
+  - name: LaserArm_1_Frame_7
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 173
+      width: 45
+      height: 47
+    spriteID: 97ae83d5818480149be68714fcc63439
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 173}
+  - name: LaserArm_1_Frame_8
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 228
+      width: 45
+      height: 47
+    spriteID: d5ea44e2adc321e4fa60423f8a3e0d5e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 228}
+  - name: LaserArm_1_Frame_9
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 283
+      width: 45
+      height: 47
+    spriteID: 093c553e61c4a3f4b8e9feef3fd1f19b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 283}
+  - name: LaserArm_1_Frame_10
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 289
+      width: 46
+      height: 49
+    spriteID: 283d32a57c6de994f94761f14ba9b24a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 289}
+  - name: LaserArm_1_Frame_11
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 346
+      width: 46
+      height: 49
+    spriteID: d451852b6bd60b24981b37da7afdb9c8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 346}
+  - name: LaserArm_1_Frame_12
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 403
+      width: 46
+      height: 49
+    spriteID: 02e239296d5e55f40928765e5f0c7c26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 403}
+  - name: LaserArm_1_Frame_13
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 4
+      width: 46
+      height: 49
+    spriteID: 546c349fd71da35439cd1b801e64e75a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 4}
+  - name: LaserArm_1_Frame_14
+    originalName: 
+    pivot: {x: 0.54347825, y: -0.20408162}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 61
+      width: 46
+      height: 49
+    spriteID: d13afcf1788333247a2e36e600d8b564
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 61}
+  - name: LaserArm_1_Frame_15
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 338
+      width: 45
+      height: 47
+    spriteID: 53bac3dd93eea594f8366cbc657c3d0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 338}
+  - name: LaserArm_1_Frame_16
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 393
+      width: 45
+      height: 47
+    spriteID: 94f6dd98fa7a1ea47a5bc07b1a0d575a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 393}
+  - name: LaserArm_1_Frame_17
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 58
+      y: 448
+      width: 45
+      height: 47
+    spriteID: f14b377ef43dd4147ac1fa95807afb72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 58, y: 448}
+  - name: LaserArm_1_Frame_18
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 4
+      width: 45
+      height: 47
+    spriteID: c2a99f8e6462f234bb2e63a5724f4a9a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 4}
+  - name: LaserArm_1_Frame_19
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.25531915}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 59
+      width: 45
+      height: 47
+    spriteID: 5bd33a3752fac76489734e71eeedaead
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 59}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -895351907
+    name: LaserArm_1
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: LaserArm_1_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: cf9b2c07440a2ad4ba6e88a9cdde6786
+    - name: LaserArm_1_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: b3381bc6f2c28df4b8442670eeedb4fe
+    - name: LaserArm_1_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: 1231321de9c815f49ac7bd53da244972
+    - name: LaserArm_1_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: f3115ef5d33d62048a226b9fead83e7e
+    - name: LaserArm_1_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: b107c92510f025d4d8606b83b1b16962
+    - name: LaserArm_1_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: 98c2033716076a94a8be3366d1cc21dd
+    - name: LaserArm_1_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: cd53bed1fe7a8214e9fa2034601fdf1a
+    - name: LaserArm_1_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: 97ae83d5818480149be68714fcc63439
+    - name: LaserArm_1_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: d5ea44e2adc321e4fa60423f8a3e0d5e
+    - name: LaserArm_1_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: 093c553e61c4a3f4b8e9feef3fd1f19b
+    - name: LaserArm_1_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: 283d32a57c6de994f94761f14ba9b24a
+    - name: LaserArm_1_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: d451852b6bd60b24981b37da7afdb9c8
+    - name: LaserArm_1_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: 02e239296d5e55f40928765e5f0c7c26
+    - name: LaserArm_1_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: 546c349fd71da35439cd1b801e64e75a
+    - name: LaserArm_1_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 7
+        y: 10
+        width: 46
+        height: 49
+      spriteId: d13afcf1788333247a2e36e600d8b564
+    - name: LaserArm_1_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: 53bac3dd93eea594f8366cbc657c3d0e
+    - name: LaserArm_1_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: 94f6dd98fa7a1ea47a5bc07b1a0d575a
+    - name: LaserArm_1_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: f14b377ef43dd4147ac1fa95807afb72
+    - name: LaserArm_1_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: c2a99f8e6462f234bb2e63a5724f4a9a
+    - name: LaserArm_1_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 7
+        y: 12
+        width: 45
+        height: 47
+      spriteId: 5bd33a3752fac76489734e71eeedaead
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 64, y: 64}
