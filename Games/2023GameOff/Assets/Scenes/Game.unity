@@ -638,10 +638,10 @@ MonoBehaviour:
   - id: PLAYER
     priority: 0
     transform: {fileID: 129632226}
-    orthographicSize: 6
+    orthographicSize: 7
   camera: {fileID: 1832428583}
-  movementSpeed: 10
-  zoomSpeed: 2.5
+  movementSpeed: 14
+  zoomSpeed: 4
 --- !u!1 &748633861
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,11 +820,12 @@ MonoBehaviour:
   camera: {fileID: 539483677}
   target: {fileID: 129632226}
   minimumMovementThreshold: 999999
+  minimumTime: 0.3
   cameraTarget:
     id: BASE
     priority: 10
     transform: {fileID: 894048943}
-    orthographicSize: 10
+    orthographicSize: 12
 --- !u!58 &894048946
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -857,9 +858,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.75}
   serializedVersion: 2
-  m_Radius: 11.5
+  m_Radius: 12.5
 --- !u!1 &899910515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1691,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 7
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

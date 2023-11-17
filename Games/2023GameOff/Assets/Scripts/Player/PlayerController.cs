@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
         _rb.AddForce(_forces);
         
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
-        Debug.Log(_rb.velocity);
     }
 
 

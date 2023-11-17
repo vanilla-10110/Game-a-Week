@@ -24,12 +24,25 @@ public class CameraController : MonoBehaviour {
     private void Update() {
         CameraTarget currentTarget = GetCurrentTarget();
 
-        Vector3 oldPosition = transform.position;
+        Vector3 myPosition = transform.position;
+        Vector3 targetPosition = currentTarget.transform.position;
+
+        float movementDistance = Vector3.Distance(targetPosition, myPosition);
+        if (movementDistance > 0.0001f) {
+            Vector3 movementDirection = (targetPosition - myPosition).normalized;
+            
+            transform.position += movementSpeed * Time.deltaTime * Mathf.Sqrt(movementDistance) * movementDirection;
+        }
+
+        float orthographicSizeDifference = currentTarget.orthographicSize - camera.orthographicSize;
+        float orthographicSizeDistance = Mathf.Abs(orthographicSizeDifference);
+        if (orthographicSizeDistance > 0.0001f) {
+            float orthographicSizeDirection = orthographicSizeDifference / orthographicSizeDistance;
+            
+            camera.orthographicSize += zoomSpeed * Time.deltaTime * Mathf.Sqrt(orthographicSizeDistance) * orthographicSizeDirection;
+        }
         
-        transform.position = Vector3.Lerp(transform.position, currentTarget.transform.position, movementSpeed * Time.deltaTime);
-        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, currentTarget.orthographicSize, zoomSpeed * Time.deltaTime);
-        
-        MoveEvent?.Invoke(oldPosition, transform.position);
+        MoveEvent?.Invoke(myPosition, transform.position);
     }
     
     public CameraTarget AddTarget(CameraTarget target) {
