@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 47d3eb02053d6d94bbe08fe4c80eccad
+guid: 0072d1377496c814696d766b1af28a6e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -130,7 +130,7 @@ ScriptedImporter:
       y: 4
       width: 46
       height: 49
-    spriteID: cf9b2c07440a2ad4ba6e88a9cdde6786
+    spriteID: ab8874b2169b3ee49955c6967cf199a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -150,7 +150,7 @@ ScriptedImporter:
       y: 61
       width: 46
       height: 49
-    spriteID: b3381bc6f2c28df4b8442670eeedb4fe
+    spriteID: a775f2766b3a8f84fb2f579d48954580
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -170,7 +170,7 @@ ScriptedImporter:
       y: 118
       width: 46
       height: 49
-    spriteID: 1231321de9c815f49ac7bd53da244972
+    spriteID: 77003932393e1b64f9de7e89dabfcaf4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -190,7 +190,7 @@ ScriptedImporter:
       y: 175
       width: 46
       height: 49
-    spriteID: f3115ef5d33d62048a226b9fead83e7e
+    spriteID: 8aa1379f12ea04a4693ecb13853c98c1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -210,7 +210,7 @@ ScriptedImporter:
       y: 232
       width: 46
       height: 49
-    spriteID: b107c92510f025d4d8606b83b1b16962
+    spriteID: fccb56dc71afdff438299387e9d27b51
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -230,7 +230,7 @@ ScriptedImporter:
       y: 460
       width: 45
       height: 47
-    spriteID: 98c2033716076a94a8be3366d1cc21dd
+    spriteID: ab273b76c953ca540b0784b5c2fd1206
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -250,7 +250,7 @@ ScriptedImporter:
       y: 118
       width: 45
       height: 47
-    spriteID: cd53bed1fe7a8214e9fa2034601fdf1a
+    spriteID: c88bdfc03672b9e4c9b6479d45586922
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +270,7 @@ ScriptedImporter:
       y: 173
       width: 45
       height: 47
-    spriteID: 97ae83d5818480149be68714fcc63439
+    spriteID: bc7db027fd523e245a3d78242abf2fb6
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -290,7 +290,7 @@ ScriptedImporter:
       y: 228
       width: 45
       height: 47
-    spriteID: d5ea44e2adc321e4fa60423f8a3e0d5e
+    spriteID: 57f68f3130335564782568394c68e024
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -310,7 +310,7 @@ ScriptedImporter:
       y: 283
       width: 45
       height: 47
-    spriteID: 093c553e61c4a3f4b8e9feef3fd1f19b
+    spriteID: da7d53aea0c119643859ae2f90ae0d16
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -330,7 +330,7 @@ ScriptedImporter:
       y: 289
       width: 46
       height: 49
-    spriteID: 283d32a57c6de994f94761f14ba9b24a
+    spriteID: c51defed3b18a434e996129849c8e1dc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -350,7 +350,7 @@ ScriptedImporter:
       y: 346
       width: 46
       height: 49
-    spriteID: d451852b6bd60b24981b37da7afdb9c8
+    spriteID: 8a1b17a8fda71134c9a81d918dfe0372
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -370,7 +370,7 @@ ScriptedImporter:
       y: 403
       width: 46
       height: 49
-    spriteID: 02e239296d5e55f40928765e5f0c7c26
+    spriteID: 415d5643b0460f644a26b5cb3b3ec31c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -390,7 +390,7 @@ ScriptedImporter:
       y: 4
       width: 46
       height: 49
-    spriteID: 546c349fd71da35439cd1b801e64e75a
+    spriteID: 1a02de939318f344b8ab19ab09c64201
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -410,7 +410,7 @@ ScriptedImporter:
       y: 61
       width: 46
       height: 49
-    spriteID: d13afcf1788333247a2e36e600d8b564
+    spriteID: a66012dcdffbb9f4c97ff97bc111297f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -430,7 +430,7 @@ ScriptedImporter:
       y: 338
       width: 45
       height: 47
-    spriteID: 53bac3dd93eea594f8366cbc657c3d0e
+    spriteID: f1403cdec8162ef4c9a19f614c1b4c22
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -450,7 +450,7 @@ ScriptedImporter:
       y: 393
       width: 45
       height: 47
-    spriteID: 94f6dd98fa7a1ea47a5bc07b1a0d575a
+    spriteID: 82b12712de0697b48805f03521a7e5d9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -470,7 +470,7 @@ ScriptedImporter:
       y: 448
       width: 45
       height: 47
-    spriteID: f14b377ef43dd4147ac1fa95807afb72
+    spriteID: 1c0fb73de58763648b51145dd126712a
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -490,7 +490,7 @@ ScriptedImporter:
       y: 4
       width: 45
       height: 47
-    spriteID: c2a99f8e6462f234bb2e63a5724f4a9a
+    spriteID: 5b8d2b2648fb47745b4afc21a3809263
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -510,7 +510,7 @@ ScriptedImporter:
       y: 59
       width: 45
       height: 47
-    spriteID: 5bd33a3752fac76489734e71eeedaead
+    spriteID: 529ac694740e0574da96189cf51aadc2
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -535,7 +535,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: cf9b2c07440a2ad4ba6e88a9cdde6786
+      spriteId: ab8874b2169b3ee49955c6967cf199a9
     - name: LaserArm_1_Frame_1
       frameIndex: 1
       cellRect:
@@ -543,7 +543,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: b3381bc6f2c28df4b8442670eeedb4fe
+      spriteId: a775f2766b3a8f84fb2f579d48954580
     - name: LaserArm_1_Frame_2
       frameIndex: 2
       cellRect:
@@ -551,7 +551,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: 1231321de9c815f49ac7bd53da244972
+      spriteId: 77003932393e1b64f9de7e89dabfcaf4
     - name: LaserArm_1_Frame_3
       frameIndex: 3
       cellRect:
@@ -559,7 +559,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: f3115ef5d33d62048a226b9fead83e7e
+      spriteId: 8aa1379f12ea04a4693ecb13853c98c1
     - name: LaserArm_1_Frame_4
       frameIndex: 4
       cellRect:
@@ -567,7 +567,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: b107c92510f025d4d8606b83b1b16962
+      spriteId: fccb56dc71afdff438299387e9d27b51
     - name: LaserArm_1_Frame_5
       frameIndex: 5
       cellRect:
@@ -575,7 +575,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: 98c2033716076a94a8be3366d1cc21dd
+      spriteId: ab273b76c953ca540b0784b5c2fd1206
     - name: LaserArm_1_Frame_6
       frameIndex: 6
       cellRect:
@@ -583,7 +583,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: cd53bed1fe7a8214e9fa2034601fdf1a
+      spriteId: c88bdfc03672b9e4c9b6479d45586922
     - name: LaserArm_1_Frame_7
       frameIndex: 7
       cellRect:
@@ -591,7 +591,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: 97ae83d5818480149be68714fcc63439
+      spriteId: bc7db027fd523e245a3d78242abf2fb6
     - name: LaserArm_1_Frame_8
       frameIndex: 8
       cellRect:
@@ -599,7 +599,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: d5ea44e2adc321e4fa60423f8a3e0d5e
+      spriteId: 57f68f3130335564782568394c68e024
     - name: LaserArm_1_Frame_9
       frameIndex: 9
       cellRect:
@@ -607,7 +607,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: 093c553e61c4a3f4b8e9feef3fd1f19b
+      spriteId: da7d53aea0c119643859ae2f90ae0d16
     - name: LaserArm_1_Frame_10
       frameIndex: 10
       cellRect:
@@ -615,7 +615,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: 283d32a57c6de994f94761f14ba9b24a
+      spriteId: c51defed3b18a434e996129849c8e1dc
     - name: LaserArm_1_Frame_11
       frameIndex: 11
       cellRect:
@@ -623,7 +623,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: d451852b6bd60b24981b37da7afdb9c8
+      spriteId: 8a1b17a8fda71134c9a81d918dfe0372
     - name: LaserArm_1_Frame_12
       frameIndex: 12
       cellRect:
@@ -631,7 +631,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: 02e239296d5e55f40928765e5f0c7c26
+      spriteId: 415d5643b0460f644a26b5cb3b3ec31c
     - name: LaserArm_1_Frame_13
       frameIndex: 13
       cellRect:
@@ -639,7 +639,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: 546c349fd71da35439cd1b801e64e75a
+      spriteId: 1a02de939318f344b8ab19ab09c64201
     - name: LaserArm_1_Frame_14
       frameIndex: 14
       cellRect:
@@ -647,7 +647,7 @@ ScriptedImporter:
         y: 10
         width: 46
         height: 49
-      spriteId: d13afcf1788333247a2e36e600d8b564
+      spriteId: a66012dcdffbb9f4c97ff97bc111297f
     - name: LaserArm_1_Frame_15
       frameIndex: 15
       cellRect:
@@ -655,7 +655,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: 53bac3dd93eea594f8366cbc657c3d0e
+      spriteId: f1403cdec8162ef4c9a19f614c1b4c22
     - name: LaserArm_1_Frame_16
       frameIndex: 16
       cellRect:
@@ -663,7 +663,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: 94f6dd98fa7a1ea47a5bc07b1a0d575a
+      spriteId: 82b12712de0697b48805f03521a7e5d9
     - name: LaserArm_1_Frame_17
       frameIndex: 17
       cellRect:
@@ -671,7 +671,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: f14b377ef43dd4147ac1fa95807afb72
+      spriteId: 1c0fb73de58763648b51145dd126712a
     - name: LaserArm_1_Frame_18
       frameIndex: 18
       cellRect:
@@ -679,7 +679,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: c2a99f8e6462f234bb2e63a5724f4a9a
+      spriteId: 5b8d2b2648fb47745b4afc21a3809263
     - name: LaserArm_1_Frame_19
       frameIndex: 19
       cellRect:
@@ -687,7 +687,7 @@ ScriptedImporter:
         y: 12
         width: 45
         height: 47
-      spriteId: 5bd33a3752fac76489734e71eeedaead
+      spriteId: 529ac694740e0574da96189cf51aadc2
     linkedCells: []
     parentIndex: -1
   platformSettings:
