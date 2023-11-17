@@ -13,6 +13,14 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private float movementSpeed;
     [SerializeField] private float zoomSpeed;
     
+    private void Awake() {
+        CameraTarget currentTarget = GetCurrentTarget();
+
+        if (currentTarget != null) {
+            camera.orthographicSize = currentTarget.orthographicSize;
+        }
+    }
+    
     private void Update() {
         CameraTarget currentTarget = GetCurrentTarget();
 
