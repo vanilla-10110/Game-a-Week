@@ -90,7 +90,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{3d8cdd0d-7888-430e-961b-f1f11fe7a552}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-33</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{5e0ecf6f-814d-427a-896e-c87c92e422f9}</destination>
@@ -187,10 +187,13 @@
 			<value>4</value>
 		</property>
 		<property name="minimumDistance">
-			<value>4</value>
+			<value>0</value>
 		</property>
 		<property name="maximumDistance">
-			<value>4</value>
+			<value>9.40000057</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
 		</property>
 		<property name="extentMode">
 			<value>1</value>
@@ -216,8 +219,8 @@
 			<destination>{52a08c3a-b425-4069-8b1b-7f1c636550a5}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{07ec6e65-bc5f-486f-9fb3-ad14b8229660}</destination>
 			<destination>{0e1d04ad-7e23-4018-8236-ded34bb1c288}</destination>
+			<destination>{36c26609-8084-45f4-9196-e804b8d09b5c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{ec56fd17-6128-49eb-b74b-7e37dbbbf9b6}" />
@@ -240,7 +243,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-11</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{8cad5787-8eac-4a25-9e3a-f6a4e582956d}">
@@ -248,15 +251,7 @@
 			<value>10</value>
 		</property>
 		<property name="value">
-			<value>24</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{07ec6e65-bc5f-486f-9fb3-ad14b8229660}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>0</value>
+			<value>-0.400000006</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{0e1d04ad-7e23-4018-8236-ded34bb1c288}">
@@ -265,6 +260,17 @@
 		</property>
 		<property name="value">
 			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{36c26609-8084-45f4-9196-e804b8d09b5c}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-6</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.872181833</value>
 		</property>
 	</object>
 </objects>
