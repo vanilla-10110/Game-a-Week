@@ -10,7 +10,7 @@ public class MouseCursor : MonoBehaviour
     {
         //cursor goes to the z layer of the screen so the cam doesnt pick it up
         _mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = _mousePosition;
+        transform.position = _mousePosition + new Vector3(0, 0, 10);
     }
 
     private void OnTriggerEnter(Collision collision)
