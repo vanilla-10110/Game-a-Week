@@ -40,9 +40,9 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
         if (_forces != Vector2.zero)
         {
-            _thrusterAnimator.Play("Flame", 1);
+           // _thrusterAnimator.Play("Flame", 1);
             RotateThruster();
-        } else
+        }
         RotateArms();
     }
 
