@@ -1,7 +1,8 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D))]
-public class BaseBuilding : MonoBehaviour { 
+public class BaseBuilding : MonoBehaviour {
     private GameObject _popupUI;
     private Animator _popupUIAnimator;
     private Collider2D _collider;
@@ -28,11 +29,13 @@ public class BaseBuilding : MonoBehaviour {
             Vector2 mouseScreenPosition = Input.mousePosition;
             Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
 
-            if (_collider.OverlapPoint(mouseWorldPosition)) {
-                TogglePopup();
-            }
-            else {
-                HidePopup();
+            if (!GameManager.instance.eventSystem.IsPointerOverGameObject()) {
+                if (_collider.OverlapPoint(mouseWorldPosition)) {
+                    TogglePopup();
+                }
+                else {
+                    HidePopup();
+                }
             }
         }
     }
