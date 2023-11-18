@@ -215,6 +215,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e493560c1a24efcb807f31cc0df998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &119048100
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,6 +983,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e493560c1a24efcb807f31cc0df998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &894048942
 GameObject:
   m_ObjectHideFlags: 0
@@ -2050,6 +2078,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e493560c1a24efcb807f31cc0df998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &1520764939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,6 +2373,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e493560c1a24efcb807f31cc0df998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &1620015035
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,6 +2587,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e493560c1a24efcb807f31cc0df998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &1809523345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,6 +2693,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e493560c1a24efcb807f31cc0df998e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &1832428580
 GameObject:
   m_ObjectHideFlags: 0

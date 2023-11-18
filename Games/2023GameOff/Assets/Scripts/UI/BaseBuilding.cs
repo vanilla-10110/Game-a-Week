@@ -1,11 +1,17 @@
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D))]
 public class BaseBuilding : MonoBehaviour {
+    [SerializeField] private EventReference popOnSound;
+    [SerializeField] private EventReference popOffSound;
+    
     private GameObject _popupUI;
     private Animator _popupUIAnimator;
     private Collider2D _collider;
+    private bool _uiToggledOn = false;
 
     private void Awake() {
         _popupUI = transform.Find("BuildingUI").gameObject;
@@ -41,19 +47,28 @@ public class BaseBuilding : MonoBehaviour {
     }
 
     public void TogglePopup() {
-        _popupUIAnimator.SetTrigger("Toggle");
+        if (_uiToggledOn) {
+            HidePopup();
+        }
+        else {
+            ShowPopup();
+        }
     }
 
     public void ShowPopup() {
         _popupUIAnimator.SetTrigger("On");
+        FMODUnity.RuntimeManager.PlayOneShot(popOnSound);
+        _uiToggledOn = true;
     }
     
     public void HidePopup() {
         _popupUIAnimator.SetTrigger("Off");
+        FMODUnity.RuntimeManager.PlayOneShot(popOffSound);
+        _uiToggledOn = false;
     }
 
     private void OnCameraTargetChange(CameraTarget oldTarget, CameraTarget newTarget) {
-        if (newTarget.id != "BASE") {
+        if (newTarget.id != "BASE" && _uiToggledOn) {
             HidePopup();
         }
     }
