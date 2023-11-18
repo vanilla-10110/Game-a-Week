@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{05f166f1-9bae-4967-a665-11886781aa51}">
 		<property name="name">
-			<value>SHIP_DRILL</value>
+			<value>SHIP_LASER_ARM</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
@@ -90,7 +90,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{3d8cdd0d-7888-430e-961b-f1f11fe7a552}">
 		<property name="volume">
-			<value>-33</value>
+			<value>-40</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{5e0ecf6f-814d-427a-896e-c87c92e422f9}</destination>
@@ -130,7 +130,7 @@
 			<destination>{62c2d48f-66e4-46c6-9ecc-41b78432641a}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{e0e3547f-16a9-4951-85ab-434ac33b24c6}</destination>
+			<destination>{c17c48c4-a63d-48b3-97be-e6c1c1c8186c}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{42151b52-c717-4a3e-8c16-76adca9017ca}">
@@ -243,7 +243,10 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-11</value>
+			<value>-24</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.411693662</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{8cad5787-8eac-4a25-9e3a-f6a4e582956d}">
@@ -251,7 +254,7 @@
 			<value>10</value>
 		</property>
 		<property name="value">
-			<value>-0.400000006</value>
+			<value>6</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{0e1d04ad-7e23-4018-8236-ded34bb1c288}">
@@ -267,7 +270,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-6</value>
+			<value>-20</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.872181833</value>
