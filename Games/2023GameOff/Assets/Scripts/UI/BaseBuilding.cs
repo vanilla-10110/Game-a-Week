@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class BaseBuilding : MonoBehaviour { 
-    [SerializeField] private RectTransform popupUI;
+    [SerializeField] private GameObject popupUI;
     
     private Collider2D _collider;
 
