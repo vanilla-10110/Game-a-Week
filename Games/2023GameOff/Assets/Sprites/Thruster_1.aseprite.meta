@@ -141,7 +141,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Thruster_1_Frame_21
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -161,7 +161,7 @@ ScriptedImporter:
     uvTransform: {x: 48, y: 4}
   - name: Thruster_1_Frame_22
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -181,7 +181,7 @@ ScriptedImporter:
     uvTransform: {x: 92, y: 4}
   - name: Thruster_1_Frame_23
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -201,7 +201,7 @@ ScriptedImporter:
     uvTransform: {x: 136, y: 4}
   - name: Thruster_1_Frame_24
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -221,7 +221,7 @@ ScriptedImporter:
     uvTransform: {x: 180, y: 4}
   - name: Thruster_1_Frame_25
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -241,7 +241,7 @@ ScriptedImporter:
     uvTransform: {x: 48, y: 72}
   - name: Thruster_1_Frame_26
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -261,7 +261,7 @@ ScriptedImporter:
     uvTransform: {x: 92, y: 72}
   - name: Thruster_1_Frame_27
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -281,7 +281,7 @@ ScriptedImporter:
     uvTransform: {x: 136, y: 72}
   - name: Thruster_1_Frame_28
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -301,7 +301,7 @@ ScriptedImporter:
     uvTransform: {x: 180, y: 72}
   - name: Thruster_1_Frame_29
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -321,7 +321,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 106}
   - name: Thruster_1_Frame_30
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -341,7 +341,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 38}
   - name: Thruster_1_Frame_31
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -361,7 +361,7 @@ ScriptedImporter:
     uvTransform: {x: 48, y: 38}
   - name: Thruster_1_Frame_32
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -381,7 +381,7 @@ ScriptedImporter:
     uvTransform: {x: 92, y: 38}
   - name: Thruster_1_Frame_33
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -401,7 +401,7 @@ ScriptedImporter:
     uvTransform: {x: 136, y: 38}
   - name: Thruster_1_Frame_34
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -421,7 +421,7 @@ ScriptedImporter:
     uvTransform: {x: 180, y: 38}
   - name: Thruster_1_Frame_35
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -441,7 +441,7 @@ ScriptedImporter:
     uvTransform: {x: 48, y: 106}
   - name: Thruster_1_Frame_36
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -461,7 +461,7 @@ ScriptedImporter:
     uvTransform: {x: 92, y: 106}
   - name: Thruster_1_Frame_37
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -481,7 +481,7 @@ ScriptedImporter:
     uvTransform: {x: 136, y: 106}
   - name: Thruster_1_Frame_38
     originalName: 
-    pivot: {x: 0.5, y: -1.2608696}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -501,7 +501,7 @@ ScriptedImporter:
     uvTransform: {x: 180, y: 106}
   - name: Thruster_1_Frame_39
     originalName: 
-    pivot: {x: 0.5, y: -1.1153847}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -521,7 +521,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 72}
   - name: Thruster_1_Frame_0
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -541,7 +541,7 @@ ScriptedImporter:
     uvTransform: {x: 224, y: 106}
   - name: Thruster_1_Frame_1
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -561,7 +561,7 @@ ScriptedImporter:
     uvTransform: {x: 224, y: 4}
   - name: Thruster_1_Frame_2
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -581,7 +581,7 @@ ScriptedImporter:
     uvTransform: {x: 224, y: 38}
   - name: Thruster_1_Frame_3
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -601,7 +601,7 @@ ScriptedImporter:
     uvTransform: {x: 224, y: 72}
   - name: Thruster_1_Frame_4
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -621,7 +621,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 137}
   - name: Thruster_1_Frame_5
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -641,7 +641,7 @@ ScriptedImporter:
     uvTransform: {x: 28, y: 137}
   - name: Thruster_1_Frame_6
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -661,7 +661,7 @@ ScriptedImporter:
     uvTransform: {x: 52, y: 137}
   - name: Thruster_1_Frame_7
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -681,7 +681,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 137}
   - name: Thruster_1_Frame_8
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -701,7 +701,7 @@ ScriptedImporter:
     uvTransform: {x: 100, y: 137}
   - name: Thruster_1_Frame_9
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -721,7 +721,7 @@ ScriptedImporter:
     uvTransform: {x: 124, y: 137}
   - name: Thruster_1_Frame_10
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -741,7 +741,7 @@ ScriptedImporter:
     uvTransform: {x: 148, y: 137}
   - name: Thruster_1_Frame_11
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -761,7 +761,7 @@ ScriptedImporter:
     uvTransform: {x: 172, y: 137}
   - name: Thruster_1_Frame_12
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -781,7 +781,7 @@ ScriptedImporter:
     uvTransform: {x: 196, y: 137}
   - name: Thruster_1_Frame_13
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -801,7 +801,7 @@ ScriptedImporter:
     uvTransform: {x: 220, y: 137}
   - name: Thruster_1_Frame_14
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -821,7 +821,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 167}
   - name: Thruster_1_Frame_15
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -841,7 +841,7 @@ ScriptedImporter:
     uvTransform: {x: 28, y: 167}
   - name: Thruster_1_Frame_16
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -861,7 +861,7 @@ ScriptedImporter:
     uvTransform: {x: 52, y: 167}
   - name: Thruster_1_Frame_17
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -881,7 +881,7 @@ ScriptedImporter:
     uvTransform: {x: 76, y: 167}
   - name: Thruster_1_Frame_18
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -901,7 +901,7 @@ ScriptedImporter:
     uvTransform: {x: 100, y: 167}
   - name: Thruster_1_Frame_19
     originalName: 
-    pivot: {x: 0.5, y: -0.3181818}
+    pivot: {x: 0.5, y: 1.52}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

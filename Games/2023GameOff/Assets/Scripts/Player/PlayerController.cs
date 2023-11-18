@@ -7,11 +7,10 @@ public class PlayerController : MonoBehaviour
     [Header("")]
     public float thrusterRotateSpeed = 5f;
     public float armsRotateSpeed = 5f;
-    private Vector2 lastVelocity = Vector2.zero;
-    private Vector2 currentAcceleration = Vector2.zero;
     private Vector2 _forces;
     private Transform _arms;
     private Transform _thruster;
+    private Transform _basePointer;
     private Rigidbody2D _rb;
     private Animator _thrusterAnimator;
     
@@ -31,8 +30,8 @@ public class PlayerController : MonoBehaviour
         _rb = GetComponent<Rigidbody2D>();
         _arms = transform.Find("Arms");
         _thruster = transform.Find("Thruster");
-        _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>(); 
-        
+        _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>();
+        _basePointer = transform.Find("Base Pointer");
     }
     
     void Update()
@@ -44,6 +43,8 @@ public class PlayerController : MonoBehaviour
             RotateThruster();
         }
         RotateArms();
+        RotatePointer();
+
     }
 
     void MovePlayer()
@@ -74,5 +75,14 @@ public class PlayerController : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         _arms.rotation = Quaternion.Slerp(_arms.rotation, rotation, armsRotateSpeed * Time.deltaTime);
     }
-
+    private void RotatePointer()
+    {
+        Vector2 basePosition = Vector2.zero;//GameObject.Find("Base").transform.position;
+        Vector2 objectScreenPosition = transform.position;
+        
+        Vector2 direction = basePosition - objectScreenPosition;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        _basePointer.rotation = Quaternion.Slerp(_basePointer.rotation, rotation, armsRotateSpeed * Time.deltaTime);
+    }
 }
