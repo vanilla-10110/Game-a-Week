@@ -31,6 +31,9 @@ public class BaseBuilding : MonoBehaviour {
             if (_collider.OverlapPoint(mouseWorldPosition)) {
                 TogglePopup();
             }
+            else {
+                HidePopup();
+            }
         }
     }
 
