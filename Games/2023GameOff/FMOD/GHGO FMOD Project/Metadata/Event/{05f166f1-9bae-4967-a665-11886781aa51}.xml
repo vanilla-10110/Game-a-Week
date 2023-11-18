@@ -199,10 +199,7 @@
 			<value>1</value>
 		</property>
 		<property name="soundSize">
-			<value>5</value>
-		</property>
-		<property name="minimumExtent">
-			<value>28</value>
+			<value>1</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{41a72dd2-4d0e-4497-b19f-0b3ffaf7f896}">
