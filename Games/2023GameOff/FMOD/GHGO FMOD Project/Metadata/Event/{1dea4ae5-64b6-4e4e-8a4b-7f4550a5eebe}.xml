@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{1dea4ae5-64b6-4e4e-8a4b-7f4550a5eebe}">
 		<property name="name">
-			<value>SHIP_DRILL_BEAM</value>
+			<value>SHIP_LASER_BEAM</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
