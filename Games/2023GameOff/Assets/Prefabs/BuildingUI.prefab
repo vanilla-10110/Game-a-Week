@@ -67,6 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eab529da6f540889a39c7afb51b576f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownLength: 0.35
   popOnSound:
     Guid:
       Data1: 1972762185

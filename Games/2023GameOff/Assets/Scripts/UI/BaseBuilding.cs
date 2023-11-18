@@ -5,9 +5,12 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D))]
 public class BaseBuilding : MonoBehaviour {
+    [SerializeField] private float cooldownLength = 0.35f;
+    
     private Collider2D _collider;
     private GameObject _popupUIGameObject;
     private Popup _popupUI;
+    private float lastPopupTime = -Mathf.Infinity;
 
     private void Awake() {
         _popupUIGameObject = transform.Find("BuildingUI").gameObject;
@@ -31,13 +34,15 @@ public class BaseBuilding : MonoBehaviour {
             Vector2 mouseScreenPosition = Input.mousePosition;
             Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
 
-            if (!GameManager.instance.eventSystem.IsPointerOverGameObject()) {
+            if (!GameManager.instance.eventSystem.IsPointerOverGameObject() && Time.time - lastPopupTime > cooldownLength) {
                 if (_collider.OverlapPoint(mouseWorldPosition)) {
                     _popupUI.TogglePopup();
                 }
                 else {
                     _popupUI.HidePopup();
                 }
+                
+                lastPopupTime = Time.time;
             }
         }
     }
