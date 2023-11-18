@@ -3,10 +3,14 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class BaseBuilding : MonoBehaviour { 
     private GameObject _popupUI;
+    private Animator _popupUIAnimator;
     private Collider2D _collider;
 
     private void Awake() {
         _popupUI = transform.Find("BuildingUI").gameObject;
+        _popupUI.SetActive(true);
+        
+        _popupUIAnimator = _popupUI.GetComponent<Animator>();
         
         _collider = GetComponent<Collider2D>();
     }
@@ -31,15 +35,15 @@ public class BaseBuilding : MonoBehaviour {
     }
 
     public void TogglePopup() {
-        _popupUI.gameObject.SetActive(!_popupUI.gameObject.activeSelf);
+        _popupUIAnimator.SetTrigger("Toggle");
     }
 
     public void ShowPopup() {
-        _popupUI.gameObject.SetActive(true);
+        _popupUIAnimator.SetTrigger("On");
     }
     
     public void HidePopup() {
-        _popupUI.gameObject.SetActive(false);
+        _popupUIAnimator.SetTrigger("Off");
     }
 
     private void OnCameraTargetChange(CameraTarget oldTarget, CameraTarget newTarget) {
