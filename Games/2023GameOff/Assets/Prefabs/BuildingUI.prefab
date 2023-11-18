@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6931213071181068934}
   - component: {fileID: 5423169348111668558}
+  - component: {fileID: 9172975149889598106}
   m_Layer: 0
   m_Name: BuildingUI
   m_TagString: Untagged
@@ -54,6 +55,32 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &9172975149889598106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409032033604756287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1eab529da6f540889a39c7afb51b576f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  popOnSound:
+    Guid:
+      Data1: 1972762185
+      Data2: 1269318177
+      Data3: 866265008
+      Data4: 813168395
+    Path: event:/UI/UI_POPUP_OPEN
+  popOffSound:
+    Guid:
+      Data1: 657160906
+      Data2: 1271670826
+      Data3: 700342693
+      Data4: -1612940584
+    Path: event:/UI/UI_POPUP_CLOSE
 --- !u!1 &1564736079104773340
 GameObject:
   m_ObjectHideFlags: 0

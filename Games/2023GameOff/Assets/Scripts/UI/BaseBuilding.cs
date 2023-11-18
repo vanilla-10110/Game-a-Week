@@ -5,19 +5,15 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Collider2D))]
 public class BaseBuilding : MonoBehaviour {
-    [SerializeField] private EventReference popOnSound;
-    [SerializeField] private EventReference popOffSound;
-    
-    private GameObject _popupUI;
-    private Animator _popupUIAnimator;
     private Collider2D _collider;
-    private bool _uiToggledOn = false;
+    private GameObject _popupUIGameObject;
+    private Popup _popupUI;
 
     private void Awake() {
-        _popupUI = transform.Find("BuildingUI").gameObject;
-        _popupUI.SetActive(true);
+        _popupUIGameObject = transform.Find("BuildingUI").gameObject;
+        _popupUIGameObject.SetActive(true);
         
-        _popupUIAnimator = _popupUI.GetComponent<Animator>();
+        _popupUI = _popupUIGameObject.GetComponent<Popup>();
         
         _collider = GetComponent<Collider2D>();
     }
@@ -37,39 +33,18 @@ public class BaseBuilding : MonoBehaviour {
 
             if (!GameManager.instance.eventSystem.IsPointerOverGameObject()) {
                 if (_collider.OverlapPoint(mouseWorldPosition)) {
-                    TogglePopup();
+                    _popupUI.TogglePopup();
                 }
                 else {
-                    HidePopup();
+                    _popupUI.HidePopup();
                 }
             }
         }
     }
 
-    public void TogglePopup() {
-        if (_uiToggledOn) {
-            HidePopup();
-        }
-        else {
-            ShowPopup();
-        }
-    }
-
-    public void ShowPopup() {
-        _popupUIAnimator.SetTrigger("On");
-        FMODUnity.RuntimeManager.PlayOneShot(popOnSound);
-        _uiToggledOn = true;
-    }
-    
-    public void HidePopup() {
-        _popupUIAnimator.SetTrigger("Off");
-        FMODUnity.RuntimeManager.PlayOneShot(popOffSound);
-        _uiToggledOn = false;
-    }
-
     private void OnCameraTargetChange(CameraTarget oldTarget, CameraTarget newTarget) {
-        if (newTarget.id != "BASE" && _uiToggledOn) {
-            HidePopup();
+        if (newTarget.id != "BASE") {
+            _popupUI.HidePopup();
         }
     }
 }
