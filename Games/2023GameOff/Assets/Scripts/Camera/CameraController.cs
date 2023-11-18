@@ -6,6 +6,8 @@ public delegate void OnMove(Vector3 oldPosition, Vector3 newPosition);
 
 public class CameraController : MonoBehaviour {
     public event OnMove MoveEvent;
+
+    public static CameraController main;
     
     public List<CameraTarget> targets = new List<CameraTarget>();
 
@@ -14,6 +16,13 @@ public class CameraController : MonoBehaviour {
     [SerializeField] private float zoomSpeed;
     
     private void Awake() {
+        if (main == null) {
+            main = this;
+        }
+        else {
+            Destroy(transform.gameObject);
+        }
+        
         CameraTarget currentTarget = GetCurrentTarget();
 
         if (currentTarget != null) {

@@ -2,16 +2,17 @@ using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class BaseBuilding : MonoBehaviour { 
-    [SerializeField] private GameObject popupUI;
-    
+    private GameObject _popupUI;
     private Collider2D _collider;
 
     private void Awake() {
+        _popupUI = transform.Find("BuildingUI").gameObject;
+        
         _collider = GetComponent<Collider2D>();
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && CameraController.main.GetCurrentTarget().id == "BASE") {
             Vector2 mouseScreenPosition = Input.mousePosition;
             Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
 
@@ -22,14 +23,14 @@ public class BaseBuilding : MonoBehaviour {
     }
 
     public void TogglePopup() {
-        popupUI.gameObject.SetActive(!popupUI.gameObject.activeSelf);
+        _popupUI.gameObject.SetActive(!_popupUI.gameObject.activeSelf);
     }
 
     public void ShowPopup() {
-        popupUI.gameObject.SetActive(true);
+        _popupUI.gameObject.SetActive(true);
     }
     
     public void HidePopup() {
-        popupUI.gameObject.SetActive(false);
+        _popupUI.gameObject.SetActive(false);
     }
 }
