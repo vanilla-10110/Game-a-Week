@@ -3,9 +3,11 @@ using System.Linq;
 using UnityEngine;
 
 public delegate void OnMove(Vector3 oldPosition, Vector3 newPosition);
+public delegate void OnSetTarget(CameraTarget oldTarget, CameraTarget newTarget);
 
 public class CameraController : MonoBehaviour {
     public event OnMove MoveEvent;
+    public event OnSetTarget SetTargetEvent;
 
     public static CameraController main;
     
@@ -37,7 +39,7 @@ public class CameraController : MonoBehaviour {
         Vector3 targetPosition = currentTarget.transform.position;
 
         float movementDistance = Vector3.Distance(targetPosition, myPosition);
-        if (movementDistance > 0.0001f) {
+        if (movementDistance > 0.01f) {
             Vector3 movementDirection = (targetPosition - myPosition).normalized;
             
             transform.position += movementSpeed * Time.deltaTime * Mathf.Sqrt(movementDistance) * movementDirection;
@@ -45,7 +47,7 @@ public class CameraController : MonoBehaviour {
 
         float orthographicSizeDifference = currentTarget.orthographicSize - camera.orthographicSize;
         float orthographicSizeDistance = Mathf.Abs(orthographicSizeDifference);
-        if (orthographicSizeDistance > 0.0001f) {
+        if (orthographicSizeDistance > 0.01f) {
             float orthographicSizeDirection = orthographicSizeDifference / orthographicSizeDistance;
             
             camera.orthographicSize += zoomSpeed * Time.deltaTime * Mathf.Sqrt(orthographicSizeDistance) * orthographicSizeDirection;
@@ -55,7 +57,16 @@ public class CameraController : MonoBehaviour {
     }
     
     public CameraTarget AddTarget(CameraTarget target) {
+        CameraTarget oldTarget = GetCurrentTarget();
+        
         targets.Add(target);
+
+        CameraTarget newTarget = GetCurrentTarget();
+
+        if (newTarget.id != oldTarget.id) {
+            SetTargetEvent?.Invoke(oldTarget, newTarget);
+        }
+        
         return target;
     }
 
@@ -65,7 +76,15 @@ public class CameraController : MonoBehaviour {
     }
     
     public void RemoveTarget(CameraTarget target) {
+        CameraTarget oldTarget = GetCurrentTarget();
+        
         targets.Remove(target);
+        
+        CameraTarget newTarget = GetCurrentTarget();
+
+        if (newTarget.id != oldTarget.id) {
+            SetTargetEvent?.Invoke(oldTarget, newTarget);
+        }
     }
 
     public void RemoveTarget(string id) {
