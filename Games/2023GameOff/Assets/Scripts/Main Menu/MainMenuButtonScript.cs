@@ -12,12 +12,12 @@ public class MainMenuButtonScript : MonoBehaviour
     public GameObject Options_menu_Script_Sound;
     public GameObject Options_menu_Script_Controlls;
 
-    
+
 
     private void Start()
     {
-        SceneManager.UnloadScene("Base");
-        SceneManager.UnloadScene("Game");
+        SceneManager.UnloadSceneAsync("Base");
+        SceneManager.UnloadSceneAsync("Game");
         Options_menu_Script.SetActive(false);
         Options_menu_Script_Sound.SetActive(false);
         Options_menu_Script_Controlls.SetActive(false);
@@ -46,7 +46,7 @@ public class MainMenuButtonScript : MonoBehaviour
     public void On_ControllOption_Click()
     {
         Options_menu_Script_Controlls.SetActive(true);
-       
+
     }
 
     public void Return_To_Options()

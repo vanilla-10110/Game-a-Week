@@ -10,7 +10,7 @@ public class Asteroid : MonoBehaviour
     [SerializeField] Sprite[] sprites;
     private SpriteRenderer spriteRenderer;
 
-    void Start()
+    public void Awake()
     {
         //give random appearance
         spriteRenderer = GetComponent<SpriteRenderer>();

@@ -1503,8 +1503,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
-  minAmount: 40
-  maxAmount: 50
+  minAmount: 100
+  maxAmount: 100
+  minDistanceFromBase: 20
+  overlapCheckRadius: 10
+  overlapContactFilter:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 128
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!1 &1742367443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,8 +2029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 296e4ab6dcedc1846b527e01652315a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrusterRotateSpeed: 10
-  armsRotateSpeed: 5
   thrustForce: 250
   maxSpeed: 10
   fuelEfficiency: 1
