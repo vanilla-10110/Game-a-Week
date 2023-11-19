@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float thrusterRotateSpeed = 5f;
     public float armsRotateSpeed = 5f;
     private Vector2 _forces;
+    private Vector2 _brakeForce;
     private Transform _arms;
     private Transform _thruster;
     private Transform _basePointer;
@@ -37,6 +38,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+                    Brake();
+        }
         if (_forces != Vector2.zero)
         {
            // _thrusterAnimator.Play("Flame", 1);
@@ -44,6 +49,8 @@ public class PlayerController : MonoBehaviour
         }
         RotateArms();
         RotatePointer();
+
+        
 
     }
 
@@ -84,5 +91,11 @@ public class PlayerController : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         _basePointer.rotation = Quaternion.Slerp(_basePointer.rotation, rotation, armsRotateSpeed * Time.deltaTime);
+    }
+
+    private void Brake()
+    {
+        _brakeForce = -_rb.velocity * _rb.mass;
+        _rb.AddForce(_brakeForce);
     }
 }
