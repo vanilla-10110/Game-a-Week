@@ -1503,8 +1503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
-  minAmount: 100
-  maxAmount: 100
+  minAmount: 70
+  maxAmount: 70
   minDistanceFromBase: 20
   overlapCheckRadius: 10
   overlapContactFilter:

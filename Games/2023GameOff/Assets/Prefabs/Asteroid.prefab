@@ -99,9 +99,9 @@ MonoBehaviour:
   sprites:
   - {fileID: 7968327106629225918, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
   - {fileID: -4081458858774278898, guid: 2de5fb720bc9a5346a7e0e55f33774d3, type: 3}
-  - {fileID: 6373820283191707063, guid: 5a7f3f0184f5f114da3f8c3d07a08e75, type: 3}
   - {fileID: 4057775834960082434, guid: 0c66b70d270f02343b3ceae368161023, type: 3}
   - {fileID: -2135181985125288468, guid: aefe08f230852344da9c48ae6b91dd42, type: 3}
+  susSprite: {fileID: 6373820283191707063, guid: 5a7f3f0184f5f114da3f8c3d07a08e75, type: 3}
 --- !u!50 &1465876804295089030
 Rigidbody2D:
   serializedVersion: 4
