@@ -5,10 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("")]
-    public float thrusterRotateSpeed = 5f;
-    public float armsRotateSpeed = 5f;
+    private float _thrusterRotateSpeed = 8f;
+    private float _armsRotateSpeed = 5f;
     private Vector2 _forces;
-    private Vector2 _brakeForce;
     private Transform _arms;
     private Transform _thruster;
     private Transform _basePointer;
@@ -38,13 +37,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         MovePlayer();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))
         {
-                    Brake();
-        }
+            Brake();
+        }  
         if (_forces != Vector2.zero)
         {
-           // _thrusterAnimator.Play("Flame", 1);
             RotateThruster();
         }
         RotateArms();
@@ -58,9 +56,8 @@ public class PlayerController : MonoBehaviour
     {
         _forces = new Vector2(Input.GetAxisRaw("Horizontal") * thrustForce * Time.deltaTime, Input.GetAxisRaw("Vertical") * thrustForce * Time.deltaTime);
         _rb.AddForce(_forces);
-        
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
-       // Debug.Log(_rb.velocity);
+
     }
 
 
@@ -68,34 +65,36 @@ public class PlayerController : MonoBehaviour
     {
         float angle = Mathf.Atan2(_forces.y, _forces.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        _thruster.rotation = Quaternion.Slerp(_thruster.rotation, rotation, thrusterRotateSpeed * Time.deltaTime);
+        _thruster.rotation = Quaternion.Slerp(_thruster.rotation, rotation, _thrusterRotateSpeed * Time.deltaTime);
     }
 
     private void RotateArms()
     {
-        //i think this works but i could very well have missed something
         Vector2 mousePosition = Input.mousePosition;
         Vector2 objectScreenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
         Vector2 direction = mousePosition - objectScreenPosition;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
-        _arms.rotation = Quaternion.Slerp(_arms.rotation, rotation, armsRotateSpeed * Time.deltaTime);
+        _arms.rotation = Quaternion.Slerp(_arms.rotation, rotation, _armsRotateSpeed * Time.deltaTime);
     }
     private void RotatePointer()
     {
-        Vector2 basePosition = Vector2.zero;//GameObject.Find("Base").transform.position;
+        Vector2 basePosition = Vector2.zero;
         Vector2 objectScreenPosition = transform.position;
         
         Vector2 direction = basePosition - objectScreenPosition;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        _basePointer.rotation = Quaternion.Slerp(_basePointer.rotation, rotation, armsRotateSpeed * Time.deltaTime);
+        _basePointer.rotation = Quaternion.Slerp(_basePointer.rotation, rotation, 15f * Time.deltaTime);
     }
 
     private void Brake()
     {
-        _brakeForce = -_rb.velocity * _rb.mass;
-        _rb.AddForce(_brakeForce);
+        if (_forces == Vector2.zero)
+        {
+            _forces += -_rb.velocity * _rb.mass;
+            _rb.AddForce(_forces);
+        }
     }
 }
