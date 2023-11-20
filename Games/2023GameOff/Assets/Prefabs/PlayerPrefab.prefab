@@ -662,7 +662,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.1
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 59bf314df46152348ac99e8ec240ddc6, type: 2}
@@ -689,10 +689,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrustForce: 250
-  maxSpeed: 30
+  maxSpeed: 100
   fuelEfficiency: 1
-  fuelCapacity: 100
+  maxFuelCapacity: 100
+  fuelAmount: 100
+  hullHealth: 100
   autoBrake: 0
+  maxO2Capacity: 100
+  O2Amount: 0
 --- !u!114 &3130369378477789525
 MonoBehaviour:
   m_ObjectHideFlags: 0

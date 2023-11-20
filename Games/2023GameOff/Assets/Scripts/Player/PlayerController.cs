@@ -20,7 +20,9 @@ public class PlayerController : MonoBehaviour
     public float fuelEfficiency = 1.0f;
     public float maxFuelCapacity = 100.0f;
     public float fuelAmount;
+    public float hullHealth = 100.0f;
     public bool autoBrake = false;
+    
 
     [Header("Other Shit")]
     public float maxO2Capacity = 100.0f;
@@ -60,6 +62,7 @@ public class PlayerController : MonoBehaviour
     {
         _forces = new Vector2(Input.GetAxisRaw("Horizontal") * thrustForce * Time.deltaTime, Input.GetAxisRaw("Vertical") * thrustForce * Time.deltaTime);
         _rb.AddForce(_forces);
+        fuelAmount -= _forces.magnitude * Time.deltaTime;
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
 
     }
@@ -99,6 +102,28 @@ public class PlayerController : MonoBehaviour
         {
             _forces += -_rb.velocity * _rb.mass;
             _rb.AddForce(_forces);
+            fuelAmount -= _forces.magnitude / 50;
         }
     }
+
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Rock"))
+        {
+            hullHealth -= (_rb.velocity - collision.collider.GetComponent<Rigidbody2D>().velocity).magnitude * 4; 
+            Debug.Log(hullHealth);
+
+        }
+        if (collision.collider.CompareTag("Ship"))
+        {
+            hullHealth -= _rb.velocity.magnitude;
+            Debug.Log(hullHealth);
+
+        }
+
+
+    }
+
 }
