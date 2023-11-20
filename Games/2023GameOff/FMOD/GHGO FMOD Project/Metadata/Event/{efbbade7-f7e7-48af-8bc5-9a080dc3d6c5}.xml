@@ -95,7 +95,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{e216de74-5508-408f-8e48-5191123d98e6}">
 		<property name="volume">
-			<value>-14.5</value>
+			<value>-9.5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{0f9bfd15-8a86-41b2-b4f9-6b3544d4b688}</destination>
@@ -124,9 +124,6 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{3223778e-5fe2-4413-a6f6-125f104eb6f2}">
-		<property name="length">
-			<value>10</value>
-		</property>
 		<property name="pitch">
 			<value>-12.5</value>
 		</property>
@@ -140,7 +137,7 @@
 			<destination>{49508224-4b61-4d35-adac-07da8a8f6340}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{1205428b-c74c-424c-82d6-6fbd115079c4}</destination>
+			<destination>{5f355fa3-7d34-4c2f-a394-64e69d44a134}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{72f123be-860c-4ff7-bbf3-cfb5f2c89345}">
@@ -219,7 +216,7 @@
 			<value>8</value>
 		</property>
 		<property name="minimumExtent">
-			<value>116</value>
+			<value>28</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{352693eb-35e0-4f00-b18e-aef3d854d35b}">
@@ -227,8 +224,8 @@
 			<destination>{e6171f49-5018-483e-9f7d-cfa96517f24a}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{c025f4f6-3807-4f8f-8cac-8899a0fe124f}</destination>
 			<destination>{9163a4a7-555d-48d0-9ce8-500d9a246dbb}</destination>
+			<destination>{18cca73c-fb09-4606-8938-8eee0ac87ff4}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{728a8e77-3380-46a7-a7a2-77d8d66789cc}">
@@ -237,52 +234,46 @@
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{8393d708-a2de-4da5-8536-de9653eaede0}</destination>
-			<destination>{1ca5f453-700a-4e78-b5cb-abc5d40ba394}</destination>
-			<destination>{4069fa2d-750c-47cf-842d-1d5f933e3ef6}</destination>
+			<destination>{94fa794c-878e-4497-9941-e49383b38c2a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{b7cd3d4a-6ed9-45e3-a6ec-a270c90189f9}" />
-	<object class="AutomationPoint" id="{c025f4f6-3807-4f8f-8cac-8899a0fe124f}">
-		<property name="position">
-			<value>0.0082101806239737278</value>
-		</property>
-		<property name="value">
-			<value>-6</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{9163a4a7-555d-48d0-9ce8-500d9a246dbb}">
-		<property name="position">
-			<value>10</value>
-		</property>
-		<property name="value">
-			<value>16</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{8393d708-a2de-4da5-8536-de9653eaede0}">
-		<property name="position">
-			<value>10</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{1ca5f453-700a-4e78-b5cb-abc5d40ba394}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>-10</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{4069fa2d-750c-47cf-842d-1d5f933e3ef6}">
 		<property name="position">
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-10</value>
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{18cca73c-fb09-4606-8938-8eee0ac87ff4}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-24</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.94146961</value>
+			<value>-0.117164947</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{8393d708-a2de-4da5-8536-de9653eaede0}">
+		<property name="position">
+			<value>0.5</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{94fa794c-878e-4497-9941-e49383b38c2a}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+		<property name="curveShape">
+			<value>-1</value>
 		</property>
 	</object>
 </objects>
