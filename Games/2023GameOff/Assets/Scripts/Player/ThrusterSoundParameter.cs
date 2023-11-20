@@ -6,16 +6,33 @@ using UnityEngine;
 public class ThrusterSoundParameter : MonoBehaviour
 {
     private float Thrust;
+    private Vector3 previous;
+    private float velocity;
 
-
-    // Update is called once per frame
     void Update()
+    {
+        GetVelocity();
+        SetThrust();
+    }
+    void GetVelocity()
+    {
+        velocity = ((transform.position - previous).magnitude) / Time.deltaTime;
+        previous = transform.position;
+    }
+    void SetThrust()
     {
         if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0 || Input.GetKey(KeyCode.Space))
         {
-            Thrust = 1;
+            if (velocity > 1)
+            {
+                Thrust = 1;
+            }
+            else
+            {
+                Thrust = 0;
+            }
         }
-        
+
         else
         {
             Thrust = 0;
