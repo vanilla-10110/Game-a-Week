@@ -89,7 +89,7 @@
 			<destination>{8fbf24b6-1494-4c2f-84b4-fa0265558f95}</destination>
 		</relationship>
 		<relationship name="preset">
-			<destination>{52a08c3a-b425-4069-8b1b-7f1c636550a5}</destination>
+			<destination>{d3ab756d-83ae-48c9-bcfb-10d8bfc2fe78}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{3d8cdd0d-7888-430e-961b-f1f11fe7a552}">
@@ -208,7 +208,7 @@
 	</object>
 	<object class="AutomationCurve" id="{41a72dd2-4d0e-4497-b19f-0b3ffaf7f896}">
 		<relationship name="parameter">
-			<destination>{52a08c3a-b425-4069-8b1b-7f1c636550a5}</destination>
+			<destination>{d3ab756d-83ae-48c9-bcfb-10d8bfc2fe78}</destination>
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{efc37ec0-31c8-470c-8b27-8340cc10e59d}</destination>
@@ -217,7 +217,7 @@
 	</object>
 	<object class="AutomationCurve" id="{00088ff1-6ae6-4b5f-8a98-df13c1fb49d0}">
 		<relationship name="parameter">
-			<destination>{52a08c3a-b425-4069-8b1b-7f1c636550a5}</destination>
+			<destination>{d3ab756d-83ae-48c9-bcfb-10d8bfc2fe78}</destination>
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{0e1d04ad-7e23-4018-8236-ded34bb1c288}</destination>
