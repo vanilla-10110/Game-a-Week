@@ -465,9 +465,9 @@ GameObject:
   m_Component:
   - component: {fileID: 539483676}
   - component: {fileID: 539483677}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CameraContainer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -480,13 +480,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 539483675}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.065374, y: 5.189125, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1832428584}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 8557123088158176099}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &539483677
 MonoBehaviour:
@@ -1503,10 +1503,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroidPrefab: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
-  minAmount: 70
-  maxAmount: 70
-  minDistanceFromBase: 20
-  overlapCheckRadius: 10
+  possibleMinerals:
+  - {fileID: 4263722219983422318, guid: 9da19ef29bdb12c4a81f7b76eb972456, type: 3}
+  - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
+  mineralChance: 0.5
+  minAmount: 100
+  maxAmount: 100
+  minDistanceFromBase: 15
+  overlapCheckRadius: 1
   overlapContactFilter:
     useTriggers: 0
     useLayerMask: 1
@@ -1705,8 +1709,7 @@ GameObject:
   - component: {fileID: 1832428584}
   - component: {fileID: 1832428583}
   - component: {fileID: 1832428581}
-  - component: {fileID: 1832428585}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1823,19 +1826,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 539483676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1832428585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832428580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!1 &1860826448
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,9 +2000,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5858738771597846671}
   - component: {fileID: 3526670449020662759}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SoundEmitter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2045,6 +2035,14 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 538fe7e3d2aefaa4f933d8f2851cbf27, type: 3}
       propertyPath: m_Name
       value: Cockpit
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 538fe7e3d2aefaa4f933d8f2851cbf27, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 538fe7e3d2aefaa4f933d8f2851cbf27, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 538fe7e3d2aefaa4f933d8f2851cbf27, type: 3}
       propertyPath: m_SortingOrder
@@ -2108,9 +2106,9 @@ GameObject:
   m_Component:
   - component: {fileID: 939700862233751264}
   - component: {fileID: 6314035738941576673}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SoundEmitter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2139,7 +2137,7 @@ GameObject:
   - component: {fileID: 917756895324413384}
   m_Layer: 3
   m_Name: Arms
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2187,7 +2185,7 @@ GameObject:
   - component: {fileID: 5490263623719626157}
   m_Layer: 3
   m_Name: Thruster
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2277,6 +2275,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: LaserArm_1
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 0072d1377496c814696d766b1af28a6e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 0072d1377496c814696d766b1af28a6e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 0072d1377496c814696d766b1af28a6e, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -2341,6 +2347,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TractorArm_1
       objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 14e1f155d3bf449499b23b56d0bb00c9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 14e1f155d3bf449499b23b56d0bb00c9, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 14e1f155d3bf449499b23b56d0bb00c9, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -2404,6 +2418,14 @@ PrefabInstance:
     - target: {fileID: -2253911629886400664, guid: 88c3735b2ad595149ac54d6ddabd3c1c, type: 3}
       propertyPath: m_Name
       value: Thruster_1
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 88c3735b2ad595149ac54d6ddabd3c1c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -2253911629886400664, guid: 88c3735b2ad595149ac54d6ddabd3c1c, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3626916397498700004, guid: 88c3735b2ad595149ac54d6ddabd3c1c, type: 3}
       propertyPath: m_SortingOrder
@@ -2530,9 +2552,9 @@ GameObject:
   - component: {fileID: 7008983082106448872}
   - component: {fileID: 6328729824811012665}
   - component: {fileID: 6885563652162962134}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SoundEmitter
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2547,6 +2569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8557123088158176099}
   - component: {fileID: 8557123088158176100}
+  - component: {fileID: 8557123088158176101}
   - component: {fileID: 5213759167974386659}
   - component: {fileID: 1670571949174700982}
   - component: {fileID: 3130369378510521390}
@@ -2655,6 +2678,7 @@ Transform:
   - {fileID: 8804716796657707489}
   - {fileID: 1338101069982366062}
   - {fileID: 1539787289}
+  - {fileID: 539483676}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8557123088158176100
@@ -2669,6 +2693,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83871ecbedfd907478e343da59667209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8557123088158176101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817324322062114572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3816c5ca0eafe47bf6b1984cc4155b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laserPrefab: {fileID: 3869018082684505930, guid: d1a96c603b8262340ba7b5621876e1e7, type: 3}
+  shootSpeed: 1
 --- !u!4 &8804716796657707489
 Transform:
   m_ObjectHideFlags: 0
@@ -2697,7 +2735,7 @@ GameObject:
   - component: {fileID: 9113768999295085592}
   m_Layer: 3
   m_Name: Base Pointer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2737,7 +2775,6 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 539483676}
   - {fileID: 8557123088158176099}
   - {fileID: 1860826449}
   - {fileID: 1285676041}

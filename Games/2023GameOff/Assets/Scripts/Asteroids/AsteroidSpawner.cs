@@ -3,18 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Spawns an amount (random between min and max range) of asterioids on game start
+/// Spawns asterioids on game start. 
 /// </summary>
 public class AsteroidSpawner : MonoBehaviour
 {
     [SerializeField] Asteroid asteroidPrefab;
+    [SerializeField] Mineral[] possibleMinerals;
+    [SerializeField] float mineralChance;
     [SerializeField] int minAmount;
     [SerializeField] int maxAmount;
     /// <summary>
     /// Asteroids cannot spawn in a circle this many units from 0, 0.
     /// </summary>
     [SerializeField] float minDistanceFromBase;
+    /// <summary>
+    /// Required spacing between asteroids
+    /// </summary>
     [SerializeField] int overlapCheckRadius;
+    /// <summary>
+    /// Used in Physics.OverlapCircle to only detect asteroids, not the player, base, etc.
+    /// </summary>
     [SerializeField] ContactFilter2D overlapContactFilter;
 
     void Start()
@@ -56,6 +64,14 @@ public class AsteroidSpawner : MonoBehaviour
         //create object an assign position
         GameObject obj = Instantiate(asteroidPrefab.gameObject);
         obj.transform.position = pos;
+
+        //Assign random mineral.
+        //This will give shine effect to asteroid, and make it drop the mineral
+        //TODO: make this a weighted probability so valuable minerals show up less often
+        if (Random.value > mineralChance)
+        {
+            obj.GetComponent<Asteroid>().SetMineral(possibleMinerals[Random.Range(0, possibleMinerals.Length)]);
+        }
     }
 
     /// <summary>
