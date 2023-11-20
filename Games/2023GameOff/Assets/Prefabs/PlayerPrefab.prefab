@@ -413,7 +413,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7867588594933823821}
-  - component: {fileID: 6536042344602286279}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -438,19 +437,6 @@ Transform:
   - {fileID: 6152269169399955005}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6536042344602286279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4043427893359452775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!1 &4431671942151125695
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,7 +620,7 @@ GameObject:
   - component: {fileID: 8557123088259130904}
   - component: {fileID: 5213759167872908952}
   - component: {fileID: 1670571949208022733}
-  - component: {fileID: 7794723458749438598}
+  - component: {fileID: 8232722002094696739}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -709,7 +695,7 @@ MonoBehaviour:
   autoBrake: 0
   maxO2Capacity: 100
   O2Amount: 0
---- !u!114 &7794723458749438598
+--- !u!114 &8232722002094696739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -721,7 +707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 8923672254321209205}
+  attenuationObject: {fileID: 0}
 --- !u!1 &7716809139082224693
 GameObject:
   m_ObjectHideFlags: 0
