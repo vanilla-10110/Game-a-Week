@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{f2119db6-823b-42a1-9ec4-cab2aca4dcdb}">
+		<property name="name">
+			<value>THRUST_POWER</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{e6171f49-5018-483e-9f7d-cfa96517f24a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{e6171f49-5018-483e-9f7d-cfa96517f24a}">
+		<property name="maximum">
+			<value>30</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>50</value>
+		</property>
+		<property name="seekSpeedDescending">
+			<value>22.80000114440918</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
