@@ -10,7 +10,9 @@ public class BaseBuilding : MonoBehaviour {
     [TextArea] public string description;
     
     [SerializeField] private float cooldownLength = 0.35f;
-    
+    [SerializeField] private Transform player;
+    [SerializeField] private Collider2D interactArea;
+
     private Collider2D _collider;
     private GameObject _popupUIGameObject;
     private BaseBuildingPopup _popupUI;
@@ -44,7 +46,7 @@ public class BaseBuilding : MonoBehaviour {
             Vector2 mouseScreenPosition = Input.mousePosition;
             Vector2 mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
 
-            if (!GameManager.instance.eventSystem.IsPointerOverGameObject() && Time.time - _lastPopupTime > cooldownLength) {
+            if (interactArea.OverlapPoint(player.position) && !GameManager.instance.eventSystem.IsPointerOverGameObject() && Time.time - _lastPopupTime > cooldownLength) {
                 if (_collider.OverlapPoint(mouseWorldPosition)) {
                     _popupUI.TogglePopup();
                 }

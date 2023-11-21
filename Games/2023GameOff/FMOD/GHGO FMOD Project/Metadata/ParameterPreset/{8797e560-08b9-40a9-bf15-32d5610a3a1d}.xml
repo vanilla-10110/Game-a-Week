@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8797e560-08b9-40a9-bf15-32d5610a3a1d}">
+		<property name="name">
+			<value>MINERAL_TYPE</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{aaba7032-0da6-4a8f-8ad7-e514402d89dc}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{aaba7032-0da6-4a8f-8ad7-e514402d89dc}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Fe</value>
+			<value>Ni</value>
+			<value>Pt</value>
+			<value>Au</value>
+			<value>Az</value>
+		</property>
+		<property name="isHeld">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

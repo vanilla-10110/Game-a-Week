@@ -111,6 +111,9 @@
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{62cb590a-3578-448b-83bf-ced019d9e9b7}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{69d86596-3a37-4c52-97ca-7db6305ad0c0}</destination>
 			<destination>{c225100e-1ba9-475b-89a2-7e693f9e63bd}</destination>
@@ -129,6 +132,17 @@
 	<object class="SpatialiserEffect" id="{860f6986-1cd3-4f5f-b0f3-56b43122093f}">
 		<property name="distanceRolloffType">
 			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+	</object>
+	<object class="RandomizerModulator" id="{62cb590a-3578-448b-83bf-ced019d9e9b7}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
 		</property>
 	</object>
 	<object class="SingleSound" id="{69d86596-3a37-4c52-97ca-7db6305ad0c0}">
