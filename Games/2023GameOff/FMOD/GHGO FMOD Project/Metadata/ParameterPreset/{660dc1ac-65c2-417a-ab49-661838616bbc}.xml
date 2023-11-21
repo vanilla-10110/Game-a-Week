@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{660dc1ac-65c2-417a-ab49-661838616bbc}">
+		<property name="name">
+			<value>THRUST TYPE</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{1cef6825-808a-40fd-b6a6-fd1903cea922}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{1cef6825-808a-40fd-b6a6-fd1903cea922}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>NORMAL</value>
+			<value>O2NOZZLE</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
