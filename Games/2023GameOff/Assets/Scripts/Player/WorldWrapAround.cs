@@ -41,7 +41,10 @@ public class WorldWrapAround : MonoBehaviour
         }
 
         //Apply change, if nessecary
-        if (newTransform != transform.position)
+        if (newTransform != transform.position) {
             transform.position = newTransform;
+            
+            CameraController.main.TeleportToTarget();
+        }
     }
 }

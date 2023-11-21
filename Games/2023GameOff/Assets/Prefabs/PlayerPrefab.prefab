@@ -64,7 +64,6 @@ GameObject:
   - component: {fileID: 1662626955782429204}
   - component: {fileID: 3770764371590155182}
   - component: {fileID: 3851891435740799066}
-  - component: {fileID: 6008126470427827976}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -182,19 +181,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &6008126470427827976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 278734637126062076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
 --- !u!1 &889742839310791584
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +572,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6812361289862788784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
   m_Name: 
@@ -621,7 +607,8 @@ GameObject:
   - component: {fileID: 8557123088259130904}
   - component: {fileID: 5213759167872908952}
   - component: {fileID: 1670571949208022733}
-  - component: {fileID: 3130369378477789525}
+  - component: {fileID: 8232722002094696739}
+  - component: {fileID: 3137628448320149803}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -662,7 +649,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.1
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 59bf314df46152348ac99e8ec240ddc6, type: 2}
@@ -689,15 +676,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   thrustForce: 250
-  maxSpeed: 100
+  maxSpeed: 30
   fuelEfficiency: 1
   maxFuelCapacity: 100
-  fuelAmount: 100
-  hullHealth: 100
+  fuelAmount: 0
   autoBrake: 0
   maxO2Capacity: 100
   O2Amount: 0
---- !u!114 &3130369378477789525
+--- !u!114 &8232722002094696739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,7 +695,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 8923672254321209205}
+  attenuationObject: {fileID: 0}
+--- !u!114 &3137628448320149803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817324321961675383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83871ecbedfd907478e343da59667209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7716809139082224693
 GameObject:
   m_ObjectHideFlags: 0

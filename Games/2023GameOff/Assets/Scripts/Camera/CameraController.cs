@@ -55,6 +55,12 @@ public class CameraController : MonoBehaviour {
         
         MoveEvent?.Invoke(myPosition, transform.position);
     }
+
+    public void TeleportToTarget() {
+        CameraTarget currentTarget = GetCurrentTarget();
+
+        transform.position = currentTarget.transform.position;
+    }
     
     public CameraTarget AddTarget(CameraTarget target) {
         CameraTarget oldTarget = GetCurrentTarget();
