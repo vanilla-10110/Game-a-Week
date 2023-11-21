@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Asteroid_2
     originalName: 
-    pivot: {x: 0.52238804, y: -0.32051283}
+    pivot: {x: 5, y: 5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
