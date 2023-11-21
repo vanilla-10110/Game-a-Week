@@ -51,8 +51,9 @@ public class PlayerController : MonoBehaviour
         }
         RotateArms();
         RotatePointer();
+        ThrusterSound();
 
-        
+
 
     }
 
@@ -99,6 +100,17 @@ public class PlayerController : MonoBehaviour
         {
             _forces += -_rb.velocity * _rb.mass;
             _rb.AddForce(_forces);
+        }
+    }
+    private void ThrusterSound()
+    {
+        if (_forces != Vector2.zero)
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", _rb.velocity.magnitude);
+        }
+        else
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", 0);
         }
     }
 }
