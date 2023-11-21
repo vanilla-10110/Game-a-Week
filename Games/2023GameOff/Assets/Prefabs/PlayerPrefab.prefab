@@ -679,7 +679,8 @@ MonoBehaviour:
   maxSpeed: 30
   fuelEfficiency: 1
   maxFuelCapacity: 100
-  fuelAmount: 0
+  fuelAmount: 100
+  hullHealth: 100
   autoBrake: 0
   maxO2Capacity: 100
   O2Amount: 0

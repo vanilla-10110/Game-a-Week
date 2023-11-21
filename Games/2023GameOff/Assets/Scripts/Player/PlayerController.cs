@@ -129,13 +129,6 @@ public class PlayerController : MonoBehaviour
 
     private void ThrusterSound()
     {
-        if (_forces != Vector2.zero)
-        {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", _rb.velocity.magnitude);
-        }
-        else
-        {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", 0);
-        }
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", _forces.magnitude);
     }
 }
