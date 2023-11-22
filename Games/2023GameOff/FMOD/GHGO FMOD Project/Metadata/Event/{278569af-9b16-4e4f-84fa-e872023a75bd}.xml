@@ -111,6 +111,9 @@
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<property name="playlistMode">
+			<value>1</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{62cb590a-3578-448b-83bf-ced019d9e9b7}</destination>
 		</relationship>
