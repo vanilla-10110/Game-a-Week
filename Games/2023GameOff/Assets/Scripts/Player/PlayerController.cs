@@ -1,10 +1,11 @@
+using TMPro;
 using UnityEngine;
 
 
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("")]
+    
     private float _thrusterRotateSpeed = 8f;
     private float _armsRotateSpeed = 5f;
     private Vector2 _forces;
@@ -19,16 +20,17 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed = 30.0f;
     public float fuelEfficiency = 1.0f;
     public float maxFuelCapacity = 100.0f;
-    public float fuelAmount;
+    public float fuelAmount = 100.0f;
     public float hullHealth = 100.0f;
     public bool autoBrake = false;
     
 
-    [Header("Other Shit")]
+    [Header("Other Stats ig")]
     public float maxO2Capacity = 100.0f;
     public float O2Amount;
 
-    
+    [Header("UI")]
+    public TextMeshProUGUI hullIntegrityText;
 
 
     void Start()
@@ -123,6 +125,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log(hullHealth);
 
         }
+        hullIntegrityText.text = "HULL INTEGRITY: " + Mathf.RoundToInt(hullHealth).ToString();
 
 
     }

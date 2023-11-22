@@ -885,11 +885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8646255
+      value: 0.171875
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.989125
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1770,7 +1770,7 @@ GameObject:
   - component: {fileID: 1860826449}
   m_Layer: 0
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
