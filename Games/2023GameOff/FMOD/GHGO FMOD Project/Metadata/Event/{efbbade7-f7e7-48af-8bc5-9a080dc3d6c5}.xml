@@ -82,9 +82,6 @@
 		<relationship name="automationTracks">
 			<destination>{58df1df6-b59d-4c34-b535-c8521103aeb1}</destination>
 		</relationship>
-		<relationship name="modules">
-			<destination>{7780381f-5bae-40ac-b390-e64bc9f806d6}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b81b408f-8a9a-4c9e-9324-5ba51cf2b02b}</destination>
 		</relationship>
@@ -109,7 +106,6 @@
 	<object class="ParameterProxy" id="{adc0be94-66bd-44f6-a509-47ae78b7220f}">
 		<relationship name="modules">
 			<destination>{3223778e-5fe2-4413-a6f6-125f104eb6f2}</destination>
-			<destination>{7780381f-5bae-40ac-b390-e64bc9f806d6}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{e6171f49-5018-483e-9f7d-cfa96517f24a}</destination>
@@ -160,14 +156,6 @@
 	<object class="AutomationTrack" id="{58df1df6-b59d-4c34-b535-c8521103aeb1}">
 		<relationship name="automator">
 			<destination>{97d339ed-db3b-41ca-aa9e-89788dafd492}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{7780381f-5bae-40ac-b390-e64bc9f806d6}">
-		<property name="looping">
-			<value>true</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{fe00f299-d218-47ef-a132-a71ea242ddd7}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b81b408f-8a9a-4c9e-9324-5ba51cf2b02b}">
