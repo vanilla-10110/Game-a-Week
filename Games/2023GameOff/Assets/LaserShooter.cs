@@ -7,11 +7,11 @@ public class LaserShooter : MonoBehaviour
     public float laserDistance = 100.0f;
     private Transform _laserPoint;
     private LineRenderer _lineRenderer;
-    private Transform transform;
+    private Transform m_transform;
 
     private void Awake()
     {
-        transform = GetComponent<Transform>();
+        m_transform = GetComponent<Transform>();
         _lineRenderer = GetComponent<LineRenderer>();
         _laserPoint = GameObject.Find("LaserPoint").transform;
     }
@@ -22,9 +22,9 @@ public class LaserShooter : MonoBehaviour
 
     private void FireLaser()
     {
-        if (Physics2D.Raycast(transform.position, transform.right))
+        if (Physics2D.Raycast(m_transform.position, m_transform.right))
         {
-            RaycastHit2D _hit = Physics2D.Raycast(transform.position, transform.right);
+            RaycastHit2D _hit = Physics2D.Raycast(m_transform.position, m_transform.right);
             Draw2DRay(_laserPoint.position, _hit.point);
         }
         else
