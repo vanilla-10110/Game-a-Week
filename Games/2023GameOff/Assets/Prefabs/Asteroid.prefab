@@ -127,6 +127,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
       propertyPath: m_LocalScale.x
       value: 3

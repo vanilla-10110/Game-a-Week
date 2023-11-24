@@ -7,9 +7,7 @@ using UnityEngine;
 /// </summary>
 public class AsteroidSpawner : MonoBehaviour
 {
-    [SerializeField] Asteroid asteroidPrefab;
-    [SerializeField] Mineral[] possibleMinerals;
-    [SerializeField] float mineralChance;
+    [SerializeField] ObjectSpawnData[] spawns;
     [SerializeField] int minAmount;
     [SerializeField] int maxAmount;
     /// <summary>
@@ -36,7 +34,14 @@ public class AsteroidSpawner : MonoBehaviour
         int amount = Random.Range(minAmount, maxAmount);
         for (int i = 0; i < amount; i++)
         {
-            CreateAsteroid();
+            //TODO: care about other spawns
+            foreach (var spawn in spawns)
+            {
+                if (Random.value > spawn.spawnChance)
+                {
+                    SpawnObject(spawn);
+                }
+            }
             //Waits a frame for collider to activate.
             //Code uses collison to check for overlaps. Must wait for collider to be active first.
             //Will show asteroids popping in one at a time. Shouldn't be too much of an issue.
@@ -44,7 +49,7 @@ public class AsteroidSpawner : MonoBehaviour
         }
     }
 
-    void CreateAsteroid()
+    void SpawnObject(ObjectSpawnData data)
     {
         //random position
         Vector3 pos = new Vector3(Random.Range(-WorldWrapAround.worldSize, WorldWrapAround.worldSize), Random.Range(-WorldWrapAround.worldSize, WorldWrapAround.worldSize), 0);
@@ -52,7 +57,6 @@ public class AsteroidSpawner : MonoBehaviour
         //Must be certain distance away from base
         if (Vector3.Distance(Vector3.zero, pos) < minDistanceFromBase)
         {
-            //Debug.Log("Too Close");
             return;
         }
         //Prevent overlapping with other asteroids. Needs work
@@ -62,17 +66,19 @@ public class AsteroidSpawner : MonoBehaviour
         }
 
         //create object an assign position
-        GameObject obj = Instantiate(asteroidPrefab.gameObject);
+        GameObject obj = Instantiate(data.prefab);
         obj.transform.position = pos;
 
         //Assign random mineral.
         //This will give shine effect to asteroid, and make it drop the mineral
         //TODO: make this a weighted probability so valuable minerals show up less often
-        if (Random.value > mineralChance)
+        if (data.possibleMinerals != null && Random.value > data.mineralChance)
         {
-            obj.GetComponent<Asteroid>().SetMineral(possibleMinerals[Random.Range(0, possibleMinerals.Length)]);
+            obj.GetComponent<Asteroid>().SetMineral(data.possibleMinerals[Random.Range(0, data.possibleMinerals.Length)]);
         }
     }
+
+
 
     /// <summary>
     /// Returns true if there is an overlap with another asteroid.
@@ -95,4 +101,31 @@ public class AsteroidSpawner : MonoBehaviour
             return false;
         }
     }
+}
+
+/// <summary>
+/// Data associated with each space object that can spawn (Asteroid, Sattelite, more if we need)
+/// 
+/// </summary>
+[System.Serializable]
+class ObjectSpawnData
+{
+    /// <summary>
+    /// The gameobject to make a copy of
+    /// </summary>
+    public GameObject prefab;
+    /// <summary>
+    /// Probability of choosing this spawn over others. 0 - impossible, 1 - certain
+    /// </summary>
+    public float spawnChance;
+    /// <summary>
+    /// Probability for there to be a mineral in it. 0 - impossible, 1 - certain
+    /// </summary>
+    public float mineralChance;
+    /// <summary>
+    /// Minerals that this object can contain
+    /// TODO: Make this have probabilities
+    /// </summary>
+    public Mineral[] possibleMinerals;
+
 }

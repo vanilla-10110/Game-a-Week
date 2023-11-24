@@ -885,11 +885,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.8646255
+      value: 0.171875
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.989125
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1177,6 +1177,10 @@ PrefabInstance:
     - target: {fileID: 3626916397498700004, guid: 20702594fea2d9143bddccbb3be50d51, type: 3}
       propertyPath: m_DrawMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 20702594fea2d9143bddccbb3be50d51, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 20702594fea2d9143bddccbb3be50d51, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1561,11 +1565,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e497294588e914dbeeb6abf12aff06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidPrefab: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
-  possibleMinerals:
-  - {fileID: 4263722219983422318, guid: 9da19ef29bdb12c4a81f7b76eb972456, type: 3}
-  - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
-  mineralChance: 0.5
+  spawns:
+  - prefab: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+    spawnChance: 0.9
+    mineralChance: 0.5
+    possibleMinerals:
+    - {fileID: 4263722219983422318, guid: 9da19ef29bdb12c4a81f7b76eb972456, type: 3}
+    - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
+  - prefab: {fileID: 1953928830975886252, guid: 11427b3c855488347b005d152067e61d, type: 3}
+    spawnChance: 0.1
+    mineralChance: 0.5
+    possibleMinerals:
+    - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
+  - prefab: {fileID: 9040564311802908975, guid: 63fb70bdf9db0d046b86e7b7cd769d40, type: 3}
+    spawnChance: 0.01
+    mineralChance: 1
+    possibleMinerals:
+    - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
   minAmount: 100
   maxAmount: 100
   minDistanceFromBase: 15
@@ -1770,7 +1786,7 @@ GameObject:
   - component: {fileID: 1860826449}
   m_Layer: 0
   m_Name: Base
-  m_TagString: Untagged
+  m_TagString: Ship
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
