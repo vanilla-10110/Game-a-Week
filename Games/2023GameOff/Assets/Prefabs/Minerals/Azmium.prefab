@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &9073908157681949758
+--- !u!1001 &503675872438285753
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,36 +9,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
-      propertyPath: m_Size.x
-      value: 0.13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
-      propertyPath: m_Size.y
-      value: 0.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4931858461726374536, guid: d164077ab065c3e4dbc0a4f8217dbea7, type: 3}
-    - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 48881764305045421, guid: 7ac1aa6766220b242a9aa5463dcfecd0, type: 3}
     - target: {fileID: 2207359112237798058, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_Name
-      value: Gold
+      value: Resource Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4947677284677986967, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100106263760183120, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: mineralName
-      value: Gold
+      value: Azmium
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
