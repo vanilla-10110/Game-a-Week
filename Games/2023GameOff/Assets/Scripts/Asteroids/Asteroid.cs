@@ -40,12 +40,14 @@ public class Asteroid : MonoBehaviour
     private bool selected;
 
     //Component cache
+    public Rigidbody2D rb;
     SpriteRenderer spriteRenderer;
     PolygonCollider2D polygonCollider;
 
     public void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        
 
         //1 in 100 chance for amogus asteroid
         if (Random.Range(0, 100) == 1)
@@ -62,7 +64,7 @@ public class Asteroid : MonoBehaviour
         //Do not add collider to sprite before object creation or things could go breaky
         polygonCollider = gameObject.AddComponent<PolygonCollider2D>();
 
-        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
 
         //add random velocity and rotational velocity
         rb.velocity = new Vector2(Random.Range(minVel, maxVel), Random.Range(minVel, maxVel));

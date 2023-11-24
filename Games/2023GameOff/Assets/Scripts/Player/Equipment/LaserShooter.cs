@@ -6,17 +6,25 @@ public class LaserShooter : MonoBehaviour
 {
     public float laserDistance = 100.0f;
     private Transform _laserPoint;
-    private LineRenderer _lineRenderer;
-    private Transform m_transform;
+    private Transform _grabberPoint;
+
+    private LineRenderer _lineLaser;
+    private LineRenderer _lineGrabber;
+    //private Transform m_transform;
 
     [Header("Laser Stats")]
-    public float laserDamage = 80;
+    public float laserDamage = 80.0f;
+
+    [Header("Grabber Stats")]
+    public float grabberForce = 60.0f;
 
     private void Awake()
     {
-        m_transform = GetComponent<Transform>();
-        _lineRenderer = GameObject.Find("LaserArm_1").GetComponent<LineRenderer>();
+        //m_transform = GetComponent<Transform>();
+        _lineLaser = GameObject.Find("LaserArm_1").GetComponent<LineRenderer>();
+        _lineGrabber = GameObject.Find("TractorArm_1").GetComponent<LineRenderer>();
         _laserPoint = GameObject.Find("LaserPoint").transform;
+        _grabberPoint = GameObject.Find("GrabberPoint").transform;
     }
     private void Update()
     { 
@@ -39,21 +47,47 @@ public class LaserShooter : MonoBehaviour
                 target = Asteroid.selectedAsteroid.transform.position;
                 Asteroid.selectedAsteroid.Damage(laserDamage * Time.deltaTime);
             }
-            Draw2DRay(_laserPoint.position, target);
+            DrawLaser(_laserPoint.position, target);
         }
         else
         {
-            _lineRenderer.enabled = false;
+            _lineLaser.enabled = false;
+        }
+        if (Input.GetButton("Fire2"))
+        {
+            Vector3 target;
+            if (Asteroid.selectedAsteroid == null)
+            {
+                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                target.z = 0;
+                
+            }
+            else
+            {
+                target = Asteroid.selectedAsteroid.transform.position;
+                Asteroid.selectedAsteroid.rb.AddForce((_grabberPoint.transform.position - Asteroid.selectedAsteroid.transform.position).normalized * grabberForce);
+            }
+            DrawGrabber(_grabberPoint.position, target);
+        }
+        else
+        {
+            _lineGrabber.enabled = false;
         }
         
 
         
 
     }
-    void Draw2DRay(Vector2 startPos, Vector2 endPos)
+    void DrawLaser(Vector2 startPos, Vector2 endPos)
     {
-        _lineRenderer.enabled = true;
-        _lineRenderer.SetPosition(0, startPos);
-        _lineRenderer.SetPosition(1, endPos);
+        _lineLaser.enabled = true;
+        _lineLaser.SetPosition(0, startPos);
+        _lineLaser.SetPosition(1, endPos);
+    }
+    void DrawGrabber(Vector2 startPos, Vector2 endPos)
+    {
+        _lineGrabber.enabled = true;
+        _lineGrabber.SetPosition(0, startPos);
+        _lineGrabber.SetPosition(1, endPos);
     }
 }

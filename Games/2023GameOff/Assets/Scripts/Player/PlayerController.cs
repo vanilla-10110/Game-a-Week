@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     
     private float _thrusterRotateSpeed = 8f;
-    private float _armsRotateSpeed = 5f;
+    private float _armsRotateSpeed = 8f;
     private Vector2 _forces;
     private Transform _arms;
     private Transform _thruster;
