@@ -1,6 +1,10 @@
+using FMOD.Studio;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.FilePathAttribute;
+using static UnityEngine.Rendering.DebugUI;
 
 public class LaserShooter : MonoBehaviour
 {
@@ -11,6 +15,11 @@ public class LaserShooter : MonoBehaviour
     private LineRenderer _lineLaser;
     private LineRenderer _lineGrabber;
     //private Transform m_transform;
+
+    private FMOD.Studio.EventInstance lasersound;
+    private FMOD.Studio.EventInstance laserhitsound;
+    private FMOD.Studio.EventInstance tractorsound;
+    //declare FMOD instances
 
     [Header("Laser Stats")]
     public float laserDamage = 80.0f;
@@ -25,6 +34,16 @@ public class LaserShooter : MonoBehaviour
         _lineGrabber = GameObject.Find("TractorArm_1").GetComponent<LineRenderer>();
         _laserPoint = GameObject.Find("LaserPoint").transform;
         _grabberPoint = GameObject.Find("GrabberPoint").transform;
+
+        lasersound = FMODUnity.RuntimeManager.CreateInstance("event:/SHIP/SHIP_LASER_BEAM");
+        laserhitsound = FMODUnity.RuntimeManager.CreateInstance("event:/SPACE/ROCK_DRILL_HIT");
+        tractorsound = FMODUnity.RuntimeManager.CreateInstance("event:/SHIP/SHIP_TRACTOR_BEAM");
+        //Create FMOD instances
+        lasersound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        //set instance locations immediately so console doesn't throw warnings
+
     }
     private void Update()
     { 
@@ -40,18 +59,32 @@ public class LaserShooter : MonoBehaviour
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
+                laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 
             }
             else
             {
                 target = Asteroid.selectedAsteroid.transform.position;
                 Asteroid.selectedAsteroid.Damage(laserDamage * Time.deltaTime);
+                laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target));
+                if (PlaybackState(laserhitsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+                {
+                    laserhitsound.start(); //play sound at instance location
+                }
             }
             DrawLaser(_laserPoint.position, target);
+            lasersound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
+            if (PlaybackState(lasersound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+            {
+                lasersound.start(); //play sound at instance location
+            }
+            
         }
         else
         {
             _lineLaser.enabled = false;
+            lasersound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop sound
+            laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop sound
         }
         if (Input.GetButton("Fire2"))
         {
@@ -60,24 +93,38 @@ public class LaserShooter : MonoBehaviour
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
-                
+                tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject)); //set instance location
             }
             else
             {
                 target = Asteroid.selectedAsteroid.transform.position;
                 Asteroid.selectedAsteroid.rb.AddForce((_grabberPoint.transform.position - Asteroid.selectedAsteroid.transform.position).normalized * grabberForce);
+                tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
             }
             DrawGrabber(_grabberPoint.position, target);
+            if (PlaybackState(tractorsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+            {
+                tractorsound.start(); //play sound at instance location
+            }
+            
         }
         else
         {
             _lineGrabber.enabled = false;
+            tractorsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop sound
         }
         
-
-        
-
     }
+
+    FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE pS;
+        instance.getPlaybackState(out pS);
+        return pS;
+    }
+    //creates a method that declares an eventinstance as a parameter and returns the PLAYBACK_STATE of the instance
+
+    
     void DrawLaser(Vector2 startPos, Vector2 endPos)
     {
         _lineLaser.enabled = true;
@@ -90,4 +137,5 @@ public class LaserShooter : MonoBehaviour
         _lineGrabber.SetPosition(0, startPos);
         _lineGrabber.SetPosition(1, endPos);
     }
+    
 }

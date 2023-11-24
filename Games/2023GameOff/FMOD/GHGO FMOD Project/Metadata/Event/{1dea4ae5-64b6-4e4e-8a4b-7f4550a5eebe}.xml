@@ -65,6 +65,9 @@
 		<property name="maxVoices">
 			<value>1</value>
 		</property>
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
 	</object>
 	<object class="MarkerTrack" id="{8971f53c-a90a-41bd-987a-f996797b6a50}" />
 	<object class="GroupTrack" id="{daa6b9d8-29fc-4c98-a21b-8935a9372390}">
@@ -293,9 +296,6 @@
 	<object class="SpatialiserEffect" id="{6d952407-d727-454b-ad1e-67daee763216}">
 		<property name="distanceRolloffType">
 			<value>4</value>
-		</property>
-		<property name="extentMode">
-			<value>2</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{e9b5c62d-7b15-418d-bb0c-e148de923992}" />

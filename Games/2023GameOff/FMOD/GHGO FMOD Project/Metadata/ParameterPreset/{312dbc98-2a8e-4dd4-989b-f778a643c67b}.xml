@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{312dbc98-2a8e-4dd4-989b-f778a643c67b}">
+		<property name="name">
+			<value>TRACTOR_PITCH</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{67b48112-2fcc-4e3a-9836-4592f796b0b6}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{67b48112-2fcc-4e3a-9836-4592f796b0b6}">
+		<property name="maximum">
+			<value>10</value>
+		</property>
+		<property name="initialValue">
+			<value>10</value>
+		</property>
+	</object>
+</objects>
