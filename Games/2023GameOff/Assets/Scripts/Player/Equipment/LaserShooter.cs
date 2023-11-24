@@ -23,18 +23,18 @@ public class LaserShooter : MonoBehaviour
 
     [Header("Laser Stats")]
     public float laserDamage = 80.0f;
-
-    [Header("Grabber Stats")]
     public float grabberForce = 60.0f;
+    public float powerMaxCapacity = 100.0f;
+    public float powerEfficiency = 1.0f;
 
     private void Awake()
     {
-        //m_transform = GetComponent<Transform>();
         _lineLaser = GameObject.Find("LaserArm_1").GetComponent<LineRenderer>();
         _lineGrabber = GameObject.Find("TractorArm_1").GetComponent<LineRenderer>();
         _laserPoint = GameObject.Find("LaserPoint").transform;
         _grabberPoint = GameObject.Find("GrabberPoint").transform;
 
+        //FMOD
         lasersound = FMODUnity.RuntimeManager.CreateInstance("event:/SHIP/SHIP_LASER_BEAM");
         laserhitsound = FMODUnity.RuntimeManager.CreateInstance("event:/SPACE/ROCK_DRILL_HIT");
         tractorsound = FMODUnity.RuntimeManager.CreateInstance("event:/SHIP/SHIP_TRACTOR_BEAM");
@@ -57,8 +57,11 @@ public class LaserShooter : MonoBehaviour
             Vector3 target;
             if (Asteroid.selectedAsteroid == null)
             {
+               // if (Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition).normalized))
+
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
+
                 laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 
             }
@@ -66,6 +69,7 @@ public class LaserShooter : MonoBehaviour
             {
                 target = Asteroid.selectedAsteroid.transform.position;
                 Asteroid.selectedAsteroid.Damage(laserDamage * Time.deltaTime);
+
                 laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target));
                 if (PlaybackState(laserhitsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
                 {
@@ -102,6 +106,7 @@ public class LaserShooter : MonoBehaviour
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
             }
             DrawGrabber(_grabberPoint.position, target);
+
             if (PlaybackState(tractorsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
             {
                 tractorsound.start(); //play sound at instance location

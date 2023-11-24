@@ -121,7 +121,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: NickelOre_1
     originalName: 
-    pivot: {x: 0.53846157, y: -0.27272728}
+    pivot: {x: 0.5, y: 0.5}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:

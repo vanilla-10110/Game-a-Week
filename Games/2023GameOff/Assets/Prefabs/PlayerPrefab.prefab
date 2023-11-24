@@ -1006,7 +1006,7 @@ MonoBehaviour:
   hullHealth: 100
   autoBrake: 0
   maxO2Capacity: 100
-  O2Amount: 0
+  O2Amount: 100
   hullIntegrityText: {fileID: 4801005138066075060}
 --- !u!114 &8232722002094696739
 MonoBehaviour:
@@ -1048,6 +1048,8 @@ MonoBehaviour:
   laserDistance: 100
   laserDamage: 80
   grabberForce: 10
+  powerMaxCapacity: 100
+  powerEfficiency: 1
 --- !u!1 &7406064260917209136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,6 +1543,8 @@ MonoBehaviour:
   laserDistance: 100
   laserDamage: 80
   grabberForce: 10
+  powerMaxCapacity: 100
+  powerEfficiency: 1
 --- !u!4 &4512336453629291289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 0072d1377496c814696d766b1af28a6e, type: 3}
@@ -1674,7 +1678,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.3494091
+        value: 0.18675849
         inSlope: 0
         outSlope: 0
         tangentMode: 0
