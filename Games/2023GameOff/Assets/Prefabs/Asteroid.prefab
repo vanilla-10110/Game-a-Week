@@ -4943,8 +4943,7 @@ MonoBehaviour:
   maxVel: 1
   minAngVel: -0.5
   maxAngVel: 0.5
-  valuableChance: 50
-  startingHealth: 3
+  startingHealth: 100
   destroyParticles: {fileID: 8901834974261355405}
   shinyParticles: {fileID: 4214418630001263214}
 --- !u!50 &1465876804295089030
