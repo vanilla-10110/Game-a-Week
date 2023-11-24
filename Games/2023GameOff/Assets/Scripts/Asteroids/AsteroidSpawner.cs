@@ -74,7 +74,8 @@ public class AsteroidSpawner : MonoBehaviour
         //TODO: make this a weighted probability so valuable minerals show up less often
         if (data.possibleMinerals != null && Random.value > data.mineralChance)
         {
-            obj.GetComponent<Asteroid>().SetMineral(data.possibleMinerals[Random.Range(0, data.possibleMinerals.Length)]);
+            var m = data.possibleMinerals[Random.Range(0, data.possibleMinerals.Length)];
+            obj.GetComponent<Asteroid>().SetMineral(m);
         }
     }
 

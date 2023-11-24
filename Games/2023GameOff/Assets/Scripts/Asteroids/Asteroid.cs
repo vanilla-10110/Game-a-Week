@@ -19,6 +19,10 @@ public class Asteroid : MonoBehaviour
     [SerializeField] float maxAngVel;
     //Health to begin with
     [SerializeField] float startingHealth;
+    /// <summary>
+    /// Multiplied by size for rigidbody mass
+    /// </summary>
+    [SerializeField] float baseMass;
 
     [Header("Effects")]
     //Particles when destroyed
@@ -56,6 +60,7 @@ public class Asteroid : MonoBehaviour
     public void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
 
 
         if (sprites != null && sprites.Length > 0)
@@ -66,12 +71,13 @@ public class Asteroid : MonoBehaviour
 
         //Store size of asteroid
         size = spriteRenderer.bounds.size.magnitude;
+        //Make asteroids heavier based on mass
+        rb.mass = baseMass * size;
 
         //create collider after sprite change to ensure the hitbox matches visuals.
         //Do not add collider to sprite before object creation or things could go breaky
         polygonCollider = gameObject.AddComponent<PolygonCollider2D>();
 
-        rb = gameObject.GetComponent<Rigidbody2D>();
 
         //add random velocity and rotational velocity
         rb.velocity = new Vector2(Random.Range(minVel, maxVel), Random.Range(minVel, maxVel));

@@ -221,12 +221,12 @@ MonoBehaviour:
   - {fileID: -4081458858774278898, guid: 2de5fb720bc9a5346a7e0e55f33774d3, type: 3}
   - {fileID: 4057775834960082434, guid: 0c66b70d270f02343b3ceae368161023, type: 3}
   - {fileID: -2135181985125288468, guid: aefe08f230852344da9c48ae6b91dd42, type: 3}
-  susSprite: {fileID: 6373820283191707063, guid: 5a7f3f0184f5f114da3f8c3d07a08e75, type: 3}
   minVel: -1
   maxVel: 1
   minAngVel: -0.5
   maxAngVel: 0.5
   startingHealth: 100
+  baseMass: 50
   destroyParticles: {fileID: 8901834974261355405}
   shinyParticles: {fileID: 4214418630001263214}
   rb: {fileID: 0}
@@ -242,7 +242,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 20
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

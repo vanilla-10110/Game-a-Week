@@ -659,8 +659,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029905a4c885d394ca0b829ccd6f1bc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
-  target: {fileID: 0}
+  camera: {fileID: 2088342287}
+  target: {fileID: 1890518578}
   minimumMovementThreshold: 999999
   minimumTime: 0.3
   cameraTarget:
@@ -885,15 +885,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.171875
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.302087
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalRotation.w
@@ -922,6 +922,10 @@ PrefabInstance:
     - target: {fileID: 7867588594933823821, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8557123088259130904, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1588,8 +1592,8 @@ MonoBehaviour:
     - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
     - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
     - {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
-  minAmount: 100
-  maxAmount: 100
+  minAmount: 300
+  maxAmount: 500
   minDistanceFromBase: 15
   overlapCheckRadius: 1
   overlapContactFilter:
@@ -1819,6 +1823,11 @@ Transform:
   - {fileID: 894048943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1890518578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8557123088259130904, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
+  m_PrefabInstance: {fileID: 1104343742}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1967502988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1893,6 +1902,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6931213071181068934, guid: bba62c002c4f4dd4693429299c175fe0, type: 3}
   m_PrefabInstance: {fileID: 1967502988}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2088342287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5360617123999766774, guid: 44ed4d01b09c86844ae9902bcb017a06, type: 3}
+  m_PrefabInstance: {fileID: 1104343742}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324b3adfd9f64e88b4eb5e77dc35b646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
