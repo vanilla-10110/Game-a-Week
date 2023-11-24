@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="DAWAsset" id="{e64e2703-8149-4022-a425-4bdff5f6eda2}">
+	<object class="DAWAsset" id="{3e141818-bdec-40a1-acce-e2a635722fd8}">
 		<property name="assetPath">
-			<value>2023_GHGO_SFX.rpp.link/ROCK_EXPLOSION.wav</value>
+			<value>2023_GHGO_SFX.rpp.link/ROCK_EXPLODE_CRACK_06.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>48</value>
@@ -11,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>3.9101249999999999</value>
+			<value>0.80472916666666672</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ae20a2a6-a7e3-4e47-96d9-afd90f67aaf4}</destination>
