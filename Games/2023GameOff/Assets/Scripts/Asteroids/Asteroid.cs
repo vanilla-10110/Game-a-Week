@@ -44,8 +44,6 @@ public class Asteroid : MonoBehaviour
     SpriteRenderer spriteRenderer;
     PolygonCollider2D polygonCollider;
 
-    //declare FMOD instance for explosion sound
-    private FMOD.Studio.EventInstance explosionsound;
 
     public void Awake()
     {
@@ -113,14 +111,8 @@ public class Asteroid : MonoBehaviour
         //Begin destroy particle system. The PS will destroy the object after done
         destroyParticles.Play(false);
 
-        //create FMOD instance for explosion sound
-        explosionsound = FMODUnity.RuntimeManager.CreateInstance("event:/SPACE/ROCK_EXPLODE");
-        //set location for explosion sound
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(explosionsound, GetComponent<Transform>(), GetComponent<Rigidbody>());
         //play explosion sound
-        explosionsound.start();
-        //release explosion sound instance after use
-        explosionsound.release();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SPACE/ROCK_EXPLODE", gameObject.transform.position);
     }
 
     //Use pointer exit and enter to determine if asteroid is hovered over by mouse

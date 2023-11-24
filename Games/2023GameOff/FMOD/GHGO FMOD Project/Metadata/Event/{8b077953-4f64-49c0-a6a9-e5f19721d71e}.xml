@@ -5,7 +5,7 @@
 			<value>SHIP_TRACTOR_BEAM</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e3513aa4-c209-44e6-9a49-8fd414d06741}</destination>
@@ -147,7 +147,6 @@
 	<object class="MixerBusEffectChain" id="{88929e6f-e59c-4d41-b0a7-cf38df7e967d}">
 		<relationship name="effects">
 			<destination>{75e5cc7c-4a2e-4230-a817-42d7d48e05c7}</destination>
-			<destination>{c045a023-d74f-4405-8ae0-7527ad1a5ee1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ac5b6c24-7c19-4b40-953e-36201ac0d6ab}" />
@@ -187,17 +186,6 @@
 	</object>
 	<object class="MixerBusFader" id="{d6d65a5b-ecf6-4d31-849d-1a4decc81d59}" />
 	<object class="MixerBusFader" id="{75e5cc7c-4a2e-4230-a817-42d7d48e05c7}" />
-	<object class="SpatialiserEffect" id="{c045a023-d74f-4405-8ae0-7527ad1a5ee1}">
-		<property name="distanceRolloffType">
-			<value>4</value>
-		</property>
-		<property name="minimumDistance">
-			<value>3.20000005</value>
-		</property>
-		<property name="overrideRange">
-			<value>true</value>
-		</property>
-	</object>
 	<object class="Automator" id="{f98325c4-cc57-4eae-ab4e-269a4e0f7762}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>pitch</value>

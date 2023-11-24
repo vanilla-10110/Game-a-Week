@@ -382,7 +382,7 @@
 	</object>
 	<object class="SingleSound" id="{06e7753b-35bb-4691-872e-22fd8c60b20f}">
 		<property name="start">
-			<value>110.32667876588022</value>
+			<value>108.63157894736841</value>
 		</property>
 		<property name="length">
 			<value>22.736842105263158</value>
@@ -463,7 +463,7 @@
 	</object>
 	<object class="LoopRegion" id="{13d707ac-8eb7-4592-99fe-883f9700a63a}">
 		<property name="position">
-			<value>110.32667876588022</value>
+			<value>111.1578947368421</value>
 		</property>
 		<property name="length">
 			<value>20.210526315789473</value>
