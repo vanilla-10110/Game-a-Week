@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3b1847e1-494f-4422-8a8b-37a1f140c948}">
+		<property name="name">
+			<value>TRACK_HUB_UPGRADE_2</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{249f0650-4b3b-4d08-872b-cab744d2c921}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{249f0650-4b3b-4d08-872b-cab744d2c921}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

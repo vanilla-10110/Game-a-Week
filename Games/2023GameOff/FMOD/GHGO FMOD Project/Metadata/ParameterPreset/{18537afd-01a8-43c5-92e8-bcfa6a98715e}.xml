@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{18537afd-01a8-43c5-92e8-bcfa6a98715e}">
 		<property name="name">
-			<value>PARAMETER_NAME</value>
+			<value>TRACK_HUB_UPGRADE_1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
