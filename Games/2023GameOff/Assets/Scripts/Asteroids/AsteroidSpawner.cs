@@ -37,7 +37,7 @@ public class AsteroidSpawner : MonoBehaviour
             //TODO: care about other spawns
             foreach (var spawn in spawns)
             {
-                if (Random.value > spawn.spawnChance)
+                if (Random.value < spawn.spawnChance)
                 {
                     SpawnObject(spawn);
                 }
