@@ -142,7 +142,7 @@ ScriptedImporter:
   spriteSheetImportData:
   - name: RockParticals_1_0
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -162,7 +162,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: RockParticals_1_1
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -182,7 +182,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: RockParticals_1_2
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -202,7 +202,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: RockParticals_1_3
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -222,7 +222,7 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   - name: RockParticals_1_4
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -232,6 +232,26 @@ ScriptedImporter:
       width: 8
       height: 8
     spriteID: 95705214f7506c44d992e1b7dc398baa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  - name: RockParticals_1_5
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 43
+      y: 4
+      width: 8
+      height: 8
+    spriteID: a89556103684778418fec67a9d305c23
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -253,7 +273,7 @@ ScriptedImporter:
       cellRect:
         x: 1
         y: 0
-        width: 38
+        width: 46
         height: 8
       spriteId: da95c37b80a3d20448331d43967321c0
     linkedCells: []
@@ -297,4 +317,4 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 40, y: 8}
+  canvasSize: {x: 48, y: 8}
