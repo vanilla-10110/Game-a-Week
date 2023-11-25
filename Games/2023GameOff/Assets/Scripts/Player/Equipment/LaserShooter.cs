@@ -134,13 +134,26 @@ public class LaserShooter : MonoBehaviour
     {
         _lineLaser.enabled = true;
         _lineLaser.SetPosition(0, startPos);
-        _lineLaser.SetPosition(1, endPos);
+
+        var direction = (endPos - startPos).normalized;
+        //the hardcoded number at the end makes the laser longer     
+        var realEndPos = startPos + direction * 30;
+
+        _lineLaser.SetPosition(1, realEndPos);
+
     }
     void DrawGrabber(Vector2 startPos, Vector2 endPos)
     {
         _lineGrabber.enabled = true;
         _lineGrabber.SetPosition(0, startPos);
         _lineGrabber.SetPosition(1, endPos);
+
+        //this doesn't work dunno why
+        //var direction = (endPos - startPos).normalized;
+        ////the hardcoded number at the end makes the laser longer     
+        //var realEndPos = startPos + direction * 30;
+
+        //_lineLaser.SetPosition(1, realEndPos);
     }
 
 }
