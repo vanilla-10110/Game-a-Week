@@ -61,9 +61,20 @@ public class LaserShooter : MonoBehaviour
             if (Asteroid.selectedAsteroid == null)
             {
                 // if (Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition).normalized))
+                
+                RaycastHit2D hit = Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition - _laserPoint.transform.position).normalized);
 
-                target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                target.z = 0;
+                if (hit.collider.CompareTag("Rock"))
+                {
+                    target = hit.transform.position;
+                }
+                else
+                {
+                    target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    target.z = 0;
+                }
+
+                
 
                 powerAmount -= powerEfficiency * Time.deltaTime / 2;
 
@@ -106,8 +117,9 @@ public class LaserShooter : MonoBehaviour
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
-
                 powerAmount -= powerEfficiency * Time.deltaTime / 2;
+
+                
 
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject)); //set instance location
             }
@@ -118,7 +130,7 @@ public class LaserShooter : MonoBehaviour
                     selection = Mineral.selectedMineral.gameObject;
                 else selection = SpaceObject.selectedAsteroid.gameObject;
                 target = selection.transform.position;
-                selection.GetComponent<Rigidbody2D>().AddForce((_grabberPoint.transform.position - selection.transform.position).normalized * grabberForce);
+                selection.GetComponent<Rigidbody2D>()./*velocity = */AddForce((_grabberPoint.transform.position - selection.transform.position).normalized * grabberForce);
 
                 powerAmount -= powerEfficiency * Time.deltaTime;
 
