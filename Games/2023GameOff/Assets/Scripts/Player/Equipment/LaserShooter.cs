@@ -24,8 +24,9 @@ public class LaserShooter : MonoBehaviour
     [Header("Laser Stats")]
     public float laserDamage = 80.0f;
     public float grabberForce = 250.0f;
-    public float powerMaxCapacity = 100.0f;
+    public float powerMaxCapacity = 200.0f;
     public float powerEfficiency = 1.0f;
+    public float powerAmount;
 
     private void Awake()
     {
@@ -33,6 +34,8 @@ public class LaserShooter : MonoBehaviour
         _lineGrabber = GameObject.Find("TractorArm_1").GetComponent<LineRenderer>();
         _laserPoint = GameObject.Find("LaserPoint").transform;
         _grabberPoint = GameObject.Find("GrabberPoint").transform;
+
+        powerAmount = powerMaxCapacity;
 
         //FMOD
         lasersound = FMODUnity.RuntimeManager.CreateInstance("event:/SHIP/SHIP_LASER_BEAM");
@@ -52,7 +55,7 @@ public class LaserShooter : MonoBehaviour
 
     private void FireLaser()
     {
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && powerAmount > 0)
         {
             Vector3 target;
             if (Asteroid.selectedAsteroid == null)
@@ -61,6 +64,8 @@ public class LaserShooter : MonoBehaviour
 
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
+
+                powerAmount -= powerEfficiency * Time.deltaTime / 2;
 
                 laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
@@ -71,12 +76,15 @@ public class LaserShooter : MonoBehaviour
                 Debug.Log(laserDamage * Time.deltaTime);
                 Asteroid.selectedAsteroid.Damage(laserDamage);
 
+                powerAmount -= powerEfficiency * Time.deltaTime * 2;
+
                 laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target));
                 if (PlaybackState(laserhitsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
                 {
                     laserhitsound.start(); //play sound at instance location
                 }
             }
+
             DrawLaser(_laserPoint.position, target);
             lasersound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
             if (PlaybackState(lasersound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
@@ -91,13 +99,16 @@ public class LaserShooter : MonoBehaviour
             lasersound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop sound
             laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop sound
         }
-        if (Input.GetButton("Fire2"))
+        if (Input.GetButton("Fire2") && powerAmount > 0)
         {
             Vector3 target;
             if (SpaceObject.selectedAsteroid == null && Mineral.selectedMineral == null)
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
+
+                powerAmount -= powerEfficiency * Time.deltaTime / 2;
+
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject)); //set instance location
             }
             else
@@ -108,6 +119,9 @@ public class LaserShooter : MonoBehaviour
                 else selection = SpaceObject.selectedAsteroid.gameObject;
                 target = selection.transform.position;
                 selection.GetComponent<Rigidbody2D>().AddForce((_grabberPoint.transform.position - selection.transform.position).normalized * grabberForce);
+
+                powerAmount -= powerEfficiency * Time.deltaTime;
+
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
             }
             DrawGrabber(_grabberPoint.position, target);
