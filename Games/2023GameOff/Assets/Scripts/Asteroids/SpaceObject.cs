@@ -53,8 +53,11 @@ public class SpaceObject : MonoBehaviour
     protected SpriteRenderer spriteRenderer;
     protected Collider2D objectCollider;
 
+    private bool destroyed;
+
     private void Start()
     {
+        destroyed = false;
         OnInitialise();
     }
 
@@ -99,7 +102,7 @@ public class SpaceObject : MonoBehaviour
     public void Damage(float dmg)
     {
         health -= dmg;
-        if (health <= 0)
+        if (health <= 0 && !destroyed)
         {
             DestroyObject();
         }
@@ -120,6 +123,8 @@ public class SpaceObject : MonoBehaviour
         destroyParticles.Play(false);
 
         Destroy(gameObject);
+
+        destroyed = true;
     }
 
     //Use pointer exit and enter to determine if asteroid is hovered over by mouse

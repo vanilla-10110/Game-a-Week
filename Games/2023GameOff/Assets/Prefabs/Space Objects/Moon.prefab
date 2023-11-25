@@ -147,7 +147,7 @@ MonoBehaviour:
   maxAngVel: 1
   velocityModifier: 1
   baseMass: 100
-  startingHealth: 300
+  startingHealth: 500
   destroyParticles: {fileID: 8120314539365218092}
   rb: {fileID: 0}
   asteroidPrefab: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
