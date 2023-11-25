@@ -24,9 +24,12 @@ public class Moon : SpaceObject
         for (int i = 0; i < spawnAmount; i++)
         {
             GameObject obj = Instantiate(asteroidPrefab);
-            obj.GetComponent<Asteroid>().velocityModifier = 3;
+            //arbiratly chosen numbers
+            Vector3 offset = new Vector3(Random.Range(-4, 4), Random.Range(-4, 4));
+            obj.transform.position = transform.position + offset;
 
-            obj.transform.position = transform.position;
+            obj.GetComponent<Asteroid>().velocityModifier = 2;
+
         }
 
         //play explosion sound
