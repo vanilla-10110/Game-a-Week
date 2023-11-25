@@ -151,10 +151,24 @@ public class SpaceObject : MonoBehaviour
     void WrapAround()
     {
         Vector3 pos = transform.position;
-        pos.x = Mathf.Clamp(pos.x, -WorldWrapAround.worldSize, WorldWrapAround.worldSize);
-        pos.y = Mathf.Clamp(pos.y, -WorldWrapAround.worldSize, WorldWrapAround.worldSize);
 
-        if (pos != transform.position)
-            transform.position = pos;
+        if (pos.x < -WorldWrapAround.worldSize)
+        {
+            pos.x = WorldWrapAround.worldSize;
+        }
+        if (pos.x > WorldWrapAround.worldSize)
+        {
+            pos.x = -WorldWrapAround.worldSize;
+        }
+        if (pos.y < -WorldWrapAround.worldSize)
+        {
+            pos.y = WorldWrapAround.worldSize;
+        }
+        if (pos.y > WorldWrapAround.worldSize)
+        {
+            pos.y = -WorldWrapAround.worldSize;
+        }
+
+        transform.position = pos;
     }
 }
