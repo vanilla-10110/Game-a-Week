@@ -68,18 +68,7 @@ public class AsteroidSpawner : MonoBehaviour
         //create object an assign position
         GameObject obj = Instantiate(data.prefab);
         obj.transform.position = pos;
-
-        //Assign random mineral.
-        //This will give shine effect to asteroid, and make it drop the mineral
-        //TODO: make this a weighted probability so valuable minerals show up less often
-        if (data.possibleMinerals != null && Random.value > data.mineralChance)
-        {
-            var m = data.possibleMinerals[Random.Range(0, data.possibleMinerals.Length)];
-            obj.GetComponent<Asteroid>().SetMineral(m);
-        }
     }
-
-
 
     /// <summary>
     /// Returns true if there is an overlap with another asteroid.
@@ -119,14 +108,6 @@ class ObjectSpawnData
     /// Probability of choosing this spawn over others. 0 - impossible, 1 - certain
     /// </summary>
     public float spawnChance;
-    /// <summary>
-    /// Probability for there to be a mineral in it. 0 - impossible, 1 - certain
-    /// </summary>
-    public float mineralChance;
-    /// <summary>
-    /// Minerals that this object can contain
-    /// TODO: Make this have probabilities
-    /// </summary>
-    public Mineral[] possibleMinerals;
+
 
 }

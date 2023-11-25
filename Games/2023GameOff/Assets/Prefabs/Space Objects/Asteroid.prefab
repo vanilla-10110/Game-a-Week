@@ -5155,6 +5155,12 @@ MonoBehaviour:
   destroyParticles: {fileID: 388154237988037504}
   rb: {fileID: 0}
   shinyParticles: {fileID: 4214418630001263214}
+  mineralChance: 0.5
+  possibleMinerals:
+  - {fileID: 4263722219983422318, guid: 9da19ef29bdb12c4a81f7b76eb972456, type: 3}
+  - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
+  - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+  - {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
 --- !u!50 &1465876804295089030
 Rigidbody2D:
   serializedVersion: 4

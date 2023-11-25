@@ -9,12 +9,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: mineralChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: sprites.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: m_Name
-      value: Susteroid Variant
+      value: Susteroid
       objectReference: {fileID: 0}
     - target: {fileID: 3015301375562948460, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: m_LocalPosition.x

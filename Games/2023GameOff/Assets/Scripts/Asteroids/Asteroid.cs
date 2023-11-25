@@ -12,6 +12,16 @@ public class Asteroid : SpaceObject
     [SerializeField] ParticleSystem shinyParticles;
 
     /// <summary>
+    /// Probability for there to be a mineral in it. 0 - impossible, 1 - certain
+    /// </summary>
+    public float mineralChance;
+
+    /// <summary>
+    /// Minerals that this object can contain
+    /// </summary>
+    public Mineral[] possibleMinerals;
+
+    /// <summary>
     /// Valuable asteroids drop minerals. If false, drop nothing.
     /// </summary>
     public bool isValuable { get { return mineral != null; } }
@@ -27,6 +37,15 @@ public class Asteroid : SpaceObject
         //create collider after sprite change to ensure the hitbox matches visuals.
         //Do not add collider to sprite before object creation or things could go breaky
         objectCollider = gameObject.AddComponent<PolygonCollider2D>();
+
+        //Assign random mineral.
+        //This will give shine effect to asteroid, and make it drop the mineral
+        //TODO: make this a weighted probability so valuable minerals show up less often
+        if (possibleMinerals != null && Random.value > mineralChance)
+        {
+            var m = possibleMinerals[Random.Range(0, possibleMinerals.Length)];
+            SetMineral(m);
+        }
     }
 
     public void SetMineral(Mineral m)

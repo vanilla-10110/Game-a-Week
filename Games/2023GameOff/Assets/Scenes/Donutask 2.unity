@@ -1499,30 +1499,12 @@ MonoBehaviour:
   spawns:
   - prefab: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
     spawnChance: 0.9
-    mineralChance: 0.5
-    possibleMinerals:
-    - {fileID: 4263722219983422318, guid: 9da19ef29bdb12c4a81f7b76eb972456, type: 3}
-    - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
-    - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
-    - {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
   - prefab: {fileID: 9040564311802908975, guid: caadc31fc1c4dd44c8c1346985f7184b, type: 3}
     spawnChance: 0.01
-    mineralChance: 0.5
-    possibleMinerals:
-    - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
-    - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
   - prefab: {fileID: 1953928830975886252, guid: 8f7caf65fcc4faa4dbc343a3cedad5bf, type: 3}
     spawnChance: 0.01
-    mineralChance: 1
-    possibleMinerals:
-    - {fileID: 4263722219983422318, guid: 9da19ef29bdb12c4a81f7b76eb972456, type: 3}
-    - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
-    - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
-    - {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
   - prefab: {fileID: 5901788204242166693, guid: 205cbb632cc37ca4d8e3b9acc945c718, type: 3}
     spawnChance: 0.005
-    mineralChance: 1
-    possibleMinerals: []
   minAmount: 600
   maxAmount: 1000
   minDistanceFromBase: 15
