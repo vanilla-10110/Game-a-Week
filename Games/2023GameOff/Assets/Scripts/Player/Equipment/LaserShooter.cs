@@ -23,7 +23,7 @@ public class LaserShooter : MonoBehaviour
 
     [Header("Laser Stats")]
     public float laserDamage = 80.0f;
-    public float grabberForce = 60.0f;
+    public float grabberForce = 250.0f;
     public float powerMaxCapacity = 100.0f;
     public float powerEfficiency = 1.0f;
 
@@ -68,7 +68,8 @@ public class LaserShooter : MonoBehaviour
             else
             {
                 target = Asteroid.selectedAsteroid.transform.position;
-                Asteroid.selectedAsteroid.Damage(laserDamage * Time.deltaTime);
+                Debug.Log(laserDamage * Time.deltaTime);
+                Asteroid.selectedAsteroid.Damage(laserDamage);
 
                 laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target));
                 if (PlaybackState(laserhitsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
@@ -93,7 +94,7 @@ public class LaserShooter : MonoBehaviour
         if (Input.GetButton("Fire2"))
         {
             Vector3 target;
-            if (Asteroid.selectedAsteroid == null)
+            if (Asteroid.selectedAsteroid == null && Mineral.selectedMineral == null)
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
@@ -101,8 +102,12 @@ public class LaserShooter : MonoBehaviour
             }
             else
             {
-                target = Asteroid.selectedAsteroid.transform.position;
-                Asteroid.selectedAsteroid.rb.AddForce((_grabberPoint.transform.position - Asteroid.selectedAsteroid.transform.position).normalized * grabberForce);
+                GameObject selection;
+                if (Asteroid.selectedAsteroid == null)
+                    selection = Mineral.selectedMineral.gameObject;
+                else selection = Asteroid.selectedAsteroid.gameObject;
+                target = selection.transform.position;
+                selection.GetComponent<Rigidbody2D>().AddForce((_grabberPoint.transform.position - selection.transform.position).normalized * grabberForce);
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
             }
             DrawGrabber(_grabberPoint.position, target);
