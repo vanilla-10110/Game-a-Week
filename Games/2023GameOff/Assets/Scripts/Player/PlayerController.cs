@@ -19,22 +19,31 @@ public class PlayerController : MonoBehaviour
     public float thrustForce = 75.0f;
     public float maxSpeed = 30.0f;
     public float fuelEfficiency = 1.0f;
-    public float maxFuelCapacity = 100.0f;
-    public float fuelAmount = 100.0f;
-    public float hullHealth = 100.0f;
+    
+    
     public bool autoBrake = false;
     
 
     [Header("Other Stats ig")]
-    public float maxO2Capacity = 100.0f;
+    public float maxO2Capacity = 200.0f;
+    public float O2DrainRate = 0.2f;
     public float O2Amount;
 
+    public float maxFuelCapacity = 200.0f;
+    public float fuelAmount;
+
+    public float hullHealth = 100.0f;
+    
     [Header("UI")]
     public TextMeshProUGUI hullIntegrityText;
 
 
     void Start()
     {
+
+        O2Amount = maxO2Capacity;
+        fuelAmount = maxFuelCapacity;
+
         _rb = GetComponent<Rigidbody2D>();
         _arms = transform.Find("Arms");
         _thruster = transform.Find("Thruster");
@@ -56,16 +65,20 @@ public class PlayerController : MonoBehaviour
         RotateArms();
         RotatePointer();
         ThrusterSound();
-
-
-
+        O2Amount -= O2DrainRate * Time.deltaTime;
     }
 
     void MovePlayer()
     {
         _forces = new Vector2(Input.GetAxisRaw("Horizontal") * thrustForce * Time.deltaTime, Input.GetAxisRaw("Vertical") * thrustForce * Time.deltaTime);
-        _rb.AddForce(_forces);
-        fuelAmount -= _forces.magnitude * Time.deltaTime;
+        if (fuelAmount > 0 && O2Amount > 0)
+        {
+            fuelAmount -= _forces.magnitude * Time.deltaTime;
+            O2Amount -= _forces.magnitude * Time.deltaTime / 4;
+            _rb.AddForce(_forces);
+            
+        }
+        
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
 
     }

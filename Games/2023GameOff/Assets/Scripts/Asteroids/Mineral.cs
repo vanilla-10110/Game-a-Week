@@ -9,6 +9,16 @@ public class Mineral : MonoBehaviour
     /// </summary>
     public string mineralName;
 
+    public static Mineral selectedMineral { get; private set; }
+
+
+    SpriteRenderer spriteRenderer;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
     //If touching player
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -25,5 +35,17 @@ public class Mineral : MonoBehaviour
     {
         Debug.Log("Collected " + mineralName);
         Destroy(gameObject);
+    }
+
+    public void OnMouseOver()
+    {
+        selectedMineral = this;
+        spriteRenderer.color = Color.gray;
+    }
+
+    public void OnMouseExit()
+    {
+        selectedMineral = null;
+        spriteRenderer.color = Color.white;
     }
 }
