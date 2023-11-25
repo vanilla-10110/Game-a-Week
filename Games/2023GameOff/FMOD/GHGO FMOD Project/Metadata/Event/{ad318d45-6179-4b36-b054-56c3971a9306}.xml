@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{5507bfce-c64f-4ece-9fcd-1ed51189fc65}</destination>
+			<destination>{eda0294b-4b0c-403f-9ed9-a6629a54d8d6}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{ee084707-06ea-406a-976b-435b821ed937}</destination>
@@ -51,6 +51,9 @@
 		</relationship>
 	</object>
 	<object class="MixerInput" id="{b22c5257-46dc-4c47-a62d-59619d58138c}">
+		<relationship name="masters">
+			<destination>{48545cb2-d4bc-45d6-80fa-af2a5fcbca04}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{8e8c1eec-d02b-4b85-ad8f-c218633ce00f}</destination>
 		</relationship>
@@ -58,7 +61,7 @@
 			<destination>{6b95ca30-25e3-4802-b422-638fd7ca85d7}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{b5cc6ae8-476d-4d88-b166-d5f29d26f6bc}</destination>
+			<destination>{96deeefd-80af-4b8e-8ef8-f27b646fa9c3}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{9717160f-ee05-4faf-9ad4-92b0ac86bf56}" />
@@ -327,7 +330,7 @@
 			<value>-80</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.344588041</value>
+			<value>-1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4ac3a673-784f-45cc-aea3-ca3cca93840e}">
@@ -336,6 +339,9 @@
 		</property>
 		<property name="value">
 			<value>-40</value>
+		</property>
+		<property name="curveShape">
+			<value>-0.507063389</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{466e58bc-489f-403e-86c1-6816fea7d860}">
