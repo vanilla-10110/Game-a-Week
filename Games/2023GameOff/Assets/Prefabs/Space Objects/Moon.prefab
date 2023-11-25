@@ -151,7 +151,7 @@ MonoBehaviour:
   destroyParticles: {fileID: 8120314539365218092}
   rb: {fileID: 0}
   asteroidPrefab: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
-  spawnAmount: 5
+  spawnAmount: 4
 --- !u!58 &826898767689132747
 CircleCollider2D:
   m_ObjectHideFlags: 0

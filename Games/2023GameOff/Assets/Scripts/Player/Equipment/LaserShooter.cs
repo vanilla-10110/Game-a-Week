@@ -84,7 +84,7 @@ public class LaserShooter : MonoBehaviour
             else
             {
                 target = Asteroid.selectedAsteroid.transform.position;
-                Debug.Log(laserDamage * Time.deltaTime);
+                //Debug.Log(laserDamage * Time.deltaTime);
                 Asteroid.selectedAsteroid.Damage(laserDamage);
 
                 powerAmount -= powerEfficiency * Time.deltaTime * 2;

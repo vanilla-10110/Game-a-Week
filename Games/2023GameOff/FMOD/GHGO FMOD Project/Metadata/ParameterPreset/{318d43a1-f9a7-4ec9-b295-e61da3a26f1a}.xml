@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{318d43a1-f9a7-4ec9-b295-e61da3a26f1a}">
+		<property name="name">
+			<value>WARNINGTYPE</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{8fddf09e-98c4-49ad-bacb-889c4352afce}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{8fddf09e-98c4-49ad-bacb-889c4352afce}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>O2</value>
+			<value>FUEL</value>
+			<value>POWER</value>
+			<value>HULL</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
