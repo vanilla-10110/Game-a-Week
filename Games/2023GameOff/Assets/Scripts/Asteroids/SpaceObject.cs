@@ -112,10 +112,14 @@ public class SpaceObject : MonoBehaviour
     protected virtual void DestroyObject()
     {
         //Deactivate sprite renderer and collider.
-        objectCollider.enabled = false;
-        spriteRenderer.enabled = false;
+        //objectCollider.enabled = false;
+        //spriteRenderer.enabled = false;
 
+        //Unchild the particles (if not part of main object) and play them
+        destroyParticles.transform.parent = null;
         destroyParticles.Play(false);
+
+        Destroy(gameObject);
     }
 
     //Use pointer exit and enter to determine if asteroid is hovered over by mouse
@@ -129,5 +133,23 @@ public class SpaceObject : MonoBehaviour
     {
         selectedAsteroid = null;
         spriteRenderer.color = Color.white;
+    }
+
+    private void Update()
+    {
+        WrapAround();
+    }
+
+    /// <summary>
+    /// if on edge of world move to the other edge
+    /// </summary>
+    void WrapAround()
+    {
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, -WorldWrapAround.worldSize, WorldWrapAround.worldSize);
+        pos.y = Mathf.Clamp(pos.y, -WorldWrapAround.worldSize, WorldWrapAround.worldSize);
+
+        if (pos != transform.position)
+            transform.position = pos;
     }
 }

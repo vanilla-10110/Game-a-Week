@@ -121,11 +121,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 826898767689132747}
   m_SourcePrefab: {fileID: 100100000, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
---- !u!198 &1034575068306634529 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8901834974261355405, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
-  m_PrefabInstance: {fileID: 8489891359591453868}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5901788204242166693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
@@ -150,9 +145,10 @@ MonoBehaviour:
   maxVel: 0.5
   minAngVel: -1
   maxAngVel: 1
+  velocityModifier: 1
   baseMass: 100
   startingHealth: 300
-  destroyParticles: {fileID: 1034575068306634529}
+  destroyParticles: {fileID: 8120314539365218092}
   rb: {fileID: 0}
   asteroidPrefab: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
   spawnAmount: 5
@@ -194,5 +190,10 @@ CircleCollider2D:
 --- !u!50 &7027286788349955882 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1465876804295089030, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+  m_PrefabInstance: {fileID: 8489891359591453868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8120314539365218092 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 388154237988037504, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
   m_PrefabInstance: {fileID: 8489891359591453868}
   m_PrefabAsset: {fileID: 0}
