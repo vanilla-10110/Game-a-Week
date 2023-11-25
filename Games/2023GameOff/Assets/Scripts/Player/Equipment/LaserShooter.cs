@@ -46,7 +46,7 @@ public class LaserShooter : MonoBehaviour
 
     }
     private void Update()
-    { 
+    {
         FireLaser();
     }
 
@@ -57,13 +57,13 @@ public class LaserShooter : MonoBehaviour
             Vector3 target;
             if (Asteroid.selectedAsteroid == null)
             {
-               // if (Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition).normalized))
+                // if (Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition).normalized))
 
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
 
                 laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-                
+
             }
             else
             {
@@ -82,7 +82,7 @@ public class LaserShooter : MonoBehaviour
             {
                 lasersound.start(); //play sound at instance location
             }
-            
+
         }
         else
         {
@@ -93,7 +93,7 @@ public class LaserShooter : MonoBehaviour
         if (Input.GetButton("Fire2"))
         {
             Vector3 target;
-            if (Asteroid.selectedAsteroid == null)
+            if (SpaceObject.selectedAsteroid == null)
             {
                 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 target.z = 0;
@@ -101,8 +101,8 @@ public class LaserShooter : MonoBehaviour
             }
             else
             {
-                target = Asteroid.selectedAsteroid.transform.position;
-                Asteroid.selectedAsteroid.rb.AddForce((_grabberPoint.transform.position - Asteroid.selectedAsteroid.transform.position).normalized * grabberForce);
+                target = SpaceObject.selectedAsteroid.transform.position;
+                SpaceObject.selectedAsteroid.rb.AddForce((_grabberPoint.transform.position - Asteroid.selectedAsteroid.transform.position).normalized * grabberForce);
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set instance location
             }
             DrawGrabber(_grabberPoint.position, target);
@@ -111,14 +111,14 @@ public class LaserShooter : MonoBehaviour
             {
                 tractorsound.start(); //play sound at instance location
             }
-            
+
         }
         else
         {
             _lineGrabber.enabled = false;
             tractorsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop sound
         }
-        
+
     }
 
     FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
@@ -129,7 +129,7 @@ public class LaserShooter : MonoBehaviour
     }
     //creates a method that declares an eventinstance as a parameter and returns the PLAYBACK_STATE of the instance
 
-    
+
     void DrawLaser(Vector2 startPos, Vector2 endPos)
     {
         _lineLaser.enabled = true;
@@ -142,5 +142,5 @@ public class LaserShooter : MonoBehaviour
         _lineGrabber.SetPosition(0, startPos);
         _lineGrabber.SetPosition(1, endPos);
     }
-    
+
 }
