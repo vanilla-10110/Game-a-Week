@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 8232722002094696739}
   - component: {fileID: 3137628448320149803}
   - component: {fileID: 7479696283432224052}
+  - component: {fileID: 5511441930778379529}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1320,6 +1321,40 @@ MonoBehaviour:
   grabberForce: 60
   powerMaxCapacity: 100
   powerEfficiency: 1
+  powerAmount: 0
+--- !u!114 &5511441930778379529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6817324321961675383}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 571456536
+      Data2: 1227642307
+      Data3: 715316372
+      Data4: -1586273699
+    Path: event:/SPACE/COLLISION
+  Event: 
+  PlayEvent: 9
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: MATERIAL
+    Value: 1
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &6946985617865672857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1983,6 +2018,7 @@ MonoBehaviour:
   grabberForce: 10
   powerMaxCapacity: 100
   powerEfficiency: 1
+  powerAmount: 0
 --- !u!4 &4512336453629291289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 0072d1377496c814696d766b1af28a6e, type: 3}

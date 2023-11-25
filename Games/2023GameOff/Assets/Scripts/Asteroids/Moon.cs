@@ -33,6 +33,6 @@ public class Moon : SpaceObject
         }
 
         //play explosion sound
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SPACE/ROCK_EXPLODE", gameObject.transform.position);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SPACE/MOON_EXPLODE", gameObject.transform.position);
     }
 }
