@@ -91,7 +91,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{bfbe0eac-b89a-43e7-9e00-62e68da26596}">
 		<property name="volume">
-			<value>-36</value>
+			<value>-28</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{103fe3ec-d6c3-4714-8ac6-bdbb099b6bf8}</destination>
@@ -131,7 +131,7 @@
 			<destination>{0378ab25-0905-40f9-a78f-4cc7a32d3ad5}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{c17c48c4-a63d-48b3-97be-e6c1c1c8186c}</destination>
+			<destination>{8bd6bb0b-7439-40a1-b80d-34cc294c000e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3bf03a66-f28d-4715-a85d-782a26f883e8}">
@@ -241,7 +241,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-20</value>
+			<value>-6</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.41770345</value>
@@ -252,7 +252,7 @@
 			<value>10</value>
 		</property>
 		<property name="value">
-			<value>-9</value>
+			<value>15</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{80bb153f-a437-4912-82cb-57d37eef51be}">
@@ -268,7 +268,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-10</value>
+			<value>-16</value>
 		</property>
 	</object>
 </objects>

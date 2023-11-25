@@ -22,7 +22,7 @@
 			<value>0</value>
 		</property>
 		<property name="seekSpeed">
-			<value>15</value>
+			<value>22</value>
 		</property>
 		<property name="seekSpeedDescending">
 			<value>10</value>

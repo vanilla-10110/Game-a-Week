@@ -137,7 +137,7 @@
 			<destination>{820340e5-5e30-491f-82da-27426a3df746}</destination>
 		</relationship>
 		<relationship name="audioFile">
-			<destination>{c17c48c4-a63d-48b3-97be-e6c1c1c8186c}</destination>
+			<destination>{8bd6bb0b-7439-40a1-b80d-34cc294c000e}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{9109cd27-80c9-4cb0-a847-b4a1e42a2eab}">
@@ -212,7 +212,7 @@
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{a34a5dcb-55bc-4653-b70d-0040181895e2}</destination>
-			<destination>{c2c35bee-be5a-48a3-83c4-b2d7ff044ca1}</destination>
+			<destination>{94831e51-ad9b-46d9-aaa2-2a980348ea8a}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{da9c6521-7a5c-41de-aafd-55414a5cfd8a}">
@@ -243,15 +243,15 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-12</value>
+			<value>-24</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{c2c35bee-be5a-48a3-83c4-b2d7ff044ca1}">
+	<object class="AutomationPoint" id="{94831e51-ad9b-46d9-aaa2-2a980348ea8a}">
 		<property name="position">
 			<value>10</value>
 		</property>
 		<property name="value">
-			<value>7</value>
+			<value>24</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{c9e9c7e5-8709-4f52-9af8-0ef096aef6e7}">
