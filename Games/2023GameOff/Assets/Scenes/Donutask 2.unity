@@ -218,8 +218,8 @@ MonoBehaviour:
   _name: Research & Development
   description: Use this building to gain special upgrades!
   cooldownLength: 0.25
-  player: {fileID: 0}
-  interactArea: {fileID: 0}
+  player: {fileID: 1890518578}
+  interactArea: {fileID: 49358067}
 --- !u!1 &119048100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,8 +1327,8 @@ MonoBehaviour:
   description: Increase your oxygen carrying capacity. Flying fast burns more oxygen
     so be careful!
   cooldownLength: 0.25
-  player: {fileID: 0}
-  interactArea: {fileID: 0}
+  player: {fileID: 1890518578}
+  interactArea: {fileID: 1421750380}
 --- !u!1 &1520764939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,8 +1509,8 @@ MonoBehaviour:
   description: Increase your fuel capacity to make your ship last longer in deep
     space.
   cooldownLength: 0.25
-  player: {fileID: 0}
-  interactArea: {fileID: 0}
+  player: {fileID: 1890518578}
+  interactArea: {fileID: 1619416286}
 --- !u!1 &1698368131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,8 +1592,12 @@ MonoBehaviour:
     - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
     - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
     - {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
-  minAmount: 300
-  maxAmount: 500
+  - prefab: {fileID: 5901788204242166693, guid: 205cbb632cc37ca4d8e3b9acc945c718, type: 3}
+    spawnChance: 0.005
+    mineralChance: 1
+    possibleMinerals: []
+  minAmount: 600
+  maxAmount: 1000
   minDistanceFromBase: 15
   overlapCheckRadius: 1
   overlapContactFilter:
@@ -1705,8 +1709,8 @@ MonoBehaviour:
   _name: Energy
   description: Upgrade this building to increase your energy capacity.
   cooldownLength: 0.25
-  player: {fileID: 0}
-  interactArea: {fileID: 0}
+  player: {fileID: 1890518578}
+  interactArea: {fileID: 1742367445}
 --- !u!1 &1809523345
 GameObject:
   m_ObjectHideFlags: 0

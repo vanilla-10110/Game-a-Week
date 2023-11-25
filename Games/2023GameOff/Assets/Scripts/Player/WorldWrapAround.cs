@@ -11,7 +11,7 @@ public class WorldWrapAround : MonoBehaviour
     /// <summary>
     /// Limit of how far player can travel. Also influences asteroid spawning.
     /// </summary>
-    public static int worldSize { get; } = 100;
+    public static int worldSize { get; } = 200;
 
     private void Update()
     {
@@ -41,9 +41,10 @@ public class WorldWrapAround : MonoBehaviour
         }
 
         //Apply change, if nessecary
-        if (newTransform != transform.position) {
+        if (newTransform != transform.position)
+        {
             transform.position = newTransform;
-            
+
             CameraController.main.TeleportToTarget();
         }
     }
