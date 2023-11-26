@@ -85,7 +85,7 @@ public class LaserShooter : MonoBehaviour
             {
                 target = Asteroid.selectedAsteroid.transform.position;
                 //Debug.Log(laserDamage * Time.deltaTime);
-                Asteroid.selectedAsteroid.Damage(laserDamage);
+                Asteroid.selectedAsteroid.Damage(laserDamage * Time.deltaTime);
 
                 powerAmount -= powerEfficiency * Time.deltaTime * 2;
 
@@ -130,7 +130,9 @@ public class LaserShooter : MonoBehaviour
                     selection = Mineral.selectedMineral.gameObject;
                 else selection = SpaceObject.selectedAsteroid.gameObject;
                 target = selection.transform.position;
-                selection.GetComponent<Rigidbody2D>()./*velocity = */AddForce((_grabberPoint.transform.position - selection.transform.position).normalized * grabberForce);
+                selection.GetComponent<Rigidbody2D>().AddForce((new Vector2(_grabberPoint.transform.position.x, _grabberPoint.transform.position.y) - new Vector2(selection.transform.position.x, selection.transform.position.y)).normalized * (grabberForce + selection.GetComponent<Rigidbody2D>().mass) + gameObject.GetComponent<Rigidbody2D>().velocity * selection.GetComponent<Rigidbody2D>().mass);
+
+                //selection.GetComponent<Rigidbody2D>().AddForce((_grabberPoint.transform.position - selection.transform.position).normalized * (grabberForce + selection.GetComponent<Rigidbody2D>().mass) + gameObject.GetComponent<Rigidbody2D>().velocity);
 
                 powerAmount -= powerEfficiency * Time.deltaTime;
 

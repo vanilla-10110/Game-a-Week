@@ -25,25 +25,57 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: mineralChance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: sprites.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: possibleMinerals.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: possibleMinerals.Array.data[0]
       value: 
-      objectReference: {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
+      objectReference: {fileID: 4210706790354009981, guid: 8a3a09bae37cef84881ac5c255140a58, type: 3}
     - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: possibleMinerals.Array.data[1]
       value: 
-      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+      objectReference: {fileID: 2823948929365868327, guid: b12af518423d0204dae1c0ec9e7bcf1e, type: 3}
     - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: possibleMinerals.Array.data[2]
       value: 
-      objectReference: {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
+      objectReference: {fileID: 2513877442961514684, guid: 833081c3f2c45524e955b44e4a170f69, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[3]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: c6927afcae8822749b1970ad854cc6c8, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[4]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[5]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[6]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[7]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[8]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
+    - target: {fileID: 1893792817293705500, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
+      propertyPath: possibleMinerals.Array.data[9]
+      value: 
+      objectReference: {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
     - target: {fileID: 2609125903617931017, guid: 588a159c1e6adb34096b0badd810daaa, type: 3}
       propertyPath: m_Name
       value: Wrecked Satellite

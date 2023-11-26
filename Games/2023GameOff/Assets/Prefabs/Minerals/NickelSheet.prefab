@@ -19,14 +19,14 @@ PrefabInstance:
     - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -425459919549167202, guid: 9d142f64022ae874092f0711a776e343, type: 3}
+      objectReference: {fileID: -6977105235310337273, guid: 9d142f64022ae874092f0711a776e343, type: 3}
     - target: {fileID: 1295305571098205623, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2207359112237798058, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_Name
-      value: Nickel
+      value: NickelSheet
       objectReference: {fileID: 0}
     - target: {fileID: 2837772700455535007, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: m_Radius
@@ -74,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100106263760183120, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
       propertyPath: mineralName
-      value: Nickel
+      value: Nickel Sheet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
