@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="ParameterPreset" id="{660dc1ac-65c2-417a-ab49-661838616bbc}">
 		<property name="name">
-			<value>THRUST TYPE</value>
+			<value>THRUST_TYPE</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
@@ -20,7 +20,7 @@
 		</property>
 		<property name="enumerationLabels">
 			<value>NORMAL</value>
-			<value>O2NOZZLE</value>
+			<value>O2HISS</value>
 		</property>
 		<property name="isGlobal">
 			<value>true</value>

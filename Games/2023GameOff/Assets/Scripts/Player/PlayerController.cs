@@ -145,8 +145,14 @@ public class PlayerController : MonoBehaviour
 
     private void ThrusterSound()
     {
-        if (fuelAmount > 0)
+        if (O2Amount > 0)
+        {
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", _forces.magnitude);
+            if (fuelAmount > 0)
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("THRUST_TYPE", "NORMAL");
+            else
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("THRUST_TYPE", "O2HISS");
+        }
         else
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("THRUST_POWER", 0f);
 
