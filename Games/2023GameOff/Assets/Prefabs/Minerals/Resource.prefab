@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1295305571098205623}
   - component: {fileID: 2837772700455535007}
   - component: {fileID: -3332248624071441052}
+  - component: {fileID: 3458946354357270952}
   m_Layer: 8
   m_Name: Resource
   m_TagString: Untagged
@@ -162,3 +163,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3458946354357270952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207359112237798058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1830221138
+      Data2: 1339451315
+      Data3: 1139041686
+      Data4: 686546038
+    Path: event:/SHIP/SHIP_PICKUP_MINERAL
+  Event: 
+  PlayEvent: 2
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params:
+  - Name: MINERAL_TYPE
+    Value: 0
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
