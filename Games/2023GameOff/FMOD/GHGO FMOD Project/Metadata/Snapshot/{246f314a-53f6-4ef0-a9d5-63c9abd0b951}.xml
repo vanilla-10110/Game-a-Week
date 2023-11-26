@@ -22,10 +22,12 @@
 		<relationship name="snapshotProperties">
 			<destination>{bad488f7-209c-4d46-b9df-2fe4d635d9e9}</destination>
 			<destination>{d096d77a-2736-443e-af2d-066f1df765df}</destination>
+			<destination>{dc5676fb-0aeb-42ff-a6e9-9a9b0fd1ea48}</destination>
 		</relationship>
 		<relationship name="snapshotTracks">
 			<destination>{03b50928-b8fc-47fd-82a0-692ea66167c1}</destination>
 			<destination>{3089dcdd-3243-4c98-ad64-66756c99e579}</destination>
+			<destination>{e2bc2cd5-4e2d-4973-ae48-fc6d595c08b5}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{7d6ef502-7baf-463a-b06d-0f7e89b8abc1}" />
@@ -54,10 +56,24 @@
 			<value>-80</value>
 		</property>
 		<relationship name="modulators">
-			<destination>{127aa233-10ae-4f07-ac04-734d5068aef1}</destination>
+			<destination>{b80430cf-e8ba-4dee-b9bc-8fdb9143b933}</destination>
 		</relationship>
 		<relationship name="automatableObject">
 			<destination>{e4df77bb-27e5-44c4-96f9-927ef48c2f0c}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{dc5676fb-0aeb-42ff-a6e9-9a9b0fd1ea48}">
+		<property name="propertyName">
+			<value>volume</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+		<relationship name="modulators">
+			<destination>{66e49467-167f-4a0d-a5cf-a7685eb42429}</destination>
+		</relationship>
+		<relationship name="automatableObject">
+			<destination>{7d840f50-ac90-4bd3-a5f4-5b24bd69402b}</destination>
 		</relationship>
 	</object>
 	<object class="SnapshotTrack" id="{03b50928-b8fc-47fd-82a0-692ea66167c1}">
@@ -68,6 +84,11 @@
 	<object class="SnapshotTrack" id="{3089dcdd-3243-4c98-ad64-66756c99e579}">
 		<relationship name="mixerStrip">
 			<destination>{e4df77bb-27e5-44c4-96f9-927ef48c2f0c}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{e2bc2cd5-4e2d-4973-ae48-fc6d595c08b5}">
+		<relationship name="mixerStrip">
+			<destination>{7d840f50-ac90-4bd3-a5f4-5b24bd69402b}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{9baf6d24-8acb-40bc-8f13-5f1110670663}">
@@ -84,7 +105,18 @@
 			<value>100</value>
 		</property>
 	</object>
-	<object class="ADSRModulator" id="{127aa233-10ae-4f07-ac04-734d5068aef1}">
+	<object class="ADSRModulator" id="{b80430cf-e8ba-4dee-b9bc-8fdb9143b933}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>value</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="ADSRModulator" id="{66e49467-167f-4a0d-a5cf-a7685eb42429}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>value</value>
 		</property>
@@ -92,10 +124,10 @@
 			<value>-80</value>
 		</property>
 		<property name="attackTime">
-			<value>300</value>
+			<value>100</value>
 		</property>
 		<property name="releaseTime">
-			<value>300</value>
+			<value>100</value>
 		</property>
 		<property name="finalValue">
 			<value>-80</value>
