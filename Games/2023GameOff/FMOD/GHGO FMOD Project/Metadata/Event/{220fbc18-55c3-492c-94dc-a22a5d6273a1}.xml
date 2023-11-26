@@ -43,8 +43,8 @@
 	<object class="MasterTrack" id="{cda3afc5-17cc-41dd-b768-b3b1e3a2b40e}">
 		<relationship name="modules">
 			<destination>{29abf626-b2c0-4388-a60e-ebb3f684cfde}</destination>
-			<destination>{ca5beb60-cc37-415b-a8e5-8ca8f1034073}</destination>
-			<destination>{174fd948-1351-4b8e-a128-22320aeb9f9f}</destination>
+			<destination>{19759bc1-010a-4651-93f2-52de23aba2cd}</destination>
+			<destination>{90208199-f38f-442d-ad74-4c9848742fb0}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{c3d9db12-8373-444b-a287-a4394ca0c884}</destination>
@@ -78,8 +78,8 @@
 	<object class="ParameterProxy" id="{e5d7205d-682c-4073-9943-56295e61e8ee}">
 		<relationship name="modules">
 			<destination>{29abf626-b2c0-4388-a60e-ebb3f684cfde}</destination>
-			<destination>{ca5beb60-cc37-415b-a8e5-8ca8f1034073}</destination>
-			<destination>{174fd948-1351-4b8e-a128-22320aeb9f9f}</destination>
+			<destination>{19759bc1-010a-4651-93f2-52de23aba2cd}</destination>
+			<destination>{90208199-f38f-442d-ad74-4c9848742fb0}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{c5802a6c-2615-4977-a2e6-b1693cb1a921}</destination>
@@ -101,20 +101,20 @@
 			<destination>{ad7285ff-1407-42c3-86e2-1242328d7a7c}</destination>
 		</relationship>
 	</object>
-	<object class="EventSound" id="{ca5beb60-cc37-415b-a8e5-8ca8f1034073}">
-		<property name="start">
-			<value>2</value>
-		</property>
-		<relationship name="event">
-			<destination>{4c2c92d7-ee26-4720-8bf4-572eae6c74d7}</destination>
-		</relationship>
-	</object>
-	<object class="EventSound" id="{174fd948-1351-4b8e-a128-22320aeb9f9f}">
+	<object class="EventSound" id="{19759bc1-010a-4651-93f2-52de23aba2cd}">
 		<property name="start">
 			<value>1</value>
 		</property>
 		<relationship name="event">
-			<destination>{5877a4c1-345a-4ab6-bc6b-845300aaaff3}</destination>
+			<destination>{9776efab-484b-4f72-8691-c594abf251ee}</destination>
+		</relationship>
+	</object>
+	<object class="EventSound" id="{90208199-f38f-442d-ad74-4c9848742fb0}">
+		<property name="start">
+			<value>2</value>
+		</property>
+		<relationship name="event">
+			<destination>{35771d2d-8fd7-4f42-9d39-042e0ea3506f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{f85b62ed-cdf0-425a-b773-a06554e5d3a1}">

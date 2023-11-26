@@ -5,7 +5,7 @@
 			<value>ASTEROID_COLLISION</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{220fbc18-55c3-492c-94dc-a22a5d6273a1}</destination>
@@ -55,11 +55,14 @@
 		<property name="maxVoices">
 			<value>3</value>
 		</property>
+		<property name="voiceStealing">
+			<value>4</value>
+		</property>
 		<property name="priority">
 			<value>1</value>
 		</property>
 		<property name="triggerCooldown">
-			<value>40</value>
+			<value>20</value>
 		</property>
 	</object>
 	<object class="MarkerTrack" id="{0196e3a7-5ed0-4773-b0d5-2405e6c8a110}" />
@@ -170,6 +173,7 @@
 	<object class="MixerBusEffectChain" id="{3f88557c-46b2-4e55-b4dd-13c9419bdd98}">
 		<relationship name="effects">
 			<destination>{03ac8e26-b361-4f13-8225-0eb3307289c8}</destination>
+			<destination>{505b13ec-0132-448b-9cf5-f5ab79339840}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{238badac-2b45-4c7e-aff6-5900714f8f14}" />
@@ -257,6 +261,7 @@
 	</object>
 	<object class="MixerBusPanner" id="{64cfaa52-bc12-469a-a04c-457cd3711b68}" />
 	<object class="MixerBusFader" id="{03ac8e26-b361-4f13-8225-0eb3307289c8}" />
+	<object class="SpatialiserEffect" id="{505b13ec-0132-448b-9cf5-f5ab79339840}" />
 	<object class="MixerBusFader" id="{c93a8745-1aff-4915-ab66-542ff5358394}" />
 	<object class="MixerBusFader" id="{6172fb94-add8-4e29-a9af-6ed83370bf50}" />
 </objects>
