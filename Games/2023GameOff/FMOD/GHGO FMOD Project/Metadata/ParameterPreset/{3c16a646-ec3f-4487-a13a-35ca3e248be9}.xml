@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{3c16a646-ec3f-4487-a13a-35ca3e248be9}">
+		<property name="name">
+			<value>LASER_HIT_MATERIAL</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{73a8802d-5608-4741-a597-695fb31cdc51}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{73a8802d-5608-4741-a597-695fb31cdc51}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>ROCK</value>
+			<value>METAL</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
