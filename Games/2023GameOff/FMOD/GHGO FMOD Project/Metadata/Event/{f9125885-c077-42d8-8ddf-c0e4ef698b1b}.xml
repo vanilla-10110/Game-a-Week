@@ -5,7 +5,7 @@
 			<value>MUSIC</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{8b5dde20-6d38-42f8-b657-010ca369c91e}</destination>
@@ -382,7 +382,7 @@
 	</object>
 	<object class="SingleSound" id="{06e7753b-35bb-4691-872e-22fd8c60b20f}">
 		<property name="start">
-			<value>108.63157894736841</value>
+			<value>111.1578947368421</value>
 		</property>
 		<property name="length">
 			<value>22.736842105263158</value>
@@ -587,7 +587,6 @@
 		<relationship name="effects">
 			<destination>{691433a5-45c8-4b5d-915c-63409bc016c5}</destination>
 			<destination>{01b32289-bda0-4806-9133-2a4be11f893d}</destination>
-			<destination>{333bc861-840e-435c-bc4c-0a70f8ed994e}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{0d34e3fd-07d5-4e35-b06d-4539fe4c3daf}" />
@@ -742,6 +741,9 @@
 	<object class="MixerBusFader" id="{d29e6fc5-4c07-4e1c-ae80-91433cd1084e}" />
 	<object class="MixerBusFader" id="{691433a5-45c8-4b5d-915c-63409bc016c5}" />
 	<object class="MultibandEqEffect" id="{01b32289-bda0-4806-9133-2a4be11f893d}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
 		<property name="filterTypeA">
 			<value>10</value>
 		</property>
@@ -750,23 +752,6 @@
 		</property>
 		<property name="qualityA">
 			<value>0.340000004</value>
-		</property>
-	</object>
-	<object class="SpatialiserEffect" id="{333bc861-840e-435c-bc4c-0a70f8ed994e}">
-		<property name="distanceRolloffType">
-			<value>4</value>
-		</property>
-		<property name="overrideRange">
-			<value>true</value>
-		</property>
-		<property name="extentMode">
-			<value>1</value>
-		</property>
-		<property name="soundSize">
-			<value>14.5</value>
-		</property>
-		<property name="minimumExtent">
-			<value>172</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4a2c964b-79f9-4891-b637-823ecba3c325}">
