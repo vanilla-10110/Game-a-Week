@@ -35,6 +35,7 @@ public class Mineral : MonoBehaviour
     {
         Debug.Log("Collected " + mineralName);
         Destroy(gameObject);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("TRACK_HUB_UPGRADE_3", 1f); //start the drums for the music track
     }
 
     public void OnMouseOver()

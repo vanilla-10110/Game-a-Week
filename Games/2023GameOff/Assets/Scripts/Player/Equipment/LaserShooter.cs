@@ -189,12 +189,16 @@ public class LaserShooter : MonoBehaviour
     void PlayLaserSound()
     {
         if (PlaybackState(lasersound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
-            lasersound.start(); //play sound at instance location
+            {
+                lasersound.start(); //play sound at instance location
+            }
     }
     void PlayTractorSound()
     {
         if (PlaybackState(tractorsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+        {
             tractorsound.start(); //play sound at instance location
+        }
     }
     void PlayHitSound()
     {
