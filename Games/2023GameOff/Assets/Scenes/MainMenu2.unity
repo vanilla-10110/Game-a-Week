@@ -633,7 +633,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Idk What this game is called
+  m_text: 'Space Core: Asteroid and Lunar Extraction'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -660,7 +660,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 99.95
+  m_fontSize: 69.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -722,6 +722,7 @@ GameObject:
   - component: {fileID: 1275057074}
   - component: {fileID: 1275057073}
   - component: {fileID: 1275057072}
+  - component: {fileID: 1275057075}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -831,6 +832,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275057069}
   m_CullTransparentMesh: 1
+--- !u!114 &1275057075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275057069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1258290876
+      Data2: 1125922313
+      Data3: -1257575792
+      Data4: -519852770
+    Path: event:/UI/UI_MISC_BUTTON
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1296769811
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +1012,7 @@ GameObject:
   - component: {fileID: 1386715601}
   - component: {fileID: 1386715600}
   - component: {fileID: 1386715603}
+  - component: {fileID: 1386715604}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -1113,6 +1146,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99999a964f524b17bcc50521537c1f30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1386715604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386715598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1258290876
+      Data2: 1125922313
+      Data3: -1257575792
+      Data4: -519852770
+    Path: event:/UI/UI_MISC_BUTTON
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1747800783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,8 +1187,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1747800786}
   - component: {fileID: 1747800785}
-  - component: {fileID: 1747800784}
   - component: {fileID: 1747800787}
+  - component: {fileID: 1747800788}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1132,14 +1196,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1747800784
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747800783}
-  m_Enabled: 1
 --- !u!20 &1747800785
 Camera:
   m_ObjectHideFlags: 0
@@ -1250,6 +1306,19 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &1747800788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747800783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 1747800783}
 --- !u!1 &1872942890
 GameObject:
   m_ObjectHideFlags: 0
