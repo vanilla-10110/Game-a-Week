@@ -60,7 +60,8 @@ PrefabInstance:
       propertyPath: mineralName
       value: Circuitry
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3458946354357270952, guid: 64ea79190252ac14f96b5c843a2b8b90, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
