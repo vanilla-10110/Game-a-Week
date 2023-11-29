@@ -512,21 +512,21 @@
 			<value>4</value>
 		</property>
 		<property name="frequencyA">
-			<value>1427.7749</value>
+			<value>2498.10815</value>
 		</property>
 		<property name="frequencyB">
-			<value>301.852356</value>
+			<value>191.352493</value>
 		</property>
 		<property name="qualityA">
-			<value>1.64331031</value>
+			<value>0.7961725</value>
 		</property>
 		<property name="qualityB">
-			<value>0.141862065</value>
+			<value>0.413965493</value>
 		</property>
 	</object>
 	<object class="LimiterEffect" id="{5a94310b-9490-4515-a6e9-9d779c584673}">
 		<property name="boost">
-			<value>7.5999999</value>
+			<value>2.10000014</value>
 		</property>
 		<property name="ceiling">
 			<value>-1.10000002</value>
