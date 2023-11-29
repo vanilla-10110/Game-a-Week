@@ -78,7 +78,7 @@ public class Asteroid : SpaceObject
         shinyParticles.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
 
         //play explosion sound
-        FMODUnity.RuntimeManager.PlayOneShot("event:/SPACE/ROCK_EXPLODE", gameObject.transform.position);
+        AudioManager.instance.PlayOneShot(FMODEvents.instance.asteroidExplode, this.transform.position);
     }
 
 }

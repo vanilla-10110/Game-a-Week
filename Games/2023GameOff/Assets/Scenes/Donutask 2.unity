@@ -220,6 +220,64 @@ MonoBehaviour:
   cooldownLength: 0.25
   player: {fileID: 1890518578}
   interactArea: {fileID: 49358067}
+--- !u!1 &57242527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 57242528}
+  - component: {fileID: 57242529}
+  m_Layer: 0
+  m_Name: FMODEvents
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &57242528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57242527}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 667803755}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &57242529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57242527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1630e6e24b7afee478a6e0ded169cfd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <music>k__BackingField:
+    Guid:
+      Data1: -116238203
+      Data2: 1121501303
+      Data3: -457121907
+      Data4: 462121455
+    Path: event:/MUSIC/TRACK_INGAME
+  <asteroidExplode>k__BackingField:
+    Guid:
+      Data1: 1747770947
+      Data2: 1188538950
+      Data3: 746617510
+      Data4: -849515919
+    Path: event:/SPACE/ROCK_EXPLODE
 --- !u!1 &119048100
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +510,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6931213071181068934, guid: bba62c002c4f4dd4693429299c175fe0, type: 3}
   m_PrefabInstance: {fileID: 491757675}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &667803753
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 667803755}
+  - component: {fileID: 667803754}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &667803754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667803753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9736c3fd7f7cd054489feff1257cc093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &667803755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667803753}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 731.8539, y: -62.126053, z: 18.923185}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 57242528}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748633861
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,10 +728,7 @@ GameObject:
   - component: {fileID: 894048943}
   - component: {fileID: 894048946}
   - component: {fileID: 894048945}
-  - component: {fileID: 894048948}
-  - component: {fileID: 894048947}
-  - component: {fileID: 894048950}
-  - component: {fileID: 894048949}
+  - component: {fileID: 894048951}
   m_Layer: 6
   m_Name: CameraFocusBox
   m_TagString: Untagged
@@ -707,7 +807,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.75}
   serializedVersion: 2
   m_Radius: 12.5
---- !u!114 &894048947
+--- !u!114 &894048951
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -716,61 +816,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 894048942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Script: {fileID: 11500000, guid: 6069930947293ff46a05358660a4e4aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Parameter: TRACK_HUB_UPGRADE_1
-  TriggerEvent: 5
-  Value: 0
---- !u!114 &894048948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894048942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Parameter: TRACK_HUB_UPGRADE_1
-  TriggerEvent: 6
-  Value: 1
---- !u!114 &894048949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894048942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Parameter: TRACK_HUB_UPGRADE_3
-  TriggerEvent: 5
-  Value: 0
---- !u!114 &894048950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 894048942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Player
-  Parameter: TRACK_HUB_UPGRADE_2
-  TriggerEvent: 5
-  Value: 0
+  hubArea: 0
+  exploreArea: 1
 --- !u!1 &899910515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1999,3 +2049,4 @@ SceneRoots:
   - {fileID: 1698368133}
   - {fileID: 7878350318689628190}
   - {fileID: 1104343742}
+  - {fileID: 667803755}
