@@ -80,12 +80,11 @@ public class LaserShooter : MonoBehaviour
                 Asteroid.selectedAsteroid.Damage(laserDamage * Time.deltaTime);
 
                 powerAmount -= powerEfficiency * Time.deltaTime * 2;
-                laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); //set location of hit sound to the selected object
-                if (Asteroid.selectedAsteroid.name == "Wrecked Satellite") //check if the object being shot is a sattelite, doesn't work right now
-                    laserhitsound.setParameterByNameWithLabel("LASER_HIT_MATERIAL", "METAL");
-                else
-                    laserhitsound.setParameterByNameWithLabel("LASER_HIT_MATERIAL", "ROCK");
+
+                 //laser hit sound
+                laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); 
                 PlayHitSound();
+                
             }
 
             DrawLaser(_laserPoint.position, target);

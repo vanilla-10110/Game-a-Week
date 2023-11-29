@@ -5125,6 +5125,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4915979586991261515}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -4544601157028562972}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
 --- !u!1 &2609125903617931017 stripped
 GameObject:
@@ -5224,6 +5227,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &-4544601157028562972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2609125903617931017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: LASER_HIT_MATERIAL
+  TriggerEvent: 13
+  Value: 0
 --- !u!4 &3015301375562948460 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 4fb6702822cbf414ca4c8f1d2e4e52ab, type: 3}
