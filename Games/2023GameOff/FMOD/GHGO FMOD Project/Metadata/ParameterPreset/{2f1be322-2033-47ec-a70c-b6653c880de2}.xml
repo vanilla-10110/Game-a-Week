@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{2f1be322-2033-47ec-a70c-b6653c880de2}">
+		<property name="name">
+			<value>AI_POWER</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f5045738-8310-4898-adf7-7beb6d7375b4}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f5045738-8310-4898-adf7-7beb6d7375b4}">
+		<property name="maximum">
+			<value>50</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>50</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

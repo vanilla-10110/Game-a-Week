@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{1c4cb004-57f7-4972-859c-b8580ad5caee}">
+		<property name="name">
+			<value>AI_O2</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7e47e260-2c58-4b5c-b735-bc6f9d242803}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7e47e260-2c58-4b5c-b735-bc6f9d242803}">
+		<property name="maximum">
+			<value>50</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>50</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

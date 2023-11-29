@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     
+    private FMOD.Studio.EventInstance aivoice;
     private float _thrusterRotateSpeed = 8f;
     private float _armsRotateSpeed = 8f;
     private Vector2 _forces;
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
         RotatePointer();
         ThrusterSound();
         O2Amount -= O2DrainRate * Time.deltaTime;
+        SetVoiceParameters();
     }
 
     void MovePlayer()
@@ -158,4 +160,12 @@ public class PlayerController : MonoBehaviour
 
         // print(_forces.magnitude); //  for sound debuging
     }
+    private void SetVoiceParameters()
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", (O2Amount / maxO2Capacity * 100f));
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", (fuelAmount / maxFuelCapacity * 100f));
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", (hullHealth / 100f));
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", (50f));
+    }
+    
 }

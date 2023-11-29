@@ -249,7 +249,7 @@ MonoBehaviour:
       Data4: -1586273699
     Path: event:/SPACE/COLLISION
   Event: 
-  PlayEvent: 19
+  PlayEvent: 20
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
@@ -823,9 +823,9 @@ MonoBehaviour:
       Data2: 1261855097
       Data3: -1017752400
       Data4: 110303895
-    Path: event:/AI/AI_VOICE
+    Path: event:/AI/AI_WARNING
   Event: 
-  PlayEvent: 19
+  PlayEvent: 20
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
