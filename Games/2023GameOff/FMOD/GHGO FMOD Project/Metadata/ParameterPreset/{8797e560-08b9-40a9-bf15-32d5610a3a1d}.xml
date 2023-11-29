@@ -16,7 +16,7 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>5</value>
+			<value>7</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Fe</value>
@@ -24,6 +24,8 @@
 			<value>Pt</value>
 			<value>Au</value>
 			<value>Az</value>
+			<value>CB</value>
+			<value>WR</value>
 		</property>
 		<property name="isHeld">
 			<value>true</value>

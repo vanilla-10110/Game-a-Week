@@ -5,7 +5,7 @@
 			<value>MOON_EXPLODE</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{3dcb44de-0e40-41f1-b2c3-5f446887ccb8}</destination>
@@ -85,6 +85,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{30ea2b98-2607-430c-afd6-560396903e7f}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{e270b4a3-dc91-49f7-be99-2867186966c9}</destination>
 		</relationship>
@@ -159,6 +162,7 @@
 	<object class="MixerBusEffectChain" id="{e270b4a3-dc91-49f7-be99-2867186966c9}">
 		<relationship name="effects">
 			<destination>{f2b7b345-ca20-446d-a283-e3e276cfe5d4}</destination>
+			<destination>{c14164f3-5e97-4aaa-b572-426bfc7c7fe2}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{ed518bd8-d4f4-432b-a447-7be58d080857}" />
@@ -208,6 +212,20 @@
 	</object>
 	<object class="MixerBusPanner" id="{b5706cb9-cb28-4eac-a270-6b0a282017b5}" />
 	<object class="MixerBusFader" id="{f2b7b345-ca20-446d-a283-e3e276cfe5d4}" />
+	<object class="SpatialiserEffect" id="{c14164f3-5e97-4aaa-b572-426bfc7c7fe2}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>10</value>
+		</property>
+		<property name="maximumDistance">
+			<value>25</value>
+		</property>
+		<property name="overrideRange">
+			<value>true</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{e9926b87-1c84-4948-85f7-4e3c23dddd7b}" />
 	<object class="MixerSend" id="{98753c75-ad36-4e50-aedf-53e7b51b4c41}">
 		<property name="level">
