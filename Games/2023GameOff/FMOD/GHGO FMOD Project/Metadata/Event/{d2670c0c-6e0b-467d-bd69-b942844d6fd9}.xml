@@ -58,7 +58,11 @@
 			<destination>{4cac201d-8953-4d3e-9db7-a2f1215dae07}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{e5dcb112-7e39-4048-a7d4-bb631f99b191}" />
+	<object class="EventAutomatableProperties" id="{e5dcb112-7e39-4048-a7d4-bb631f99b191}">
+		<property name="priority">
+			<value>3</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{fc1bac6e-b3f5-487b-8e67-c46da66952c3}" />
 	<object class="MarkerTrack" id="{3d929953-c63d-417b-bcdf-598758ce0111}" />
 	<object class="GroupTrack" id="{55a28277-db97-40ca-b837-7c80484238b5}">
@@ -218,7 +222,6 @@
 		<property name="length">
 			<value>33.529424202962666</value>
 		</property>
-		<property name="name" />
 		<relationship name="fadeOutCurve">
 			<destination>{8002acf8-57b7-4046-8c95-fdce89157479}</destination>
 		</relationship>

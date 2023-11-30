@@ -71,6 +71,9 @@
 		<property name="voiceStealing">
 			<value>3</value>
 		</property>
+		<property name="priority">
+			<value>3</value>
+		</property>
 	</object>
 	<object class="MarkerTrack" id="{dc9926df-bda0-4eb8-91e2-742b0cbb848e}" />
 	<object class="GroupTrack" id="{0fee34fd-317d-4a3d-8eff-629141e03d38}">
@@ -115,7 +118,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{e55ef184-e62e-4d3f-9821-1c6917220cf8}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-6</value>
 		</property>
 		<relationship name="modulators">
 			<destination>{86c24a91-9068-4fa0-88dd-cd9df606e704}</destination>
@@ -139,7 +142,7 @@
 	<object class="MixerBusPanner" id="{6b95ca30-25e3-4802-b422-638fd7ca85d7}" />
 	<object class="EventMixerGroup" id="{0c46ceb0-5558-41bc-b588-12246019cea7}">
 		<property name="name">
-			<value>Parameter</value>
+			<value>Snapshot</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{b0a4fad4-ea26-4427-bd6c-c80a0cd26a5f}</destination>
