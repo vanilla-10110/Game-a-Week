@@ -1,11 +1,12 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     private FMOD.Studio.EventInstance aivoice;
     private float _thrusterRotateSpeed = 8f;
     private float _armsRotateSpeed = 8f;
@@ -15,15 +16,15 @@ public class PlayerController : MonoBehaviour
     private Transform _basePointer;
     private Rigidbody2D _rb;
     private Animator _thrusterAnimator;
-    
+
     [Header("Thruster Stats")]
     public float thrustForce = 75.0f;
     public float maxSpeed = 30.0f;
     public float fuelEfficiency = 1.0f;
-    
-    
+
+
     public bool autoBrake = false;
-    
+
 
     [Header("Other Stats ig")]
     public float maxO2Capacity = 200.0f;
@@ -34,10 +35,12 @@ public class PlayerController : MonoBehaviour
     public float fuelAmount;
 
     public float hullHealth = 100.0f;
-    
+
     [Header("UI")]
     public TextMeshProUGUI hullIntegrityText;
-
+    [SerializeField] Slider hullSlider;
+    [SerializeField] Slider oxygenSlider;
+    [SerializeField] Slider fuelSlider;
 
     void Start()
     {
@@ -50,15 +53,25 @@ public class PlayerController : MonoBehaviour
         _thruster = transform.Find("Thruster");
         _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>();
         _basePointer = transform.Find("Base Pointer");
+
+        //Default resource bar values
+        hullSlider.maxValue = hullHealth;
+        hullSlider.value = hullHealth;
+
+        oxygenSlider.maxValue = maxO2Capacity;
+        oxygenSlider.value = O2Amount;
+
+        fuelSlider.maxValue = maxFuelCapacity;
+        fuelSlider.maxValue = fuelAmount;
     }
-    
+
     void Update()
     {
         MovePlayer();
         if (Input.GetKey(KeyCode.Space))
         {
             Brake();
-        }  
+        }
         if (_forces != Vector2.zero)
         {
             RotateThruster();
@@ -66,8 +79,22 @@ public class PlayerController : MonoBehaviour
         RotateArms();
         RotatePointer();
         ThrusterSound();
+
         O2Amount -= O2DrainRate * Time.deltaTime;
+
         SetVoiceParameters();
+
+        UpdateBars();
+    }
+
+    /// <summary>
+    /// Show current amount of each resource. Power is in LaserShooter script.
+    /// </summary>
+    void UpdateBars()
+    {
+        oxygenSlider.value = O2Amount;
+        fuelSlider.value = fuelAmount;
+        hullSlider.value = hullHealth;
     }
 
     void MovePlayer()
@@ -78,9 +105,10 @@ public class PlayerController : MonoBehaviour
             fuelAmount -= _forces.magnitude * Time.deltaTime;
             O2Amount -= _forces.magnitude * Time.deltaTime / 4;
             _rb.AddForce(_forces);
-            
+
+
         }
-        
+
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
 
     }
@@ -107,7 +135,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 basePosition = Vector2.zero;
         Vector2 objectScreenPosition = transform.position;
-        
+
         Vector2 direction = basePosition - objectScreenPosition;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -130,7 +158,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Rock"))
         {
-            hullHealth -= (_rb.velocity - collision.collider.GetComponent<Rigidbody2D>().velocity).magnitude * 4; 
+            hullHealth -= (_rb.velocity - collision.collider.GetComponent<Rigidbody2D>().velocity).magnitude * 4;
             Debug.Log(hullHealth);
 
         }
@@ -167,5 +195,5 @@ public class PlayerController : MonoBehaviour
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", (hullHealth / 100f));
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", (50f));
     }
-    
+
 }
