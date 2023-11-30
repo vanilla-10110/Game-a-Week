@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour
     public float hullHealth = 100.0f;
 
     [Header("UI")]
-    public TextMeshProUGUI hullIntegrityText;
     [SerializeField] Slider hullSlider;
     [SerializeField] Slider oxygenSlider;
     [SerializeField] Slider fuelSlider;
@@ -159,18 +158,15 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Rock"))
         {
             hullHealth -= (_rb.velocity - collision.collider.GetComponent<Rigidbody2D>().velocity).magnitude * 4;
-            Debug.Log(hullHealth);
+            //Debug.Log(hullHealth);
 
         }
         if (collision.collider.CompareTag("Ship"))
         {
             hullHealth -= _rb.velocity.magnitude;
-            Debug.Log(hullHealth);
+            //Debug.Log(hullHealth);
 
         }
-        hullIntegrityText.text = "HULL INTEGRITY: " + Mathf.RoundToInt(hullHealth).ToString();
-
-
     }
 
     private void ThrusterSound()
