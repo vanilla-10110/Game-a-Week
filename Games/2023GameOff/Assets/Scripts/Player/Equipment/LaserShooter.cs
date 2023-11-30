@@ -83,6 +83,8 @@ public class LaserShooter : MonoBehaviour
 
                  //laser hit sound
                 laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); 
+                laserhitsound.setParameterByName("ASTEROID_MASS", Asteroid.selectedAsteroid.rb.mass);
+                // print(Asteroid.selectedAsteroid.rb.mass); //sound debug info
                 PlayHitSound();
                 
             }
