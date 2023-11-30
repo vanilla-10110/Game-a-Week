@@ -20,12 +20,13 @@ public class ShipVoice : MonoBehaviour
     private float lowHull;
     private float lowPower;
 
-// warning muted bools
-    private bool O2warningMuted = false;
+// warning played bools
+    private bool O2WarningPlayed = true;
+    private bool FuelWarningPlayed = true;
+    private bool HullWarningPlayed = true;
+    private bool PowerWarningPlayed = true;
 
 
-// warning logic bools
-    private bool O2WarningUnplayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -48,35 +49,30 @@ public class ShipVoice : MonoBehaviour
         //get the ships resource values as percentages
         O2 = (gameObject.GetComponent<PlayerController>().O2Amount / gameObject.GetComponent<PlayerController>().maxO2Capacity * 100f);
         fuel = (gameObject.GetComponent<PlayerController>().fuelAmount / gameObject.GetComponent<PlayerController>().maxFuelCapacity * 100f);
-        hull = (gameObject.GetComponent<PlayerController>().hullHealth / 100f);
+        hull = (gameObject.GetComponent<PlayerController>().hullHealth);
+        //print(hull);
         power = (gameObject.GetComponent<LaserShooter>().powerAmount / gameObject.GetComponent<LaserShooter>().powerMaxCapacity * 100f);
         testO2Warning();
+        testFuelWarning();
+        testHullWarning();
+        testPowerWarning();
     }
-
-/*
-        Unused Parameter Update Code
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", fuel);
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", hull);
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", power);
-*/
 
     void testO2Warning()
     {
         //O2 Warning
-        if (O2 < lowO2 || O2WarningUnplayed == true) //check if O2 is low or if sound is unplayed
+        if (O2 < lowO2 || O2WarningPlayed == false) //check if O2 is low or if sound has not been played yet
         {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", O2);
-            if (O2warningMuted == false || O2WarningUnplayed == true) //check to make sure sound is set to mute
+            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is not playing
             {
-                if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if voice is playing
-                {
-                    FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
-                    shipvoice.start(); //play warning sound
-                    O2WarningUnplayed = false; //set unplayed bool to false so it doesn't repeat
-                    //set new low O2 value
-                }
-                else
-                    O2WarningUnplayed = true; //set unplayed bool to true so that it plays if it didn't trigger
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", O2); //set warning value
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
+                shipvoice.start(); //play warning sound
+                O2WarningPlayed = true; //set played bool to true so it doesn't repeat
+            }
+            if (PlaybackState(shipvoice) == FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is playing
+            {
+                O2WarningPlayed = false; 
             }
         }
         setLowO2();
@@ -92,13 +88,119 @@ public class ShipVoice : MonoBehaviour
             lowO2 = 15f;
         if (O2 < 15f & O2 > 5f)
             lowO2 = 5f;
-        if (O2 < 5f & O2 > 5f)
+        if (O2 < 5f & O2 > 0f)
             lowO2 = 0f;
         if (O2 < 0f)
-            O2warningMuted = true; //mute O2 warning after O2 reaches 0 to avoid repeating
-        if (O2 > 0f)
-            O2warningMuted = false; //unmute O2 warning after O2 reaches 0 so it can can be played again
+            lowO2 = -10000f;
     }
+    void testFuelWarning()
+    {
+        //fuel Warning
+        if (fuel < lowFuel || FuelWarningPlayed == false) //check if fuel is low or if sound has not been played yet
+        {
+            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is not playing
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", fuel); //set warning value
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "FUEL"); //set ship voice to play oxygen warning
+                shipvoice.start(); //play warning sound
+                FuelWarningPlayed = true; //set played bool to true so it doesn't repeat
+            }
+            if (PlaybackState(shipvoice) == FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is playing
+            {
+                FuelWarningPlayed = false; 
+            }
+        }
+        setLowFuel();
+    }
+
+    void setLowFuel()
+    {
+        if (fuel > 50f)
+            lowFuel = 50f;
+        if (fuel < 50f & O2 > 25f)
+            lowFuel = 25f;
+        if (fuel < 25f & O2 > 15f)
+            lowFuel = 15f;
+        if (fuel < 15f & O2 > 5f)
+            lowFuel = 5f;
+        if (fuel < 5f & O2 > 0f)
+            lowFuel = 0f;
+        if (fuel < 0f)
+            lowFuel = -10000f;
+    }
+
+    void testHullWarning()
+    {
+        //hull Warning
+        if (hull < lowHull || HullWarningPlayed == false) //check if hull is low or if sound has not been played yet
+        {
+            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is not playing
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", hull); //set warning value
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "HULL"); //set ship voice to play oxygen warning
+                shipvoice.start(); //play warning sound
+                HullWarningPlayed = true; //set played bool to true so it doesn't repeat
+            }
+            if (PlaybackState(shipvoice) == FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is playing
+            {
+                HullWarningPlayed = false; 
+            }
+        }
+        setLowHull();
+    }
+
+    void setLowHull()
+    {
+        if (hull > 50f)
+            lowHull = 50f;
+        if (hull < 50f & O2 > 25f)
+            lowHull = 25f;
+        if (hull < 25f & O2 > 15f)
+            lowHull = 15f;
+        if (hull < 15f & O2 > 5f)
+            lowHull = 5f;
+        if (hull < 5f & O2 > 0f)
+            lowHull = 0f;
+        if (hull < 0f)
+            lowHull = -10000f;
+    }
+
+    void testPowerWarning()
+    {
+        //power Warning
+        if (power < lowPower || PowerWarningPlayed == false) //check if hull is low or if sound has not been played yet
+        {
+            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is not playing
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "POWER"); //set ship voice to play oxygen warning
+                shipvoice.start(); //play warning sound
+                PowerWarningPlayed = true; //set played bool to true so it doesn't repeat
+            }
+            if (PlaybackState(shipvoice) == FMOD.Studio.PLAYBACK_STATE.PLAYING) //do if sound is playing
+            {
+                PowerWarningPlayed = false; 
+            }
+        }
+        setLowPower();
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", power); //set warning value, it's here for the power because it affects all warning sounds
+    }
+
+    void setLowPower()
+    {
+        if (power > 50f)
+            lowPower = 50f;
+        if (power < 50f & O2 > 25f)
+            lowPower = 25f;
+        if (power < 25f & O2 > 15f)
+            lowPower = 15f;
+        if (power < 15f & O2 > 5f)
+            lowPower = 5f;
+        if (power < 5f & O2 > 0f)
+            lowPower = 0f;
+        if (power < 0f)
+            lowPower = -10000f;
+    }
+ 
 
     //playback check method
     FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
