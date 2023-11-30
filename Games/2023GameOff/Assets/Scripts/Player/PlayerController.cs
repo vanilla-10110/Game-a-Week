@@ -6,10 +6,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     
-    [Header("ship voice")]
+    /*[Header("ship voice")]
     private FMOD.Studio.EventInstance shipvoice;
     private float lowO2;
-    private bool O2warningMuted = false;
+    private bool O2warningMuted = false;*/ //old shipvoice script
 
 
     private float _thrusterRotateSpeed = 8f;
@@ -56,8 +56,8 @@ public class PlayerController : MonoBehaviour
         _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>();
         _basePointer = transform.Find("Base Pointer");
 
-        shipvoice = FMODUnity.RuntimeManager.CreateInstance("event:/AI/AI_WARNING");
-        lowO2 = 50f;
+        /*shipvoice = FMODUnity.RuntimeManager.CreateInstance("event:/AI/AI_WARNING");
+        lowO2 = 50f;*/ //old shipvoice script
     }
     
     void Update()
@@ -75,8 +75,8 @@ public class PlayerController : MonoBehaviour
         RotatePointer();
         ThrusterSound();
         O2Amount -= O2DrainRate * Time.deltaTime;
-        SetVoiceParameters();
-        PlayShipVoice();
+        //SetVoiceParameters(); //old shipvoice script
+        //PlayShipVoice(); //old shipvoice script
     }
 
     void MovePlayer()
@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
 
 
     // SHIP'S VOICE
-    private void SetVoiceParameters()
+    /*private void SetVoiceParameters()
     {
         float O2Percent = (O2Amount / maxO2Capacity * 100f);
         float fuelPercent = (fuelAmount / maxFuelCapacity * 100f);
@@ -223,17 +223,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-        //stuff to copy from
-        /*if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
-        {
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "POWER"); //set ship voice to play power warning
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "FUEL"); //set ship voice to play fuel warning
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
-            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "HULL"); //set ship voice to play hull integrity warning
-            shipvoice.start(); //play warning sound
-        }*/
-    }
+    }*/ //old shipvoice script
 
     FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
     {
