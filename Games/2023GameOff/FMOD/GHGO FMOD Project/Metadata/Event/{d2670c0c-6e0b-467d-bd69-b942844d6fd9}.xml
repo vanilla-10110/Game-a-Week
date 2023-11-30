@@ -209,6 +209,12 @@
 		</property>
 	</object>
 	<object class="MultiSound" id="{d4652c47-30cb-433d-920f-3a74379c4dde}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>32.5</value>
+		</property>
 		<property name="length">
 			<value>33.529424202962666</value>
 		</property>
@@ -222,13 +228,18 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{5c7682ab-7996-4695-b11b-7a3558386fa8}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>66</value>
+		</property>
 		<property name="start">
 			<value>30.270270270270274</value>
 		</property>
 		<property name="length">
 			<value>34.054054054054049</value>
 		</property>
-		<property name="name" />
 		<relationship name="fadeOutCurve">
 			<destination>{8f9142f1-fbbb-4451-be9a-565113b4102f}</destination>
 		</relationship>
@@ -268,6 +279,12 @@
 		</property>
 	</object>
 	<object class="MultiSound" id="{e0fa3d4f-6821-486a-b539-103cb5aada0e}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>65.5</value>
+		</property>
 		<property name="length">
 			<value>22.702702702702705</value>
 		</property>
@@ -281,6 +298,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{8d62712d-708d-4592-91a2-5541b03ea9f8}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>16</value>
+		</property>
 		<property name="start">
 			<value>15.135135135135137</value>
 		</property>
@@ -297,6 +320,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{9f7e66f0-2a47-4483-a2af-bf09918247ec}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>61</value>
+		</property>
 		<property name="start">
 			<value>30.270270270270274</value>
 		</property>
@@ -313,6 +342,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{064061f7-48cf-45e0-bef9-3da86920ecb9}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>47</value>
+		</property>
 		<property name="start">
 			<value>45.405405405405403</value>
 		</property>
@@ -359,6 +394,12 @@
 		</property>
 	</object>
 	<object class="MultiSound" id="{6a14b363-7771-4843-9aaa-cf10f90381bc}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>65.5</value>
+		</property>
 		<property name="length">
 			<value>16.949227116265579</value>
 		</property>
@@ -378,6 +419,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{950603a0-e52e-4c6a-b8dd-af96def999f7}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>79</value>
+		</property>
 		<property name="start">
 			<value>30.270270270270274</value>
 		</property>
@@ -403,6 +450,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{08bfc14f-6efa-4c52-ae01-019e090833b3}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>33</value>
+		</property>
 		<property name="start">
 			<value>45.405405405405411</value>
 		</property>
@@ -425,6 +478,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{2c7d7570-4c60-4309-8b51-7102a176a725}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>32.5</value>
+		</property>
 		<property name="start">
 			<value>15.135135135135137</value>
 		</property>
