@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("ship voice")]
     private FMOD.Studio.EventInstance shipvoice;
     private float lowO2;
+    private bool O2warningMuted = false;
 
 
     private float _thrusterRotateSpeed = 8f;
@@ -190,7 +191,6 @@ public class PlayerController : MonoBehaviour
         float fuelPercent = (fuelAmount / maxFuelCapacity * 100f);
         float hullPercent = (hullHealth / 100f);
         float powerPercent = (gameObject.GetComponent<LaserShooter>().powerAmount / gameObject.GetComponent<LaserShooter>().powerMaxCapacity * 100f);
-        bool O2warningMuted = false;
 
         //O2 Warning
         if (O2Percent < lowO2 & O2warningMuted == false) //check if o2 is low
@@ -216,7 +216,8 @@ public class PlayerController : MonoBehaviour
                 if (O2Percent < 5f)
                 {
                     lowO2 = 0f;
-                }if (O2Percent < 0f)
+                }
+                if (O2Percent < 0f)
                 {
                     O2warningMuted = true; //mute o2 warning after o2 reaches 0
                 }
