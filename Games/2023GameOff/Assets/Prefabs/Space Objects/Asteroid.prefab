@@ -5167,13 +5167,6 @@ MonoBehaviour:
   - {fileID: 2513877442961514684, guid: 653b940d867aef54d98a84abd60986f3, type: 3}
   - {fileID: 4622219956001763637, guid: 6f45f1d73cb4cdd47b3c9d7ffce3112e, type: 3}
   - {fileID: 6845038442124860741, guid: 21536d33acae5814e9795353c93091fb, type: 3}
-  rockExplodeSound:
-    Guid:
-      Data1: 1747770947
-      Data2: 1188538950
-      Data3: 746617510
-      Data4: -849515919
-    Path: event:/SPACE/ROCK_EXPLODE
 --- !u!50 &1465876804295089030
 Rigidbody2D:
   serializedVersion: 4

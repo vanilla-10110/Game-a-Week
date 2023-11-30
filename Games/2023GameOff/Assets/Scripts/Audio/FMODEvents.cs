@@ -10,8 +10,8 @@ public class FMODEvents : MonoBehaviour
     [field: Header("Music")]
     [field: SerializeField] public EventReference music { get; private set; }
 
-    [field: Header("Asteroid SFX")]
-    [field: SerializeField] public EventReference asteroidExplode { get; private set; }
+    //[field: Header("Asteroid SFX")] //sorry, can't get this to work with asteroid size parameter
+    //[field: SerializeField] public EventReference asteroidExplode { get; private set; }
 
     public static FMODEvents instance { get; private set; }
     private void Awake() 

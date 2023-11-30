@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{5da7a783-cf8a-4951-9b19-ce85911caad6}">
+		<property name="name">
+			<value>ASTEROID_MASS_EXPLOSION</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{734baf10-7830-4fb1-b6d3-492756f2a38b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{734baf10-7830-4fb1-b6d3-492756f2a38b}">
+		<property name="minimum">
+			<value>100</value>
+		</property>
+		<property name="maximum">
+			<value>450</value>
+		</property>
+		<property name="initialValue">
+			<value>275</value>
+		</property>
+	</object>
+</objects>
