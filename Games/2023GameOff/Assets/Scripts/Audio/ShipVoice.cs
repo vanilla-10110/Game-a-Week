@@ -24,8 +24,8 @@ public class ShipVoice : MonoBehaviour
     private bool O2warningMuted = false;
 
 
-// warning qued bools
-    private bool O2warningQued = false;
+// warning logic bools
+    private bool O2WarningUnplayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -63,39 +63,41 @@ public class ShipVoice : MonoBehaviour
     void testO2Warning()
     {
         //O2 Warning
-        if (O2 < lowO2) //check if O2 is low
+        if (O2 < lowO2 || O2WarningUnplayed == true) //check if O2 is low or if sound is unplayed
         {
-            O2warningQued = true;
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", O2);
-            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING & O2warningMuted == false & O2warningQued == true) //check to make sure sound isn't playing, not set to mute, and qued
+            if (O2warningMuted == false || O2WarningUnplayed == true) //check to make sure sound is set to mute
             {
-                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
-                shipvoice.start(); //play warning sound
-                O2warningQued = false;
-
-                //set new low O2 value
-                if (O2 < 50f & O2 > 25f)
+                if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if voice is playing
                 {
-                    lowO2 = 25f;
+                    FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
+                    shipvoice.start(); //play warning sound
+                    O2WarningUnplayed = false; //set unplayed bool to false so it doesn't repeat
+                    //set new low O2 value
                 }
-                if (O2 < 25f & O2 > 15f)
-                {
-                    lowO2 = 15f;
-                }
-                if (O2 < 15f & O2 > 5f)
-                {
-                    lowO2 = 5f;
-                }
-                if (O2 < 5f)
-                {
-                    lowO2 = 0f;
-                }
-                if (O2 < 0f)
-                {
-                    O2warningMuted = true; //mute O2 warning after O2 reaches 0
-                }
+                else
+                    O2WarningUnplayed = true; //set unplayed bool to true so that it plays if it didn't trigger
             }
         }
+        setLowO2();
+    }
+
+    void setLowO2()
+    {
+        if (O2 > 50f)
+            lowO2 = 50f;
+        if (O2 < 50f & O2 > 25f)
+            lowO2 = 25f;
+        if (O2 < 25f & O2 > 15f)
+            lowO2 = 15f;
+        if (O2 < 15f & O2 > 5f)
+            lowO2 = 5f;
+        if (O2 < 5f & O2 > 5f)
+            lowO2 = 0f;
+        if (O2 < 0f)
+            O2warningMuted = true; //mute O2 warning after O2 reaches 0 to avoid repeating
+        if (O2 > 0f)
+            O2warningMuted = false; //unmute O2 warning after O2 reaches 0 so it can can be played again
     }
 
     //playback check method
