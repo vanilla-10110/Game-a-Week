@@ -6,7 +6,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     
-    private FMOD.Studio.EventInstance aivoice;
+    [Header("ship voice")]
+    private FMOD.Studio.EventInstance shipvoice;
+    private float lowO2;
+
+
     private float _thrusterRotateSpeed = 8f;
     private float _armsRotateSpeed = 8f;
     private Vector2 _forces;
@@ -50,6 +54,9 @@ public class PlayerController : MonoBehaviour
         _thruster = transform.Find("Thruster");
         _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>();
         _basePointer = transform.Find("Base Pointer");
+
+        shipvoice = FMODUnity.RuntimeManager.CreateInstance("event:/AI/AI_WARNING");
+        lowO2 = 50f;
     }
     
     void Update()
@@ -68,6 +75,7 @@ public class PlayerController : MonoBehaviour
         ThrusterSound();
         O2Amount -= O2DrainRate * Time.deltaTime;
         SetVoiceParameters();
+        PlayShipVoice();
     }
 
     void MovePlayer()
@@ -160,12 +168,78 @@ public class PlayerController : MonoBehaviour
 
         // print(_forces.magnitude); //  for sound debuging
     }
+
+
+    // SHIP'S VOICE
     private void SetVoiceParameters()
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", (O2Amount / maxO2Capacity * 100f));
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", (fuelAmount / maxFuelCapacity * 100f));
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", (hullHealth / 100f));
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", (50f));
+        float O2Percent = (O2Amount / maxO2Capacity * 100f);
+        float fuelPercent = (fuelAmount / maxFuelCapacity * 100f);
+        float hullPercent = (hullHealth / 100f);
+        float powerPercent = (gameObject.GetComponent<LaserShooter>().powerAmount / gameObject.GetComponent<LaserShooter>().powerMaxCapacity * 100f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", O2Percent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", fuelPercent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", hullPercent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", powerPercent);
     }
+
+    private void PlayShipVoice()
+    {
+        //define variables
+        float O2Percent = (O2Amount / maxO2Capacity * 100f);
+        float fuelPercent = (fuelAmount / maxFuelCapacity * 100f);
+        float hullPercent = (hullHealth / 100f);
+        float powerPercent = (gameObject.GetComponent<LaserShooter>().powerAmount / gameObject.GetComponent<LaserShooter>().powerMaxCapacity * 100f);
+        bool O2warningMuted = false;
+
+        //O2 Warning
+        if (O2Percent < lowO2 & O2warningMuted == false) //check if o2 is low
+        {
+            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
+                shipvoice.start(); //play warning sound
+
+                //set new low o2 value
+                if (O2Percent < 50f & O2Percent > 25f)
+                {
+                    lowO2 = 25f;
+                }
+                if (O2Percent < 25f & O2Percent > 15f)
+                {
+                    lowO2 = 15f;
+                }
+                if (O2Percent < 15f & O2Percent > 5f)
+                {
+                    lowO2 = 5f;
+                }
+                if (O2Percent < 5f)
+                {
+                    lowO2 = 0f;
+                }if (O2Percent < 0f)
+                {
+                    O2warningMuted = true; //mute o2 warning after o2 reaches 0
+                }
+            }
+        }
+
+        //stuff to copy from
+        /*if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+        {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "POWER"); //set ship voice to play power warning
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "FUEL"); //set ship voice to play fuel warning
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "HULL"); //set ship voice to play hull integrity warning
+            shipvoice.start(); //play warning sound
+        }*/
+    }
+
+    FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE pS;
+        instance.getPlaybackState(out pS);
+        return pS;
+    }
+
     
 }
