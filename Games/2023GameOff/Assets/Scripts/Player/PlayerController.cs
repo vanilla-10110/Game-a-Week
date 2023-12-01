@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private FMOD.Studio.EventInstance shipvoice;
     private float lowO2;
     private bool O2warningMuted = false;*/ //old shipvoice script
-
+    private FMOD.Studio.EventInstance collisionSound;
 
     private float _thrusterRotateSpeed = 8f;
     private float _armsRotateSpeed = 8f;
@@ -151,7 +151,11 @@ public class PlayerController : MonoBehaviour
         }
         hullIntegrityText.text = "HULL INTEGRITY: " + Mathf.RoundToInt(hullHealth).ToString();
 
-
+        //collision sound effect
+        collisionSound = FMODUnity.RuntimeManager.CreateInstance("event:/SPACE/COLLISION/SHIP"); //create instance for sound
+        collisionSound.setParameterByName("IMPACT_SPEED", collision.relativeVelocity.magnitude); //set impact force parameter
+        collisionSound.start(); //play sound at instance location
+        collisionSound.release(); //release instance from memory
     }
 
     private void ThrusterSound()
