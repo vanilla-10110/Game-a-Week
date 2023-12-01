@@ -243,21 +243,19 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 571456536
-      Data2: 1227642307
-      Data3: 715316372
-      Data4: -1586273699
-    Path: event:/SPACE/COLLISION
+      Data1: 1114241232
+      Data2: 1257054966
+      Data3: -2056559
+      Data4: 327989591
+    Path: event:/UI/UI_SFX_TEST
   Event: 
-  PlayEvent: 20
-  StopEvent: 0
+  PlayEvent: 17
+  StopEvent: 18
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
   AllowNonRigidbodyDoppler: 0
-  Params:
-  - Name: MATERIAL
-    Value: 2
+  Params: []
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
