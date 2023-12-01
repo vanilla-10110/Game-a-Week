@@ -73,7 +73,7 @@
 			<value>4</value>
 		</property>
 		<property name="maximumDistance">
-			<value>30</value>
+			<value>25</value>
 		</property>
 		<property name="triggerCooldown">
 			<value>20</value>
@@ -240,7 +240,7 @@
 	<object class="MixerBusFader" id="{eacea603-2a0a-49b3-9779-783af60bdfe0}" />
 	<object class="AutomationPoint" id="{56b71ea7-c7e4-4dec-9b5f-341db1466869}">
 		<property name="position">
-			<value>2.953389830508474</value>
+			<value>3.953389830508474</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -248,7 +248,7 @@
 	</object>
 	<object class="AutomationPoint" id="{d4e0c7f5-152f-4187-bd5b-c48879179bb2}">
 		<property name="position">
-			<value>0.0042372881355932203</value>
+			<value>1.0042372881355932</value>
 		</property>
 		<property name="value">
 			<value>-6</value>
@@ -276,7 +276,7 @@
 	</object>
 	<object class="AutomationPoint" id="{c95a9be1-ec91-49a1-8ab2-655797f82540}">
 		<property name="position">
-			<value>0.012711864406779662</value>
+			<value>1.0127118644067796</value>
 		</property>
 		<property name="value">
 			<value>4199.99951</value>
@@ -284,7 +284,7 @@
 	</object>
 	<object class="AutomationPoint" id="{83af035a-54b0-4ebf-a989-a9da461b1c48}">
 		<property name="position">
-			<value>3</value>
+			<value>4</value>
 		</property>
 		<property name="value">
 			<value>22000</value>
