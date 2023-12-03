@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{077f4ecd-3106-4eab-861a-79030fe687ca}">
+		<property name="name">
+			<value>ASTEROID_MASS</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ea9bda09-9749-4b3d-a569-d941e6f64482}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{a9a397f2-876a-4c52-888d-8ad2c91bf38e}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{a9a397f2-876a-4c52-888d-8ad2c91bf38e}">
+		<property name="minimum">
+			<value>100</value>
+		</property>
+		<property name="maximum">
+			<value>450</value>
+		</property>
+		<property name="initialValue">
+			<value>245.83333333333334</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

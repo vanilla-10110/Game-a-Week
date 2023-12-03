@@ -30,6 +30,10 @@ public class Asteroid : SpaceObject
     /// </summary>
     private Mineral mineral;
 
+    //declare explosion sound
+    private FMOD.Studio.EventInstance explosionSound;
+
+
     protected override void OnInitialise()
     {
         base.OnInitialise();
@@ -78,7 +82,12 @@ public class Asteroid : SpaceObject
         shinyParticles.Stop(false, ParticleSystemStopBehavior.StopEmittingAndClear);
 
         //play explosion sound
-        AudioManager.instance.PlayOneShot(FMODEvents.instance.asteroidExplode, this.transform.position);
+        explosionSound = FMODUnity.RuntimeManager.CreateInstance("event:/SPACE/ROCK_EXPLODE"); //create instance for sound
+        explosionSound.setParameterByName("ASTEROID_MASS_EXPLOSION", Asteroid.selectedAsteroid.rb.mass); //set mass parameter
+        print(Asteroid.selectedAsteroid.rb.mass);
+        explosionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject)); // set instance location to game object
+        explosionSound.start(); //play sound at instance location
+        explosionSound.release(); //release instance from memory
     }
 
 }

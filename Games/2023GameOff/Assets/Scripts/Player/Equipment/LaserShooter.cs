@@ -3,10 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.FilePathAttribute;
+// using static UnityEditor.FilePathAttribute;
 using static UnityEngine.GraphicsBuffer;
 using static UnityEngine.Rendering.DebugUI;
-using UnityEngine.UI;
 
 public class LaserShooter : MonoBehaviour
 {
@@ -30,8 +29,6 @@ public class LaserShooter : MonoBehaviour
     public float powerMaxCapacity = 200.0f;
     public float powerEfficiency = 1.0f;
     public float powerAmount;
-    [SerializeField] Slider powerSlider;
-
 
     private void Awake()
     {
@@ -42,17 +39,12 @@ public class LaserShooter : MonoBehaviour
 
         powerAmount = powerMaxCapacity;
 
-        //Default slider values
-        powerSlider.maxValue = powerMaxCapacity;
-        powerSlider.value = powerMaxCapacity;
-
         fmodsetup();
 
     }
     private void Update()
     {
         FireLaser();
-        powerSlider.value = powerAmount;
     }
 
     private void FireLaser()
@@ -63,7 +55,7 @@ public class LaserShooter : MonoBehaviour
             if (Asteroid.selectedAsteroid == null)
             {
                 // if (Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition).normalized))
-
+                
                 RaycastHit2D hit = Physics2D.Raycast(_laserPoint.position, Camera.main.ScreenToWorldPoint(Input.mousePosition - _laserPoint.transform.position).normalized);
 
                 if (hit.collider.CompareTag("Rock"))
@@ -76,7 +68,7 @@ public class LaserShooter : MonoBehaviour
                     target.z = 0;
                 }
 
-
+                
 
                 powerAmount -= powerEfficiency * Time.deltaTime / 2;
                 laserhitsound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop hit sounds
@@ -89,10 +81,12 @@ public class LaserShooter : MonoBehaviour
 
                 powerAmount -= powerEfficiency * Time.deltaTime * 2;
 
-                //laser hit sound
-                laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target));
+                 //laser hit sound
+                laserhitsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(target)); 
+                laserhitsound.setParameterByName("ASTEROID_MASS", Asteroid.selectedAsteroid.rb.mass);
+                // print(Asteroid.selectedAsteroid.rb.mass); //sound debug info
                 PlayHitSound();
-
+                
             }
 
             DrawLaser(_laserPoint.position, target);
@@ -115,7 +109,7 @@ public class LaserShooter : MonoBehaviour
                 target.z = 0;
                 powerAmount -= powerEfficiency * Time.deltaTime / 2;
 
-
+                
 
                 tractorsound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject)); //puts tractor beam emitter on tractor beam arm
             }
@@ -128,9 +122,9 @@ public class LaserShooter : MonoBehaviour
                     selection = Mineral.selectedMineral.gameObject;
                     velocityAdd = true;
                 }
-                else
-                {
-                    selection = SpaceObject.selectedAsteroid.gameObject;
+                else 
+                { 
+                    selection = SpaceObject.selectedAsteroid.gameObject; 
                     velocityAdd = false;
                 }
 
@@ -205,9 +199,9 @@ public class LaserShooter : MonoBehaviour
     void PlayLaserSound()
     {
         if (PlaybackState(lasersound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
-        {
-            lasersound.start(); //play sound at instance location
-        }
+            {
+                lasersound.start(); //play sound at instance location
+            }
     }
     void PlayTractorSound()
     {
@@ -221,6 +215,6 @@ public class LaserShooter : MonoBehaviour
         if (PlaybackState(laserhitsound) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
             laserhitsound.start(); //play sound at instance location
     }
-
+   
 
 }

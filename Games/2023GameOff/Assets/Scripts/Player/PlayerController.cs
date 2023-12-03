@@ -1,13 +1,17 @@
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 
 public class PlayerController : MonoBehaviour
 {
+    
+    /*[Header("ship voice")]
+    private FMOD.Studio.EventInstance shipvoice;
+    private float lowO2;
+    private bool O2warningMuted = false;*/ //old shipvoice script
+    private FMOD.Studio.EventInstance collisionSound;
 
-    private FMOD.Studio.EventInstance aivoice;
     private float _thrusterRotateSpeed = 8f;
     private float _armsRotateSpeed = 8f;
     private Vector2 _forces;
@@ -16,15 +20,15 @@ public class PlayerController : MonoBehaviour
     private Transform _basePointer;
     private Rigidbody2D _rb;
     private Animator _thrusterAnimator;
-
+    
     [Header("Thruster Stats")]
     public float thrustForce = 75.0f;
     public float maxSpeed = 30.0f;
     public float fuelEfficiency = 1.0f;
-
-
+    
+    
     public bool autoBrake = false;
-
+    
 
     [Header("Other Stats ig")]
     public float maxO2Capacity = 200.0f;
@@ -35,11 +39,10 @@ public class PlayerController : MonoBehaviour
     public float fuelAmount;
 
     public float hullHealth = 100.0f;
-
+    
     [Header("UI")]
-    [SerializeField] Slider hullSlider;
-    [SerializeField] Slider oxygenSlider;
-    [SerializeField] Slider fuelSlider;
+    public TextMeshProUGUI hullIntegrityText;
+
 
     void Start()
     {
@@ -53,24 +56,17 @@ public class PlayerController : MonoBehaviour
         _thrusterAnimator = GameObject.Find("Thruster_1").GetComponent<Animator>();
         _basePointer = transform.Find("Base Pointer");
 
-        //Default resource bar values
-        hullSlider.maxValue = hullHealth;
-        hullSlider.value = hullHealth;
-
-        oxygenSlider.maxValue = maxO2Capacity;
-        oxygenSlider.value = O2Amount;
-
-        fuelSlider.maxValue = maxFuelCapacity;
-        fuelSlider.maxValue = fuelAmount;
+        /*shipvoice = FMODUnity.RuntimeManager.CreateInstance("event:/AI/AI_WARNING");
+        lowO2 = 50f;*/ //old shipvoice script
     }
-
+    
     void Update()
     {
         MovePlayer();
         if (Input.GetKey(KeyCode.Space))
         {
             Brake();
-        }
+        }  
         if (_forces != Vector2.zero)
         {
             RotateThruster();
@@ -78,22 +74,9 @@ public class PlayerController : MonoBehaviour
         RotateArms();
         RotatePointer();
         ThrusterSound();
-
         O2Amount -= O2DrainRate * Time.deltaTime;
-
-        SetVoiceParameters();
-
-        UpdateBars();
-    }
-
-    /// <summary>
-    /// Show current amount of each resource. Power is in LaserShooter script.
-    /// </summary>
-    void UpdateBars()
-    {
-        oxygenSlider.value = O2Amount;
-        fuelSlider.value = fuelAmount;
-        hullSlider.value = hullHealth;
+        //SetVoiceParameters(); //old shipvoice script
+        //PlayShipVoice(); //old shipvoice script
     }
 
     void MovePlayer()
@@ -104,10 +87,9 @@ public class PlayerController : MonoBehaviour
             fuelAmount -= _forces.magnitude * Time.deltaTime;
             O2Amount -= _forces.magnitude * Time.deltaTime / 4;
             _rb.AddForce(_forces);
-
-
+            
         }
-
+        
         _rb.velocity = Vector2.ClampMagnitude(_rb.velocity, maxSpeed);
 
     }
@@ -134,7 +116,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 basePosition = Vector2.zero;
         Vector2 objectScreenPosition = transform.position;
-
+        
         Vector2 direction = basePosition - objectScreenPosition;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -157,16 +139,23 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.collider.CompareTag("Rock"))
         {
-            hullHealth -= (_rb.velocity - collision.collider.GetComponent<Rigidbody2D>().velocity).magnitude * 4;
-            //Debug.Log(hullHealth);
+            hullHealth -= (_rb.velocity - collision.collider.GetComponent<Rigidbody2D>().velocity).magnitude * 4; 
+            Debug.Log(hullHealth);
 
         }
         if (collision.collider.CompareTag("Ship"))
         {
             hullHealth -= _rb.velocity.magnitude;
-            //Debug.Log(hullHealth);
+            Debug.Log(hullHealth);
 
         }
+        hullIntegrityText.text = "HULL INTEGRITY: " + Mathf.RoundToInt(hullHealth).ToString();
+
+        //collision sound effect
+        collisionSound = FMODUnity.RuntimeManager.CreateInstance("event:/SPACE/COLLISION/SHIP"); //create instance for sound
+        collisionSound.setParameterByName("IMPACT_SPEED", collision.relativeVelocity.magnitude); //set impact force parameter
+        collisionSound.start(); //play sound at instance location
+        collisionSound.release(); //release instance from memory
     }
 
     private void ThrusterSound()
@@ -184,12 +173,68 @@ public class PlayerController : MonoBehaviour
 
         // print(_forces.magnitude); //  for sound debuging
     }
-    private void SetVoiceParameters()
+
+
+    // SHIP'S VOICE
+    /*private void SetVoiceParameters()
     {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", (O2Amount / maxO2Capacity * 100f));
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", (fuelAmount / maxFuelCapacity * 100f));
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", (hullHealth / 100f));
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", (50f));
+        float O2Percent = (O2Amount / maxO2Capacity * 100f);
+        float fuelPercent = (fuelAmount / maxFuelCapacity * 100f);
+        float hullPercent = (hullHealth / 100f);
+        float powerPercent = (gameObject.GetComponent<LaserShooter>().powerAmount / gameObject.GetComponent<LaserShooter>().powerMaxCapacity * 100f);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_O2", O2Percent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_FUEL", fuelPercent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_HULL", hullPercent);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("AI_POWER", powerPercent);
     }
 
+    private void PlayShipVoice()
+    {
+        //define variables
+        float O2Percent = (O2Amount / maxO2Capacity * 100f);
+        float fuelPercent = (fuelAmount / maxFuelCapacity * 100f);
+        float hullPercent = (hullHealth / 100f);
+        float powerPercent = (gameObject.GetComponent<LaserShooter>().powerAmount / gameObject.GetComponent<LaserShooter>().powerMaxCapacity * 100f);
+
+        //O2 Warning
+        if (O2Percent < lowO2 & O2warningMuted == false) //check if o2 is low
+        {
+            if (PlaybackState(shipvoice) != FMOD.Studio.PLAYBACK_STATE.PLAYING) //check if sound is playing
+            {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("WARNINGTYPE", "O2"); //set ship voice to play oxygen warning
+                shipvoice.start(); //play warning sound
+
+                //set new low o2 value
+                if (O2Percent < 50f & O2Percent > 25f)
+                {
+                    lowO2 = 25f;
+                }
+                if (O2Percent < 25f & O2Percent > 15f)
+                {
+                    lowO2 = 15f;
+                }
+                if (O2Percent < 15f & O2Percent > 5f)
+                {
+                    lowO2 = 5f;
+                }
+                if (O2Percent < 5f)
+                {
+                    lowO2 = 0f;
+                }
+                if (O2Percent < 0f)
+                {
+                    O2warningMuted = true; //mute o2 warning after o2 reaches 0
+                }
+            }
+        }
+    }*/ //old shipvoice script
+
+    FMOD.Studio.PLAYBACK_STATE PlaybackState(FMOD.Studio.EventInstance instance)
+    {
+        FMOD.Studio.PLAYBACK_STATE pS;
+        instance.getPlaybackState(out pS);
+        return pS;
+    }
+
+    
 }
